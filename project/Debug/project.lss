@@ -1,0 +1,4317 @@
+
+project.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000ba0  00800100  00001b34  00001bc8  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00001b34  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000423  00800ca0  00800ca0  00002768  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00002768  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00002798  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 000001b0  00000000  00000000  000027d4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00003721  00000000  00000000  00002984  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000d66  00000000  00000000  000060a5  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   000016c4  00000000  00000000  00006e0b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  0000067c  00000000  00000000  000084d0  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    0000077a  00000000  00000000  00008b4c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    0000295c  00000000  00000000  000092c6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000200  00000000  00000000  0000bc22  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+       0:	45 c0       	rjmp	.+138    	; 0x8c <__ctors_end>
+       2:	00 00       	nop
+       4:	c7 c0       	rjmp	.+398    	; 0x194 <__vector_1>
+       6:	00 00       	nop
+       8:	2c c1       	rjmp	.+600    	; 0x262 <__vector_2>
+       a:	00 00       	nop
+       c:	5d c0       	rjmp	.+186    	; 0xc8 <__bad_interrupt>
+       e:	00 00       	nop
+      10:	5b c0       	rjmp	.+182    	; 0xc8 <__bad_interrupt>
+      12:	00 00       	nop
+      14:	59 c0       	rjmp	.+178    	; 0xc8 <__bad_interrupt>
+      16:	00 00       	nop
+      18:	57 c0       	rjmp	.+174    	; 0xc8 <__bad_interrupt>
+      1a:	00 00       	nop
+      1c:	55 c0       	rjmp	.+170    	; 0xc8 <__bad_interrupt>
+      1e:	00 00       	nop
+      20:	53 c0       	rjmp	.+166    	; 0xc8 <__bad_interrupt>
+      22:	00 00       	nop
+      24:	51 c0       	rjmp	.+162    	; 0xc8 <__bad_interrupt>
+      26:	00 00       	nop
+      28:	4f c0       	rjmp	.+158    	; 0xc8 <__bad_interrupt>
+      2a:	00 00       	nop
+      2c:	4d c0       	rjmp	.+154    	; 0xc8 <__bad_interrupt>
+      2e:	00 00       	nop
+      30:	4b c0       	rjmp	.+150    	; 0xc8 <__bad_interrupt>
+      32:	00 00       	nop
+      34:	49 c0       	rjmp	.+146    	; 0xc8 <__bad_interrupt>
+      36:	00 00       	nop
+      38:	47 c0       	rjmp	.+142    	; 0xc8 <__bad_interrupt>
+      3a:	00 00       	nop
+      3c:	45 c0       	rjmp	.+138    	; 0xc8 <__bad_interrupt>
+      3e:	00 00       	nop
+      40:	55 c0       	rjmp	.+170    	; 0xec <__vector_16>
+      42:	00 00       	nop
+      44:	41 c0       	rjmp	.+130    	; 0xc8 <__bad_interrupt>
+      46:	00 00       	nop
+      48:	3f c0       	rjmp	.+126    	; 0xc8 <__bad_interrupt>
+      4a:	00 00       	nop
+      4c:	3d c0       	rjmp	.+122    	; 0xc8 <__bad_interrupt>
+      4e:	00 00       	nop
+      50:	3b c0       	rjmp	.+118    	; 0xc8 <__bad_interrupt>
+      52:	00 00       	nop
+      54:	39 c0       	rjmp	.+114    	; 0xc8 <__bad_interrupt>
+      56:	00 00       	nop
+      58:	37 c0       	rjmp	.+110    	; 0xc8 <__bad_interrupt>
+      5a:	00 00       	nop
+      5c:	35 c0       	rjmp	.+106    	; 0xc8 <__bad_interrupt>
+      5e:	00 00       	nop
+      60:	33 c0       	rjmp	.+102    	; 0xc8 <__bad_interrupt>
+      62:	00 00       	nop
+      64:	31 c0       	rjmp	.+98     	; 0xc8 <__bad_interrupt>
+      66:	00 00       	nop
+      68:	2f c0       	rjmp	.+94     	; 0xc8 <__bad_interrupt>
+      6a:	00 00       	nop
+      6c:	2d c0       	rjmp	.+90     	; 0xc8 <__bad_interrupt>
+      6e:	00 00       	nop
+      70:	2b c0       	rjmp	.+86     	; 0xc8 <__bad_interrupt>
+      72:	00 00       	nop
+      74:	29 c0       	rjmp	.+82     	; 0xc8 <__bad_interrupt>
+      76:	00 00       	nop
+      78:	27 c0       	rjmp	.+78     	; 0xc8 <__bad_interrupt>
+      7a:	00 00       	nop
+      7c:	25 c0       	rjmp	.+74     	; 0xc8 <__bad_interrupt>
+      7e:	00 00       	nop
+      80:	23 c0       	rjmp	.+70     	; 0xc8 <__bad_interrupt>
+      82:	00 00       	nop
+      84:	21 c0       	rjmp	.+66     	; 0xc8 <__bad_interrupt>
+      86:	00 00       	nop
+      88:	1f c0       	rjmp	.+62     	; 0xc8 <__bad_interrupt>
+	...
+
+0000008c <__ctors_end>:
+      8c:	11 24       	eor	r1, r1
+      8e:	1f be       	out	0x3f, r1	; 63
+      90:	cf ef       	ldi	r28, 0xFF	; 255
+      92:	d0 e1       	ldi	r29, 0x10	; 16
+      94:	de bf       	out	0x3e, r29	; 62
+      96:	cd bf       	out	0x3d, r28	; 61
+
+00000098 <__do_copy_data>:
+      98:	1c e0       	ldi	r17, 0x0C	; 12
+      9a:	a0 e0       	ldi	r26, 0x00	; 0
+      9c:	b1 e0       	ldi	r27, 0x01	; 1
+      9e:	e4 e3       	ldi	r30, 0x34	; 52
+      a0:	fb e1       	ldi	r31, 0x1B	; 27
+      a2:	00 e0       	ldi	r16, 0x00	; 0
+      a4:	0b bf       	out	0x3b, r16	; 59
+      a6:	02 c0       	rjmp	.+4      	; 0xac <__do_copy_data+0x14>
+      a8:	07 90       	elpm	r0, Z+
+      aa:	0d 92       	st	X+, r0
+      ac:	a0 3a       	cpi	r26, 0xA0	; 160
+      ae:	b1 07       	cpc	r27, r17
+      b0:	d9 f7       	brne	.-10     	; 0xa8 <__do_copy_data+0x10>
+
+000000b2 <__do_clear_bss>:
+      b2:	20 e1       	ldi	r18, 0x10	; 16
+      b4:	a0 ea       	ldi	r26, 0xA0	; 160
+      b6:	bc e0       	ldi	r27, 0x0C	; 12
+      b8:	01 c0       	rjmp	.+2      	; 0xbc <.do_clear_bss_start>
+
+000000ba <.do_clear_bss_loop>:
+      ba:	1d 92       	st	X+, r1
+
+000000bc <.do_clear_bss_start>:
+      bc:	a3 3c       	cpi	r26, 0xC3	; 195
+      be:	b2 07       	cpc	r27, r18
+      c0:	e1 f7       	brne	.-8      	; 0xba <.do_clear_bss_loop>
+      c2:	cf d6       	rcall	.+3486   	; 0xe62 <main>
+      c4:	0c 94 98 0d 	jmp	0x1b30	; 0x1b30 <_exit>
+
+000000c8 <__bad_interrupt>:
+      c8:	9b cf       	rjmp	.-202    	; 0x0 <__vectors>
+
+000000ca <Init_Timer0>:
+	}
+}
+
+
+void Init_Timer0(void){ //타이머 인터럽트를 위한 관련 레지스터 초기화
+	TCCR0 = 0x77;
+      ca:	87 e7       	ldi	r24, 0x77	; 119
+      cc:	83 bf       	out	0x33, r24	; 51
+	TCNT0 = 0;
+      ce:	12 be       	out	0x32, r1	; 50
+	SREG = 0x80;
+      d0:	80 e8       	ldi	r24, 0x80	; 128
+      d2:	8f bf       	out	0x3f, r24	; 63
+	TIMSK = 0x01;
+      d4:	81 e0       	ldi	r24, 0x01	; 1
+      d6:	87 bf       	out	0x37, r24	; 55
+      d8:	08 95       	ret
+
+000000da <init_INT>:
+}
+
+void init_INT(void){ //버튼 PD0, PD1의 눌렸을 때 인터럽트를 걸기 위한 초기화 과정
+	EICRA = 0x08;
+      da:	88 e0       	ldi	r24, 0x08	; 8
+      dc:	80 93 6a 00 	sts	0x006A, r24	; 0x80006a <__TEXT_REGION_LENGTH__+0x7e006a>
+	EIMSK = 0x03;
+      e0:	83 e0       	ldi	r24, 0x03	; 3
+      e2:	89 bf       	out	0x39, r24	; 57
+	SREG |= 0x80;
+      e4:	8f b7       	in	r24, 0x3f	; 63
+      e6:	80 68       	ori	r24, 0x80	; 128
+      e8:	8f bf       	out	0x3f, r24	; 63
+      ea:	08 95       	ret
+
+000000ec <__vector_16>:
+}
+
+ISR(TIMER0_OVF_vect){ //타이머 TIMER0의 인터럽트 발생시 핸들러
+      ec:	1f 92       	push	r1
+      ee:	0f 92       	push	r0
+      f0:	0f b6       	in	r0, 0x3f	; 63
+      f2:	0f 92       	push	r0
+      f4:	11 24       	eor	r1, r1
+      f6:	2f 93       	push	r18
+      f8:	3f 93       	push	r19
+      fa:	8f 93       	push	r24
+      fc:	9f 93       	push	r25
+	cnt++; //인터럽트 발생 횟수의 카운터
+      fe:	80 91 ba 0c 	lds	r24, 0x0CBA	; 0x800cba <cnt>
+     102:	90 91 bb 0c 	lds	r25, 0x0CBB	; 0x800cbb <cnt+0x1>
+     106:	01 96       	adiw	r24, 0x01	; 1
+     108:	90 93 bb 0c 	sts	0x0CBB, r25	; 0x800cbb <cnt+0x1>
+     10c:	80 93 ba 0c 	sts	0x0CBA, r24	; 0x800cba <cnt>
+	t0_cnt++; //이하 동일
+     110:	20 91 ab 0c 	lds	r18, 0x0CAB	; 0x800cab <t0_cnt>
+     114:	30 91 ac 0c 	lds	r19, 0x0CAC	; 0x800cac <t0_cnt+0x1>
+     118:	2f 5f       	subi	r18, 0xFF	; 255
+     11a:	3f 4f       	sbci	r19, 0xFF	; 255
+     11c:	30 93 ac 0c 	sts	0x0CAC, r19	; 0x800cac <t0_cnt+0x1>
+     120:	20 93 ab 0c 	sts	0x0CAB, r18	; 0x800cab <t0_cnt>
+	if (t0_cnt == 28){ // 28 정도면 1초
+     124:	2c 31       	cpi	r18, 0x1C	; 28
+     126:	31 05       	cpc	r19, r1
+     128:	71 f4       	brne	.+28     	; 0x146 <__vector_16+0x5a>
+		t0_count++; //1초당 t0_count가 1 증가한다
+     12a:	20 91 a9 0c 	lds	r18, 0x0CA9	; 0x800ca9 <t0_count>
+     12e:	30 91 aa 0c 	lds	r19, 0x0CAA	; 0x800caa <t0_count+0x1>
+     132:	2f 5f       	subi	r18, 0xFF	; 255
+     134:	3f 4f       	sbci	r19, 0xFF	; 255
+     136:	30 93 aa 0c 	sts	0x0CAA, r19	; 0x800caa <t0_count+0x1>
+     13a:	20 93 a9 0c 	sts	0x0CA9, r18	; 0x800ca9 <t0_count>
+		t0_cnt = 0;
+     13e:	10 92 ac 0c 	sts	0x0CAC, r1	; 0x800cac <t0_cnt+0x1>
+     142:	10 92 ab 0c 	sts	0x0CAB, r1	; 0x800cab <t0_cnt>
+	}
+	if (game_flag == 1) cur_score++;  // 점프보이가 장애물 회피 단계 시작되면 현재 점수가 1씩 증가한다.
+     146:	20 91 a4 0c 	lds	r18, 0x0CA4	; 0x800ca4 <game_flag>
+     14a:	21 30       	cpi	r18, 0x01	; 1
+     14c:	51 f4       	brne	.+20     	; 0x162 <__vector_16+0x76>
+     14e:	20 91 a0 0c 	lds	r18, 0x0CA0	; 0x800ca0 <__data_end>
+     152:	30 91 a1 0c 	lds	r19, 0x0CA1	; 0x800ca1 <__data_end+0x1>
+     156:	2f 5f       	subi	r18, 0xFF	; 255
+     158:	3f 4f       	sbci	r19, 0xFF	; 255
+     15a:	30 93 a1 0c 	sts	0x0CA1, r19	; 0x800ca1 <__data_end+0x1>
+     15e:	20 93 a0 0c 	sts	0x0CA0, r18	; 0x800ca0 <__data_end>
+	if (cnt > 150) cnt = 0;
+     162:	87 39       	cpi	r24, 0x97	; 151
+     164:	91 05       	cpc	r25, r1
+     166:	20 f0       	brcs	.+8      	; 0x170 <__vector_16+0x84>
+     168:	10 92 bb 0c 	sts	0x0CBB, r1	; 0x800cbb <cnt+0x1>
+     16c:	10 92 ba 0c 	sts	0x0CBA, r1	; 0x800cba <cnt>
+	play_time++; // play_time이 1씩 증가. play_time이 round_time보다 커질 때, stage 종료
+     170:	80 91 a6 0c 	lds	r24, 0x0CA6	; 0x800ca6 <play_time>
+     174:	90 91 a7 0c 	lds	r25, 0x0CA7	; 0x800ca7 <play_time+0x1>
+     178:	01 96       	adiw	r24, 0x01	; 1
+     17a:	90 93 a7 0c 	sts	0x0CA7, r25	; 0x800ca7 <play_time+0x1>
+     17e:	80 93 a6 0c 	sts	0x0CA6, r24	; 0x800ca6 <play_time>
+}
+     182:	9f 91       	pop	r25
+     184:	8f 91       	pop	r24
+     186:	3f 91       	pop	r19
+     188:	2f 91       	pop	r18
+     18a:	0f 90       	pop	r0
+     18c:	0f be       	out	0x3f, r0	; 63
+     18e:	0f 90       	pop	r0
+     190:	1f 90       	pop	r1
+     192:	18 95       	reti
+
+00000194 <__vector_1>:
+
+//game_state = 게임 단계를 서술하기 위한 flag이다.
+
+ISR(INT0_vect){//PD0 버튼을 눌렀을 때의 인터럽트 핸들을 위한 함수
+     194:	1f 92       	push	r1
+     196:	0f 92       	push	r0
+     198:	0f b6       	in	r0, 0x3f	; 63
+     19a:	0f 92       	push	r0
+     19c:	11 24       	eor	r1, r1
+     19e:	0b b6       	in	r0, 0x3b	; 59
+     1a0:	0f 92       	push	r0
+     1a2:	2f 93       	push	r18
+     1a4:	3f 93       	push	r19
+     1a6:	4f 93       	push	r20
+     1a8:	5f 93       	push	r21
+     1aa:	6f 93       	push	r22
+     1ac:	7f 93       	push	r23
+     1ae:	8f 93       	push	r24
+     1b0:	9f 93       	push	r25
+     1b2:	af 93       	push	r26
+     1b4:	bf 93       	push	r27
+     1b6:	ef 93       	push	r30
+     1b8:	ff 93       	push	r31
+	if (game_state == 0){ //커서가 game start를 가리키고 있을 때의 상태 state = 0
+     1ba:	80 91 ad 0c 	lds	r24, 0x0CAD	; 0x800cad <game_state>
+     1be:	81 11       	cpse	r24, r1
+     1c0:	04 c0       	rjmp	.+8      	; 0x1ca <__vector_1+0x36>
+		game_state = 2; //go to First_step (power gathering step) //state = 0일 때 인터럽트 INT0 발생시 게임 시작으로 인지 -> 게이지 차징 단계로 flag set up
+     1c2:	82 e0       	ldi	r24, 0x02	; 2
+     1c4:	80 93 ad 0c 	sts	0x0CAD, r24	; 0x800cad <game_state>
+     1c8:	39 c0       	rjmp	.+114    	; 0x23c <__vector_1+0xa8>
+	}
+	else if (game_state == 1){ //커서가 credit 위에 있을 때 인터럽트가 걸린다면
+     1ca:	81 30       	cpi	r24, 0x01	; 1
+     1cc:	09 f0       	breq	.+2      	; 0x1d0 <__vector_1+0x3c>
+     1ce:	36 c0       	rjmp	.+108    	; 0x23c <__vector_1+0xa8>
+		lcd_clear(); //크레딧 관련된 내용을 직접 처리한다.
+     1d0:	a6 d7       	rcall	.+3916   	; 0x111e <lcd_clear>
+		ScreenBuffer_clear();
+     1d2:	0e 94 79 09 	call	0x12f2	; 0x12f2 <ScreenBuffer_clear>
+		lcd_string(0, 0, "INHA UNIV.");
+     1d6:	45 e1       	ldi	r20, 0x15	; 21
+     1d8:	5b e0       	ldi	r21, 0x0B	; 11
+     1da:	60 e0       	ldi	r22, 0x00	; 0
+     1dc:	80 e0       	ldi	r24, 0x00	; 0
+     1de:	fd d7       	rcall	.+4090   	; 0x11da <lcd_string>
+		lcd_string(1, 0, "MP Final project");
+     1e0:	40 e2       	ldi	r20, 0x20	; 32
+     1e2:	5b e0       	ldi	r21, 0x0B	; 11
+     1e4:	60 e0       	ldi	r22, 0x00	; 0
+     1e6:	81 e0       	ldi	r24, 0x01	; 1
+     1e8:	f8 d7       	rcall	.+4080   	; 0x11da <lcd_string>
+		lcd_string(2, 0, "PARK-INKYU");
+     1ea:	41 e3       	ldi	r20, 0x31	; 49
+     1ec:	5b e0       	ldi	r21, 0x0B	; 11
+     1ee:	60 e0       	ldi	r22, 0x00	; 0
+     1f0:	82 e0       	ldi	r24, 0x02	; 2
+     1f2:	f3 d7       	rcall	.+4070   	; 0x11da <lcd_string>
+		lcd_string(3, 0, "12121484");
+     1f4:	4c e3       	ldi	r20, 0x3C	; 60
+     1f6:	5b e0       	ldi	r21, 0x0B	; 11
+     1f8:	60 e0       	ldi	r22, 0x00	; 0
+     1fa:	83 e0       	ldi	r24, 0x03	; 3
+     1fc:	ee d7       	rcall	.+4060   	; 0x11da <lcd_string>
+		lcd_string(4, 0, "CHOO-KYOJUNG");
+     1fe:	45 e4       	ldi	r20, 0x45	; 69
+     200:	5b e0       	ldi	r21, 0x0B	; 11
+     202:	60 e0       	ldi	r22, 0x00	; 0
+     204:	84 e0       	ldi	r24, 0x04	; 4
+     206:	e9 d7       	rcall	.+4050   	; 0x11da <lcd_string>
+		lcd_string(5, 0, "12111684");
+     208:	42 e5       	ldi	r20, 0x52	; 82
+     20a:	5b e0       	ldi	r21, 0x0B	; 11
+     20c:	60 e0       	ldi	r22, 0x00	; 0
+     20e:	85 e0       	ldi	r24, 0x05	; 5
+     210:	e4 d7       	rcall	.+4040   	; 0x11da <lcd_string>
+		lcd_string(6, 0, "2016. 12. 19.");
+     212:	4b e5       	ldi	r20, 0x5B	; 91
+     214:	5b e0       	ldi	r21, 0x0B	; 11
+     216:	60 e0       	ldi	r22, 0x00	; 0
+     218:	86 e0       	ldi	r24, 0x06	; 6
+     21a:	df d7       	rcall	.+4030   	; 0x11da <lcd_string>
+		lcd_string(7, 0, "All right reserved");
+     21c:	49 e6       	ldi	r20, 0x69	; 105
+     21e:	5b e0       	ldi	r21, 0x0B	; 11
+     220:	60 e0       	ldi	r22, 0x00	; 0
+     222:	87 e0       	ldi	r24, 0x07	; 7
+     224:	da d7       	rcall	.+4020   	; 0x11da <lcd_string>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+     226:	2f ef       	ldi	r18, 0xFF	; 255
+     228:	8f ef       	ldi	r24, 0xFF	; 255
+     22a:	90 ee       	ldi	r25, 0xE0	; 224
+     22c:	21 50       	subi	r18, 0x01	; 1
+     22e:	80 40       	sbci	r24, 0x00	; 0
+     230:	90 40       	sbci	r25, 0x00	; 0
+     232:	e1 f7       	brne	.-8      	; 0x22c <__vector_1+0x98>
+     234:	00 c0       	rjmp	.+0      	; 0x236 <__vector_1+0xa2>
+     236:	00 00       	nop
+		_delay_ms(5000);
+		game_state = 0;
+     238:	10 92 ad 0c 	sts	0x0CAD, r1	; 0x800cad <game_state>
+	}
+}
+     23c:	ff 91       	pop	r31
+     23e:	ef 91       	pop	r30
+     240:	bf 91       	pop	r27
+     242:	af 91       	pop	r26
+     244:	9f 91       	pop	r25
+     246:	8f 91       	pop	r24
+     248:	7f 91       	pop	r23
+     24a:	6f 91       	pop	r22
+     24c:	5f 91       	pop	r21
+     24e:	4f 91       	pop	r20
+     250:	3f 91       	pop	r19
+     252:	2f 91       	pop	r18
+     254:	0f 90       	pop	r0
+     256:	0b be       	out	0x3b, r0	; 59
+     258:	0f 90       	pop	r0
+     25a:	0f be       	out	0x3f, r0	; 63
+     25c:	0f 90       	pop	r0
+     25e:	1f 90       	pop	r1
+     260:	18 95       	reti
+
+00000262 <__vector_2>:
+
+//게이지 차징 단계에서 게이지 차징을 하기 위한 버튼으로 PD1이 이용된다
+ISR(INT1_vect){ //PD1에 대한 인터럽트 핸들링을 위한 함수
+     262:	1f 92       	push	r1
+     264:	0f 92       	push	r0
+     266:	0f b6       	in	r0, 0x3f	; 63
+     268:	0f 92       	push	r0
+     26a:	11 24       	eor	r1, r1
+     26c:	2f 93       	push	r18
+     26e:	3f 93       	push	r19
+     270:	5f 93       	push	r21
+     272:	6f 93       	push	r22
+     274:	7f 93       	push	r23
+     276:	8f 93       	push	r24
+     278:	9f 93       	push	r25
+     27a:	af 93       	push	r26
+     27c:	bf 93       	push	r27
+	cli();//모든 인터럽트를 막는다
+     27e:	f8 94       	cli
+	power_cnt++;//눌린 횟수를 계수한다.
+     280:	80 91 af 0c 	lds	r24, 0x0CAF	; 0x800caf <power_cnt>
+     284:	90 91 b0 0c 	lds	r25, 0x0CB0	; 0x800cb0 <power_cnt+0x1>
+     288:	01 96       	adiw	r24, 0x01	; 1
+     28a:	90 93 b0 0c 	sts	0x0CB0, r25	; 0x800cb0 <power_cnt+0x1>
+     28e:	80 93 af 0c 	sts	0x0CAF, r24	; 0x800caf <power_cnt>
+	box_state = (power_cnt / (stage_number * 10)); //눌린 횟수는 파워게이지와 연결된다, 스테이지별 요구 게이지(파워)가 다 다르다
+     292:	20 91 a8 0c 	lds	r18, 0x0CA8	; 0x800ca8 <stage_number>
+     296:	30 e0       	ldi	r19, 0x00	; 0
+     298:	b9 01       	movw	r22, r18
+     29a:	66 0f       	add	r22, r22
+     29c:	77 1f       	adc	r23, r23
+     29e:	22 0f       	add	r18, r18
+     2a0:	33 1f       	adc	r19, r19
+     2a2:	22 0f       	add	r18, r18
+     2a4:	33 1f       	adc	r19, r19
+     2a6:	22 0f       	add	r18, r18
+     2a8:	33 1f       	adc	r19, r19
+     2aa:	62 0f       	add	r22, r18
+     2ac:	73 1f       	adc	r23, r19
+     2ae:	0e 94 62 0d 	call	0x1ac4	; 0x1ac4 <__udivmodhi4>
+	if (box_state >= 6) box_state = 6; //스테이지가 올라갈 수록 요구 게이지는 증가함
+     2b2:	66 30       	cpi	r22, 0x06	; 6
+     2b4:	71 05       	cpc	r23, r1
+     2b6:	28 f4       	brcc	.+10     	; 0x2c2 <__vector_2+0x60>
+
+//게이지 차징 단계에서 게이지 차징을 하기 위한 버튼으로 PD1이 이용된다
+ISR(INT1_vect){ //PD1에 대한 인터럽트 핸들링을 위한 함수
+	cli();//모든 인터럽트를 막는다
+	power_cnt++;//눌린 횟수를 계수한다.
+	box_state = (power_cnt / (stage_number * 10)); //눌린 횟수는 파워게이지와 연결된다, 스테이지별 요구 게이지(파워)가 다 다르다
+     2b8:	70 93 b2 0c 	sts	0x0CB2, r23	; 0x800cb2 <box_state+0x1>
+     2bc:	60 93 b1 0c 	sts	0x0CB1, r22	; 0x800cb1 <box_state>
+     2c0:	06 c0       	rjmp	.+12     	; 0x2ce <__vector_2+0x6c>
+	if (box_state >= 6) box_state = 6; //스테이지가 올라갈 수록 요구 게이지는 증가함
+     2c2:	86 e0       	ldi	r24, 0x06	; 6
+     2c4:	90 e0       	ldi	r25, 0x00	; 0
+     2c6:	90 93 b2 0c 	sts	0x0CB2, r25	; 0x800cb2 <box_state+0x1>
+     2ca:	80 93 b1 0c 	sts	0x0CB1, r24	; 0x800cb1 <box_state>
+     2ce:	8f ef       	ldi	r24, 0xFF	; 255
+     2d0:	9f e8       	ldi	r25, 0x8F	; 143
+     2d2:	01 97       	sbiw	r24, 0x01	; 1
+     2d4:	f1 f7       	brne	.-4      	; 0x2d2 <__vector_2+0x70>
+     2d6:	00 c0       	rjmp	.+0      	; 0x2d8 <__vector_2+0x76>
+     2d8:	00 00       	nop
+	_delay_ms(10);
+	sei();//인터럽트를 허용한다
+     2da:	78 94       	sei
+}
+     2dc:	bf 91       	pop	r27
+     2de:	af 91       	pop	r26
+     2e0:	9f 91       	pop	r25
+     2e2:	8f 91       	pop	r24
+     2e4:	7f 91       	pop	r23
+     2e6:	6f 91       	pop	r22
+     2e8:	5f 91       	pop	r21
+     2ea:	3f 91       	pop	r19
+     2ec:	2f 91       	pop	r18
+     2ee:	0f 90       	pop	r0
+     2f0:	0f be       	out	0x3f, r0	; 63
+     2f2:	0f 90       	pop	r0
+     2f4:	1f 90       	pop	r1
+     2f6:	18 95       	reti
+
+000002f8 <Port_init>:
+	_delay_ms(1500);
+}
+
+
+void Port_init(void){//포트 초기화를 위한 함수
+	PORTA = 0x00; DDRA = 0xff;
+     2f8:	1b ba       	out	0x1b, r1	; 27
+     2fa:	8f ef       	ldi	r24, 0xFF	; 255
+     2fc:	8a bb       	out	0x1a, r24	; 26
+	PORTB = 0xff; DDRB = 0xff;
+     2fe:	88 bb       	out	0x18, r24	; 24
+     300:	87 bb       	out	0x17, r24	; 23
+	PORTC = 0x00; DDRC = 0xf0;
+     302:	15 ba       	out	0x15, r1	; 21
+     304:	90 ef       	ldi	r25, 0xF0	; 240
+     306:	94 bb       	out	0x14, r25	; 20
+	PORTD = 0x80; DDRD = 0x80;
+     308:	90 e8       	ldi	r25, 0x80	; 128
+     30a:	92 bb       	out	0x12, r25	; 18
+     30c:	91 bb       	out	0x11, r25	; 17
+	PORTE = 0x00; DDRE = 0xff;
+     30e:	13 b8       	out	0x03, r1	; 3
+     310:	82 b9       	out	0x02, r24	; 2
+	PORTF = 0x00; DDRF = 0x00;
+     312:	10 92 62 00 	sts	0x0062, r1	; 0x800062 <__TEXT_REGION_LENGTH__+0x7e0062>
+     316:	10 92 61 00 	sts	0x0061, r1	; 0x800061 <__TEXT_REGION_LENGTH__+0x7e0061>
+     31a:	08 95       	ret
+
+0000031c <init_devices>:
+}
+
+void init_devices(void){ //장치 초기화를 위한 함수
+	cli();
+     31c:	f8 94       	cli
+	Port_init();
+     31e:	ec df       	rcall	.-40     	; 0x2f8 <Port_init>
+	Adc_init();
+     320:	8d d6       	rcall	.+3354   	; 0x103c <Adc_init>
+	lcd_init();
+     322:	0f d7       	rcall	.+3614   	; 0x1142 <lcd_init>
+	init_INT();
+     324:	da de       	rcall	.-588    	; 0xda <init_INT>
+	sei();
+     326:	78 94       	sei
+     328:	08 95       	ret
+
+0000032a <next_stage_display>:
+		_delay_ms(100);
+	}
+}
+
+void next_stage_display(void){ // 다음 stage번호를 출력하는 함수
+	++stage_number; // 다음 stage로 넘어가면서 stage번호 1증가
+     32a:	80 91 a8 0c 	lds	r24, 0x0CA8	; 0x800ca8 <stage_number>
+     32e:	8f 5f       	subi	r24, 0xFF	; 255
+     330:	80 93 a8 0c 	sts	0x0CA8, r24	; 0x800ca8 <stage_number>
+	lcd_clear();
+     334:	f4 d6       	rcall	.+3560   	; 0x111e <lcd_clear>
+	lcd_string(3, 6, "STAGE");   // STAGE 출력
+     336:	4c e7       	ldi	r20, 0x7C	; 124
+     338:	5b e0       	ldi	r21, 0x0B	; 11
+     33a:	66 e0       	ldi	r22, 0x06	; 6
+     33c:	83 e0       	ldi	r24, 0x03	; 3
+     33e:	4d d7       	rcall	.+3738   	; 0x11da <lcd_string>
+	lcd_xy(3, 11);
+     340:	6b e0       	ldi	r22, 0x0B	; 11
+     342:	83 e0       	ldi	r24, 0x03	; 3
+     344:	07 d7       	rcall	.+3598   	; 0x1154 <lcd_xy>
+	GLCD_2DigitDecimal(stage_number); // stage 번호출력
+     346:	80 91 a8 0c 	lds	r24, 0x0CA8	; 0x800ca8 <stage_number>
+     34a:	0e 94 4d 0b 	call	0x169a	; 0x169a <GLCD_2DigitDecimal>
+     34e:	2f ef       	ldi	r18, 0xFF	; 255
+     350:	8f ef       	ldi	r24, 0xFF	; 255
+     352:	96 e8       	ldi	r25, 0x86	; 134
+     354:	21 50       	subi	r18, 0x01	; 1
+     356:	80 40       	sbci	r24, 0x00	; 0
+     358:	90 40       	sbci	r25, 0x00	; 0
+     35a:	e1 f7       	brne	.-8      	; 0x354 <next_stage_display+0x2a>
+     35c:	00 c0       	rjmp	.+0      	; 0x35e <next_stage_display+0x34>
+     35e:	00 00       	nop
+     360:	08 95       	ret
+
+00000362 <score_display>:
+	_delay_ms(3000);
+}
+
+void score_display(void){   // game over 또는 game clear 후 최고 점수와 현재 점수를 출력하는 함수
+	if (max_score < cur_score) max_score = cur_score; // 현재 점수가 최고 점수보다 높았다면 최고 점수를 갱신해준다.
+     362:	80 91 a0 0c 	lds	r24, 0x0CA0	; 0x800ca0 <__data_end>
+     366:	90 91 a1 0c 	lds	r25, 0x0CA1	; 0x800ca1 <__data_end+0x1>
+     36a:	20 91 a2 0c 	lds	r18, 0x0CA2	; 0x800ca2 <max_score>
+     36e:	30 91 a3 0c 	lds	r19, 0x0CA3	; 0x800ca3 <max_score+0x1>
+     372:	28 17       	cp	r18, r24
+     374:	39 07       	cpc	r19, r25
+     376:	20 f4       	brcc	.+8      	; 0x380 <score_display+0x1e>
+     378:	90 93 a3 0c 	sts	0x0CA3, r25	; 0x800ca3 <max_score+0x1>
+     37c:	80 93 a2 0c 	sts	0x0CA2, r24	; 0x800ca2 <max_score>
+	lcd_clear();
+     380:	ce d6       	rcall	.+3484   	; 0x111e <lcd_clear>
+	lcd_string(2, 0, "Max score : "); lcd_xy(2, 10); GLCD_4DigitDecimal(max_score); // 최고 점수 출력
+     382:	42 e8       	ldi	r20, 0x82	; 130
+     384:	5b e0       	ldi	r21, 0x0B	; 11
+     386:	60 e0       	ldi	r22, 0x00	; 0
+     388:	82 e0       	ldi	r24, 0x02	; 2
+     38a:	27 d7       	rcall	.+3662   	; 0x11da <lcd_string>
+     38c:	6a e0       	ldi	r22, 0x0A	; 10
+     38e:	82 e0       	ldi	r24, 0x02	; 2
+     390:	e1 d6       	rcall	.+3522   	; 0x1154 <lcd_xy>
+     392:	80 91 a2 0c 	lds	r24, 0x0CA2	; 0x800ca2 <max_score>
+     396:	90 91 a3 0c 	lds	r25, 0x0CA3	; 0x800ca3 <max_score+0x1>
+     39a:	0e 94 70 0b 	call	0x16e0	; 0x16e0 <GLCD_4DigitDecimal>
+	lcd_string(4, 0, "Cur score : "); lcd_xy(4, 10); GLCD_4DigitDecimal(cur_score); // 현재 점수 출력
+     39e:	4f e8       	ldi	r20, 0x8F	; 143
+     3a0:	5b e0       	ldi	r21, 0x0B	; 11
+     3a2:	60 e0       	ldi	r22, 0x00	; 0
+     3a4:	84 e0       	ldi	r24, 0x04	; 4
+     3a6:	19 d7       	rcall	.+3634   	; 0x11da <lcd_string>
+     3a8:	6a e0       	ldi	r22, 0x0A	; 10
+     3aa:	84 e0       	ldi	r24, 0x04	; 4
+     3ac:	d3 d6       	rcall	.+3494   	; 0x1154 <lcd_xy>
+     3ae:	80 91 a0 0c 	lds	r24, 0x0CA0	; 0x800ca0 <__data_end>
+     3b2:	90 91 a1 0c 	lds	r25, 0x0CA1	; 0x800ca1 <__data_end+0x1>
+     3b6:	0c 94 70 0b 	jmp	0x16e0	; 0x16e0 <GLCD_4DigitDecimal>
+     3ba:	08 95       	ret
+
+000003bc <ending_display>:
+}
+
+void ending_display(){ //게임 종료를 출력하는 함수
+	lcd_clear();
+     3bc:	b0 d6       	rcall	.+3424   	; 0x111e <lcd_clear>
+	if (end_flag == 0){ //flag가 0일 경우, 실패를 의미한다
+     3be:	80 91 a5 0c 	lds	r24, 0x0CA5	; 0x800ca5 <end_flag>
+     3c2:	81 11       	cpse	r24, r1
+     3c4:	06 c0       	rjmp	.+12     	; 0x3d2 <ending_display+0x16>
+		lcd_string(3, 5, "GAME OVER");
+     3c6:	4c e9       	ldi	r20, 0x9C	; 156
+     3c8:	5b e0       	ldi	r21, 0x0B	; 11
+     3ca:	65 e0       	ldi	r22, 0x05	; 5
+     3cc:	83 e0       	ldi	r24, 0x03	; 3
+     3ce:	05 d7       	rcall	.+3594   	; 0x11da <lcd_string>
+     3d0:	73 c0       	rjmp	.+230    	; 0x4b8 <__LOCK_REGION_LENGTH__+0xb8>
+	}
+	else{//아닌 경우, 엔딩을 출력한다
+		lcd_string(3, 7, "CLEAR!");
+     3d2:	46 ea       	ldi	r20, 0xA6	; 166
+     3d4:	5b e0       	ldi	r21, 0x0B	; 11
+     3d6:	67 e0       	ldi	r22, 0x07	; 7
+     3d8:	83 e0       	ldi	r24, 0x03	; 3
+     3da:	ff d6       	rcall	.+3582   	; 0x11da <lcd_string>
+     3dc:	2f ef       	ldi	r18, 0xFF	; 255
+     3de:	8f ef       	ldi	r24, 0xFF	; 255
+     3e0:	96 e8       	ldi	r25, 0x86	; 134
+     3e2:	21 50       	subi	r18, 0x01	; 1
+     3e4:	80 40       	sbci	r24, 0x00	; 0
+     3e6:	90 40       	sbci	r25, 0x00	; 0
+     3e8:	e1 f7       	brne	.-8      	; 0x3e2 <ending_display+0x26>
+     3ea:	00 c0       	rjmp	.+0      	; 0x3ec <ending_display+0x30>
+     3ec:	00 00       	nop
+		_delay_ms(3000);
+		lcd_clear();
+     3ee:	97 d6       	rcall	.+3374   	; 0x111e <lcd_clear>
+		ScreenBuffer_clear();
+     3f0:	80 d7       	rcall	.+3840   	; 0x12f2 <ScreenBuffer_clear>
+		lcd_string(3, 0, "Super Jump boy");
+     3f2:	4d ea       	ldi	r20, 0xAD	; 173
+     3f4:	5b e0       	ldi	r21, 0x0B	; 11
+     3f6:	60 e0       	ldi	r22, 0x00	; 0
+     3f8:	83 e0       	ldi	r24, 0x03	; 3
+     3fa:	ef d6       	rcall	.+3550   	; 0x11da <lcd_string>
+		lcd_string(4, 0, "successly escaped!");
+     3fc:	4c eb       	ldi	r20, 0xBC	; 188
+     3fe:	5b e0       	ldi	r21, 0x0B	; 11
+     400:	60 e0       	ldi	r22, 0x00	; 0
+     402:	84 e0       	ldi	r24, 0x04	; 4
+     404:	ea d6       	rcall	.+3540   	; 0x11da <lcd_string>
+     406:	2f ef       	ldi	r18, 0xFF	; 255
+     408:	8f ef       	ldi	r24, 0xFF	; 255
+     40a:	96 e8       	ldi	r25, 0x86	; 134
+     40c:	21 50       	subi	r18, 0x01	; 1
+     40e:	80 40       	sbci	r24, 0x00	; 0
+     410:	90 40       	sbci	r25, 0x00	; 0
+     412:	e1 f7       	brne	.-8      	; 0x40c <__LOCK_REGION_LENGTH__+0xc>
+     414:	00 c0       	rjmp	.+0      	; 0x416 <__LOCK_REGION_LENGTH__+0x16>
+     416:	00 00       	nop
+		_delay_ms(3000);
+		lcd_clear();
+     418:	82 d6       	rcall	.+3332   	; 0x111e <lcd_clear>
+		lcd_string(3, 4, "PARK-INKYU");
+     41a:	41 e3       	ldi	r20, 0x31	; 49
+     41c:	5b e0       	ldi	r21, 0x0B	; 11
+     41e:	64 e0       	ldi	r22, 0x04	; 4
+     420:	83 e0       	ldi	r24, 0x03	; 3
+     422:	db d6       	rcall	.+3510   	; 0x11da <lcd_string>
+     424:	2f ef       	ldi	r18, 0xFF	; 255
+     426:	8f ef       	ldi	r24, 0xFF	; 255
+     428:	93 eb       	ldi	r25, 0xB3	; 179
+     42a:	21 50       	subi	r18, 0x01	; 1
+     42c:	80 40       	sbci	r24, 0x00	; 0
+     42e:	90 40       	sbci	r25, 0x00	; 0
+     430:	e1 f7       	brne	.-8      	; 0x42a <__LOCK_REGION_LENGTH__+0x2a>
+     432:	00 c0       	rjmp	.+0      	; 0x434 <__LOCK_REGION_LENGTH__+0x34>
+     434:	00 00       	nop
+		_delay_ms(4000);
+		lcd_clear();
+     436:	73 d6       	rcall	.+3302   	; 0x111e <lcd_clear>
+		lcd_string(3, 4, "CHOO-KYOJUNG");
+     438:	45 e4       	ldi	r20, 0x45	; 69
+     43a:	5b e0       	ldi	r21, 0x0B	; 11
+     43c:	64 e0       	ldi	r22, 0x04	; 4
+     43e:	83 e0       	ldi	r24, 0x03	; 3
+     440:	cc d6       	rcall	.+3480   	; 0x11da <lcd_string>
+     442:	2f ef       	ldi	r18, 0xFF	; 255
+     444:	8f ef       	ldi	r24, 0xFF	; 255
+     446:	93 eb       	ldi	r25, 0xB3	; 179
+     448:	21 50       	subi	r18, 0x01	; 1
+     44a:	80 40       	sbci	r24, 0x00	; 0
+     44c:	90 40       	sbci	r25, 0x00	; 0
+     44e:	e1 f7       	brne	.-8      	; 0x448 <__LOCK_REGION_LENGTH__+0x48>
+     450:	00 c0       	rjmp	.+0      	; 0x452 <__LOCK_REGION_LENGTH__+0x52>
+     452:	00 00       	nop
+		_delay_ms(4000);
+		lcd_clear();
+     454:	64 d6       	rcall	.+3272   	; 0x111e <lcd_clear>
+		lcd_string(2, 4, "CHOO X PARK");
+     456:	4f ec       	ldi	r20, 0xCF	; 207
+     458:	5b e0       	ldi	r21, 0x0B	; 11
+     45a:	64 e0       	ldi	r22, 0x04	; 4
+     45c:	82 e0       	ldi	r24, 0x02	; 2
+     45e:	bd d6       	rcall	.+3450   	; 0x11da <lcd_string>
+		lcd_string(3, 4, "2016. 12. 19");
+     460:	4b ed       	ldi	r20, 0xDB	; 219
+     462:	5b e0       	ldi	r21, 0x0B	; 11
+     464:	64 e0       	ldi	r22, 0x04	; 4
+     466:	83 e0       	ldi	r24, 0x03	; 3
+     468:	b8 d6       	rcall	.+3440   	; 0x11da <lcd_string>
+     46a:	2f ef       	ldi	r18, 0xFF	; 255
+     46c:	8f ef       	ldi	r24, 0xFF	; 255
+     46e:	90 ee       	ldi	r25, 0xE0	; 224
+     470:	21 50       	subi	r18, 0x01	; 1
+     472:	80 40       	sbci	r24, 0x00	; 0
+     474:	90 40       	sbci	r25, 0x00	; 0
+     476:	e1 f7       	brne	.-8      	; 0x470 <__LOCK_REGION_LENGTH__+0x70>
+     478:	00 c0       	rjmp	.+0      	; 0x47a <__LOCK_REGION_LENGTH__+0x7a>
+     47a:	00 00       	nop
+		_delay_ms(5000);
+		lcd_clear();
+     47c:	50 d6       	rcall	.+3232   	; 0x111e <lcd_clear>
+		lcd_string(3, 5, "THANK YOU");
+     47e:	48 ee       	ldi	r20, 0xE8	; 232
+     480:	5b e0       	ldi	r21, 0x0B	; 11
+     482:	65 e0       	ldi	r22, 0x05	; 5
+     484:	83 e0       	ldi	r24, 0x03	; 3
+     486:	a9 d6       	rcall	.+3410   	; 0x11da <lcd_string>
+     488:	2f ef       	ldi	r18, 0xFF	; 255
+     48a:	8f ef       	ldi	r24, 0xFF	; 255
+     48c:	96 e8       	ldi	r25, 0x86	; 134
+     48e:	21 50       	subi	r18, 0x01	; 1
+     490:	80 40       	sbci	r24, 0x00	; 0
+     492:	90 40       	sbci	r25, 0x00	; 0
+     494:	e1 f7       	brne	.-8      	; 0x48e <__LOCK_REGION_LENGTH__+0x8e>
+     496:	00 c0       	rjmp	.+0      	; 0x498 <__LOCK_REGION_LENGTH__+0x98>
+     498:	00 00       	nop
+		_delay_ms(3000);
+		lcd_clear();
+     49a:	41 d6       	rcall	.+3202   	; 0x111e <lcd_clear>
+		lcd_string(3, 5, "GAME OVER");
+     49c:	4c e9       	ldi	r20, 0x9C	; 156
+     49e:	5b e0       	ldi	r21, 0x0B	; 11
+     4a0:	65 e0       	ldi	r22, 0x05	; 5
+     4a2:	83 e0       	ldi	r24, 0x03	; 3
+     4a4:	9a d6       	rcall	.+3380   	; 0x11da <lcd_string>
+     4a6:	2f ef       	ldi	r18, 0xFF	; 255
+     4a8:	8f ef       	ldi	r24, 0xFF	; 255
+     4aa:	99 e5       	ldi	r25, 0x59	; 89
+     4ac:	21 50       	subi	r18, 0x01	; 1
+     4ae:	80 40       	sbci	r24, 0x00	; 0
+     4b0:	90 40       	sbci	r25, 0x00	; 0
+     4b2:	e1 f7       	brne	.-8      	; 0x4ac <__LOCK_REGION_LENGTH__+0xac>
+     4b4:	00 c0       	rjmp	.+0      	; 0x4b6 <__LOCK_REGION_LENGTH__+0xb6>
+     4b6:	00 00       	nop
+     4b8:	2f ef       	ldi	r18, 0xFF	; 255
+     4ba:	8f ef       	ldi	r24, 0xFF	; 255
+     4bc:	93 eb       	ldi	r25, 0xB3	; 179
+     4be:	21 50       	subi	r18, 0x01	; 1
+     4c0:	80 40       	sbci	r24, 0x00	; 0
+     4c2:	90 40       	sbci	r25, 0x00	; 0
+     4c4:	e1 f7       	brne	.-8      	; 0x4be <__LOCK_REGION_LENGTH__+0xbe>
+     4c6:	00 c0       	rjmp	.+0      	; 0x4c8 <__LOCK_REGION_LENGTH__+0xc8>
+     4c8:	00 00       	nop
+		_delay_ms(2000);
+	}
+
+	_delay_ms(4000);
+	score_display();
+     4ca:	4b cf       	rjmp	.-362    	; 0x362 <score_display>
+     4cc:	08 95       	ret
+
+000004ce <compare>:
+}
+
+// 점프보이와 새가 충돌했는 지를 확인하는 함수
+void compare(unsigned char* y, unsigned char* x, Bird* ptr, unsigned char bird_num){ // 점프보이의 x, y좌표와 Bird 구조체의 구조체변수, 새번호를 전달 받음
+	if (*y - 10 <= ptr->y && ptr->y <= *y + 10 && *x - 10 <= ptr->x && ptr->x <= *x + 10){ // 점프보이와 새가 충돌했다면
+     4ce:	dc 01       	movw	r26, r24
+     4d0:	8c 91       	ld	r24, X
+     4d2:	90 e0       	ldi	r25, 0x00	; 0
+     4d4:	da 01       	movw	r26, r20
+     4d6:	11 96       	adiw	r26, 0x01	; 1
+     4d8:	ec 91       	ld	r30, X
+     4da:	f0 e0       	ldi	r31, 0x00	; 0
+     4dc:	dc 01       	movw	r26, r24
+     4de:	1a 97       	sbiw	r26, 0x0a	; 10
+     4e0:	ea 17       	cp	r30, r26
+     4e2:	fb 07       	cpc	r31, r27
+     4e4:	0c f4       	brge	.+2      	; 0x4e8 <compare+0x1a>
+     4e6:	43 c0       	rjmp	.+134    	; 0x56e <compare+0xa0>
+     4e8:	0a 96       	adiw	r24, 0x0a	; 10
+     4ea:	8e 17       	cp	r24, r30
+     4ec:	9f 07       	cpc	r25, r31
+     4ee:	0c f4       	brge	.+2      	; 0x4f2 <compare+0x24>
+     4f0:	3e c0       	rjmp	.+124    	; 0x56e <compare+0xa0>
+     4f2:	fb 01       	movw	r30, r22
+     4f4:	80 81       	ld	r24, Z
+     4f6:	90 e0       	ldi	r25, 0x00	; 0
+     4f8:	da 01       	movw	r26, r20
+     4fa:	4c 91       	ld	r20, X
+     4fc:	50 e0       	ldi	r21, 0x00	; 0
+     4fe:	bc 01       	movw	r22, r24
+     500:	6a 50       	subi	r22, 0x0A	; 10
+     502:	71 09       	sbc	r23, r1
+     504:	46 17       	cp	r20, r22
+     506:	57 07       	cpc	r21, r23
+     508:	94 f1       	brlt	.+100    	; 0x56e <compare+0xa0>
+     50a:	0a 96       	adiw	r24, 0x0a	; 10
+     50c:	84 17       	cp	r24, r20
+     50e:	95 07       	cpc	r25, r21
+     510:	74 f1       	brlt	.+92     	; 0x56e <compare+0xa0>
+		if (crash_flag[bird_num] == 0){ // 해당 bird_num의 crash_flag가 0인지 체크. 즉 처음 충돌했는지 체크
+     512:	30 e0       	ldi	r19, 0x00	; 0
+     514:	f9 01       	movw	r30, r18
+     516:	e9 54       	subi	r30, 0x49	; 73
+     518:	f3 4f       	sbci	r31, 0xF3	; 243
+     51a:	80 81       	ld	r24, Z
+     51c:	81 11       	cpse	r24, r1
+     51e:	2c c0       	rjmp	.+88     	; 0x578 <compare+0xaa>
+			crash_flag[bird_num] = 1;  // 현재 bird_num의 새와 충돌중임
+     520:	81 e0       	ldi	r24, 0x01	; 1
+     522:	f9 01       	movw	r30, r18
+     524:	e9 54       	subi	r30, 0x49	; 73
+     526:	f3 4f       	sbci	r31, 0xF3	; 243
+     528:	80 83       	st	Z, r24
+			if (life > 1){ // life가 1 초과시 새와 충돌하면 life 1 감소
+     52a:	80 91 ae 0c 	lds	r24, 0x0CAE	; 0x800cae <life>
+     52e:	82 30       	cpi	r24, 0x02	; 2
+     530:	90 f0       	brcs	.+36     	; 0x556 <compare+0x88>
+				life--;
+     532:	81 50       	subi	r24, 0x01	; 1
+     534:	80 93 ae 0c 	sts	0x0CAE, r24	; 0x800cae <life>
+				GLCD_Rectangle_black(0, 0, 64, 128); // 충돌시 이팩트
+     538:	20 e8       	ldi	r18, 0x80	; 128
+     53a:	40 e4       	ldi	r20, 0x40	; 64
+     53c:	60 e0       	ldi	r22, 0x00	; 0
+     53e:	80 e0       	ldi	r24, 0x00	; 0
+     540:	90 d7       	rcall	.+3872   	; 0x1462 <GLCD_Rectangle_black>
+     542:	bf ef       	ldi	r27, 0xFF	; 255
+     544:	ef e7       	ldi	r30, 0x7F	; 127
+     546:	f4 e0       	ldi	r31, 0x04	; 4
+     548:	b1 50       	subi	r27, 0x01	; 1
+     54a:	e0 40       	sbci	r30, 0x00	; 0
+     54c:	f0 40       	sbci	r31, 0x00	; 0
+     54e:	e1 f7       	brne	.-8      	; 0x548 <compare+0x7a>
+     550:	00 c0       	rjmp	.+0      	; 0x552 <compare+0x84>
+     552:	00 00       	nop
+     554:	08 95       	ret
+				_delay_ms(100);
+			}
+			else{
+				game_state = 5; // 남은 life가 없을 때 충돌했다면 game_state에 5를 넣어 ending으로 넘어가게 함
+     556:	85 e0       	ldi	r24, 0x05	; 5
+     558:	80 93 ad 0c 	sts	0x0CAD, r24	; 0x800cad <game_state>
+				end_flag = 0;  // ending이 game_over임을 알림
+     55c:	10 92 a5 0c 	sts	0x0CA5, r1	; 0x800ca5 <end_flag>
+				game_flag = 0; // 새 피하기 종료
+     560:	10 92 a4 0c 	sts	0x0CA4, r1	; 0x800ca4 <game_flag>
+				crash_flag[bird_num] = 0; // 해당 새와 충돌이 끝났음
+     564:	f9 01       	movw	r30, r18
+     566:	e9 54       	subi	r30, 0x49	; 73
+     568:	f3 4f       	sbci	r31, 0xF3	; 243
+     56a:	10 82       	st	Z, r1
+     56c:	08 95       	ret
+			}
+		}
+	}
+	else
+	crash_flag[bird_num] = 0; // 범위를 벗어나면 해당 새와 충돌이 끝났음을 flag로 체크
+     56e:	e2 2f       	mov	r30, r18
+     570:	f0 e0       	ldi	r31, 0x00	; 0
+     572:	e9 54       	subi	r30, 0x49	; 73
+     574:	f3 4f       	sbci	r31, 0xF3	; 243
+     576:	10 82       	st	Z, r1
+     578:	08 95       	ret
+
+0000057a <print_bitmap>:
+}
+
+
+// 그림을 해당위치에 전달 받은 크기만큼 출력해주는 함수
+void print_bitmap(unsigned char *test, unsigned char x, unsigned char y, unsigned char sz_x, unsigned char sz_y)
+{   //출력 위치를 설정한다
+     57a:	2f 92       	push	r2
+     57c:	3f 92       	push	r3
+     57e:	4f 92       	push	r4
+     580:	5f 92       	push	r5
+     582:	6f 92       	push	r6
+     584:	7f 92       	push	r7
+     586:	8f 92       	push	r8
+     588:	9f 92       	push	r9
+     58a:	af 92       	push	r10
+     58c:	bf 92       	push	r11
+     58e:	cf 92       	push	r12
+     590:	df 92       	push	r13
+     592:	ef 92       	push	r14
+     594:	ff 92       	push	r15
+     596:	0f 93       	push	r16
+     598:	1f 93       	push	r17
+     59a:	cf 93       	push	r28
+     59c:	df 93       	push	r29
+     59e:	cd b7       	in	r28, 0x3d	; 61
+     5a0:	de b7       	in	r29, 0x3e	; 62
+     5a2:	2a 97       	sbiw	r28, 0x0a	; 10
+     5a4:	0f b6       	in	r0, 0x3f	; 63
+     5a6:	f8 94       	cli
+     5a8:	de bf       	out	0x3e, r29	; 62
+     5aa:	0f be       	out	0x3f, r0	; 63
+     5ac:	cd bf       	out	0x3d, r28	; 61
+     5ae:	54 2e       	mov	r5, r20
+	//이미지가 이차원 배열이 아닌 일차원 배열로 입력되기 때문에 구분할 필요가 있다.
+	int pos = 0; //구분을 pos를 이용해서 한다.
+	
+	//x축을 먼저 좌에서 우로 출력하고,
+	//x축의 출력이 끝나면 y축을 이동하여 다시 x축을 좌에서 우로 출력한다.
+	for (int i = 0; i<sz_y; i++){
+     5b0:	40 2f       	mov	r20, r16
+     5b2:	50 e0       	ldi	r21, 0x00	; 0
+     5b4:	5a 83       	std	Y+2, r21	; 0x02
+     5b6:	49 83       	std	Y+1, r20	; 0x01
+     5b8:	14 16       	cp	r1, r20
+     5ba:	15 06       	cpc	r1, r21
+     5bc:	0c f0       	brlt	.+2      	; 0x5c0 <print_bitmap+0x46>
+     5be:	54 c0       	rjmp	.+168    	; 0x668 <print_bitmap+0xee>
+		pos_y++; pos_x = x; //
+		for (int j = 0; j<sz_x / 8; j++){
+     5c0:	26 95       	lsr	r18
+     5c2:	26 95       	lsr	r18
+     5c4:	26 95       	lsr	r18
+     5c6:	e2 2f       	mov	r30, r18
+     5c8:	f0 e0       	ldi	r31, 0x00	; 0
+     5ca:	fc 83       	std	Y+4, r31	; 0x04
+     5cc:	eb 83       	std	Y+3, r30	; 0x03
+     5ce:	fe 83       	std	Y+6, r31	; 0x06
+     5d0:	ed 83       	std	Y+5, r30	; 0x05
+     5d2:	c8 2e       	mov	r12, r24
+     5d4:	d9 2e       	mov	r13, r25
+     5d6:	a1 2c       	mov	r10, r1
+     5d8:	b1 2c       	mov	r11, r1
+     5da:	af 01       	movw	r20, r30
+     5dc:	58 87       	std	Y+8, r21	; 0x08
+     5de:	4f 83       	std	Y+7, r20	; 0x07
+     5e0:	26 2e       	mov	r2, r22
+			pos = i*(sz_x / 8) + j;
+
+			for (int k = 7; k >= 0; k--){
+				unsigned char temp = 1 << k;
+     5e2:	88 24       	eor	r8, r8
+     5e4:	83 94       	inc	r8
+     5e6:	91 2c       	mov	r9, r1
+	for (int i = 0; i<sz_y; i++){
+		pos_y++; pos_x = x; //
+		for (int j = 0; j<sz_x / 8; j++){
+			pos = i*(sz_x / 8) + j;
+
+			for (int k = 7; k >= 0; k--){
+     5e8:	0f 2e       	mov	r0, r31
+     5ea:	f7 e0       	ldi	r31, 0x07	; 7
+     5ec:	3f 2e       	mov	r3, r31
+     5ee:	f0 2d       	mov	r31, r0
+     5f0:	41 2c       	mov	r4, r1
+	int pos = 0; //구분을 pos를 이용해서 한다.
+	
+	//x축을 먼저 좌에서 우로 출력하고,
+	//x축의 출력이 끝나면 y축을 이동하여 다시 x축을 좌에서 우로 출력한다.
+	for (int i = 0; i<sz_y; i++){
+		pos_y++; pos_x = x; //
+     5f2:	53 94       	inc	r5
+		for (int j = 0; j<sz_x / 8; j++){
+     5f4:	8b 81       	ldd	r24, Y+3	; 0x03
+     5f6:	9c 81       	ldd	r25, Y+4	; 0x04
+     5f8:	18 16       	cp	r1, r24
+     5fa:	19 06       	cpc	r1, r25
+     5fc:	4c f5       	brge	.+82     	; 0x650 <print_bitmap+0xd6>
+     5fe:	ef 80       	ldd	r14, Y+7	; 0x07
+     600:	f8 84       	ldd	r15, Y+8	; 0x08
+     602:	ec 0c       	add	r14, r12
+     604:	fd 1c       	adc	r15, r13
+     606:	86 01       	movw	r16, r12
+     608:	72 2c       	mov	r7, r2
+     60a:	68 94       	set
+     60c:	66 24       	eor	r6, r6
+     60e:	63 f8       	bld	r6, 3
+     610:	67 0c       	add	r6, r7
+			pos = i*(sz_x / 8) + j;
+
+			for (int k = 7; k >= 0; k--){
+     612:	39 86       	std	Y+9, r3	; 0x09
+     614:	4a 86       	std	Y+10, r4	; 0x0a
+				unsigned char temp = 1 << k;
+				unsigned char res = test[pos] & temp;
+     616:	f8 01       	movw	r30, r16
+     618:	20 81       	ld	r18, Z
+     61a:	c4 01       	movw	r24, r8
+     61c:	09 84       	ldd	r0, Y+9	; 0x09
+     61e:	02 c0       	rjmp	.+4      	; 0x624 <print_bitmap+0xaa>
+     620:	88 0f       	add	r24, r24
+     622:	99 1f       	adc	r25, r25
+     624:	0a 94       	dec	r0
+     626:	e2 f7       	brpl	.-8      	; 0x620 <print_bitmap+0xa6>
+     628:	82 23       	and	r24, r18
+				//하나의 픽셀은 한 자리의 이진수로 충분히 나타낼 수 있다
+				//즉, char형 하나에 8비트를 표현할 수 있다
+				//각각의 자리에 대해서 and연산을 통해 해당 자리의 비트가 1이라면 해당 위치에 점을 찍는다
+				if (res)
+     62a:	19 f0       	breq	.+6      	; 0x632 <print_bitmap+0xb8>
+				GLCD_Dot(pos_y, pos_x);
+     62c:	67 2d       	mov	r22, r7
+     62e:	85 2d       	mov	r24, r5
+     630:	00 d6       	rcall	.+3072   	; 0x1232 <GLCD_Dot>
+				pos_x++;
+     632:	73 94       	inc	r7
+	for (int i = 0; i<sz_y; i++){
+		pos_y++; pos_x = x; //
+		for (int j = 0; j<sz_x / 8; j++){
+			pos = i*(sz_x / 8) + j;
+
+			for (int k = 7; k >= 0; k--){
+     634:	49 85       	ldd	r20, Y+9	; 0x09
+     636:	5a 85       	ldd	r21, Y+10	; 0x0a
+     638:	41 50       	subi	r20, 0x01	; 1
+     63a:	51 09       	sbc	r21, r1
+     63c:	5a 87       	std	Y+10, r21	; 0x0a
+     63e:	49 87       	std	Y+9, r20	; 0x09
+     640:	76 10       	cpse	r7, r6
+     642:	e9 cf       	rjmp	.-46     	; 0x616 <print_bitmap+0x9c>
+     644:	0f 5f       	subi	r16, 0xFF	; 255
+     646:	1f 4f       	sbci	r17, 0xFF	; 255
+				//하나의 픽셀은 한 자리의 이진수로 충분히 나타낼 수 있다
+				//즉, char형 하나에 8비트를 표현할 수 있다
+				//각각의 자리에 대해서 and연산을 통해 해당 자리의 비트가 1이라면 해당 위치에 점을 찍는다
+				if (res)
+				GLCD_Dot(pos_y, pos_x);
+				pos_x++;
+     648:	76 2c       	mov	r7, r6
+	
+	//x축을 먼저 좌에서 우로 출력하고,
+	//x축의 출력이 끝나면 y축을 이동하여 다시 x축을 좌에서 우로 출력한다.
+	for (int i = 0; i<sz_y; i++){
+		pos_y++; pos_x = x; //
+		for (int j = 0; j<sz_x / 8; j++){
+     64a:	e0 16       	cp	r14, r16
+     64c:	f1 06       	cpc	r15, r17
+     64e:	e9 f6       	brne	.-70     	; 0x60a <print_bitmap+0x90>
+	//이미지가 이차원 배열이 아닌 일차원 배열로 입력되기 때문에 구분할 필요가 있다.
+	int pos = 0; //구분을 pos를 이용해서 한다.
+	
+	//x축을 먼저 좌에서 우로 출력하고,
+	//x축의 출력이 끝나면 y축을 이동하여 다시 x축을 좌에서 우로 출력한다.
+	for (int i = 0; i<sz_y; i++){
+     650:	5f ef       	ldi	r21, 0xFF	; 255
+     652:	a5 1a       	sub	r10, r21
+     654:	b5 0a       	sbc	r11, r21
+     656:	8d 81       	ldd	r24, Y+5	; 0x05
+     658:	9e 81       	ldd	r25, Y+6	; 0x06
+     65a:	c8 0e       	add	r12, r24
+     65c:	d9 1e       	adc	r13, r25
+     65e:	e9 81       	ldd	r30, Y+1	; 0x01
+     660:	fa 81       	ldd	r31, Y+2	; 0x02
+     662:	ae 16       	cp	r10, r30
+     664:	bf 06       	cpc	r11, r31
+     666:	29 f6       	brne	.-118    	; 0x5f2 <print_bitmap+0x78>
+				GLCD_Dot(pos_y, pos_x);
+				pos_x++;
+			}
+		}
+	}
+}
+     668:	2a 96       	adiw	r28, 0x0a	; 10
+     66a:	0f b6       	in	r0, 0x3f	; 63
+     66c:	f8 94       	cli
+     66e:	de bf       	out	0x3e, r29	; 62
+     670:	0f be       	out	0x3f, r0	; 63
+     672:	cd bf       	out	0x3d, r28	; 61
+     674:	df 91       	pop	r29
+     676:	cf 91       	pop	r28
+     678:	1f 91       	pop	r17
+     67a:	0f 91       	pop	r16
+     67c:	ff 90       	pop	r15
+     67e:	ef 90       	pop	r14
+     680:	df 90       	pop	r13
+     682:	cf 90       	pop	r12
+     684:	bf 90       	pop	r11
+     686:	af 90       	pop	r10
+     688:	9f 90       	pop	r9
+     68a:	8f 90       	pop	r8
+     68c:	7f 90       	pop	r7
+     68e:	6f 90       	pop	r6
+     690:	5f 90       	pop	r5
+     692:	4f 90       	pop	r4
+     694:	3f 90       	pop	r3
+     696:	2f 90       	pop	r2
+     698:	08 95       	ret
+
+0000069a <fly>:
+	*x = 120;
+	*y = y_val;
+}
+
+// 번호가 bird_num인 새를 해당 x, y좌표에 출력해주는 함수
+void fly(unsigned start_time, unsigned char *y, unsigned char *x, unsigned char bird_num){
+     69a:	ef 92       	push	r14
+     69c:	ff 92       	push	r15
+     69e:	0f 93       	push	r16
+     6a0:	cf 93       	push	r28
+     6a2:	df 93       	push	r29
+     6a4:	dc 01       	movw	r26, r24
+	// cnt가 start_time보다 커지면 번호가 bird_num인 새를 화면에 출력. 한 번 출력되면 stage가 끝날 때까지 계속해서 화면에 나타난다.
+	if (flag[bird_num] || cnt > start_time){
+     6a6:	30 e0       	ldi	r19, 0x00	; 0
+     6a8:	f9 01       	movw	r30, r18
+     6aa:	e4 54       	subi	r30, 0x44	; 68
+     6ac:	f3 4f       	sbci	r31, 0xF3	; 243
+     6ae:	90 81       	ld	r25, Z
+     6b0:	91 11       	cpse	r25, r1
+     6b2:	08 c0       	rjmp	.+16     	; 0x6c4 <fly+0x2a>
+     6b4:	80 91 ba 0c 	lds	r24, 0x0CBA	; 0x800cba <cnt>
+     6b8:	90 91 bb 0c 	lds	r25, 0x0CBB	; 0x800cbb <cnt+0x1>
+     6bc:	a8 17       	cp	r26, r24
+     6be:	b9 07       	cpc	r27, r25
+     6c0:	08 f0       	brcs	.+2      	; 0x6c4 <fly+0x2a>
+     6c2:	3f c0       	rjmp	.+126    	; 0x742 <fly+0xa8>
+     6c4:	7a 01       	movw	r14, r20
+     6c6:	eb 01       	movw	r28, r22
+		flag[bird_num] = 1;
+     6c8:	f9 01       	movw	r30, r18
+     6ca:	e4 54       	subi	r30, 0x44	; 68
+     6cc:	f3 4f       	sbci	r31, 0xF3	; 243
+     6ce:	81 e0       	ldi	r24, 0x01	; 1
+     6d0:	80 83       	st	Z, r24
+		*x -= 6 + stage_number; // stage번호가 커짐에 따라 새의 속도가 빨라짐
+     6d2:	fa 01       	movw	r30, r20
+     6d4:	80 81       	ld	r24, Z
+     6d6:	90 91 a8 0c 	lds	r25, 0x0CA8	; 0x800ca8 <stage_number>
+     6da:	89 1b       	sub	r24, r25
+     6dc:	9a ef       	ldi	r25, 0xFA	; 250
+     6de:	98 0f       	add	r25, r24
+     6e0:	90 83       	st	Z, r25
+		print_bitmap(bird, *x - 4, *y - 4, 8, 8); // 해당위치에 새의 그림을 출력
+     6e2:	48 81       	ld	r20, Y
+     6e4:	44 50       	subi	r20, 0x04	; 4
+     6e6:	66 ef       	ldi	r22, 0xF6	; 246
+     6e8:	68 0f       	add	r22, r24
+     6ea:	08 e0       	ldi	r16, 0x08	; 8
+     6ec:	28 e0       	ldi	r18, 0x08	; 8
+     6ee:	88 e0       	ldi	r24, 0x08	; 8
+     6f0:	91 e0       	ldi	r25, 0x01	; 1
+     6f2:	43 df       	rcall	.-378    	; 0x57a <print_bitmap>
+		if (*x <= 9){
+     6f4:	f7 01       	movw	r30, r14
+     6f6:	80 81       	ld	r24, Z
+     6f8:	8a 30       	cpi	r24, 0x0A	; 10
+     6fa:	18 f5       	brcc	.+70     	; 0x742 <fly+0xa8>
+			set_Bird(y, x, (*y*power_cnt) % 53 + 4); // 새가 화면에서 사라졌을 때, 다른 좌표에 다시 출력
+     6fc:	28 81       	ld	r18, Y
+     6fe:	80 91 af 0c 	lds	r24, 0x0CAF	; 0x800caf <power_cnt>
+     702:	90 91 b0 0c 	lds	r25, 0x0CB0	; 0x800cb0 <power_cnt+0x1>
+     706:	28 9f       	mul	r18, r24
+     708:	a0 01       	movw	r20, r0
+     70a:	29 9f       	mul	r18, r25
+     70c:	50 0d       	add	r21, r0
+     70e:	11 24       	eor	r1, r1
+     710:	9a 01       	movw	r18, r20
+     712:	a1 e9       	ldi	r26, 0x91	; 145
+     714:	ba e9       	ldi	r27, 0x9A	; 154
+     716:	0e 94 89 0d 	call	0x1b12	; 0x1b12 <__umulhisi3>
+     71a:	96 95       	lsr	r25
+     71c:	87 95       	ror	r24
+     71e:	92 95       	swap	r25
+     720:	82 95       	swap	r24
+     722:	8f 70       	andi	r24, 0x0F	; 15
+     724:	89 27       	eor	r24, r25
+     726:	9f 70       	andi	r25, 0x0F	; 15
+     728:	89 27       	eor	r24, r25
+     72a:	65 e3       	ldi	r22, 0x35	; 53
+     72c:	68 9f       	mul	r22, r24
+     72e:	90 01       	movw	r18, r0
+     730:	69 9f       	mul	r22, r25
+     732:	30 0d       	add	r19, r0
+     734:	11 24       	eor	r1, r1
+     736:	42 1b       	sub	r20, r18
+     738:	53 0b       	sbc	r21, r19
+     73a:	4c 5f       	subi	r20, 0xFC	; 252
+	unsigned char y;
+}Bird;
+
+// 새의 좌표를 설정해주는 함수
+void set_Bird(unsigned char *y, unsigned char *x, unsigned char y_val){
+	*x = 120;
+     73c:	88 e7       	ldi	r24, 0x78	; 120
+     73e:	80 83       	st	Z, r24
+	*y = y_val;
+     740:	48 83       	st	Y, r20
+		print_bitmap(bird, *x - 4, *y - 4, 8, 8); // 해당위치에 새의 그림을 출력
+		if (*x <= 9){
+			set_Bird(y, x, (*y*power_cnt) % 53 + 4); // 새가 화면에서 사라졌을 때, 다른 좌표에 다시 출력
+		}
+	}
+}
+     742:	df 91       	pop	r29
+     744:	cf 91       	pop	r28
+     746:	0f 91       	pop	r16
+     748:	ff 90       	pop	r15
+     74a:	ef 90       	pop	r14
+     74c:	08 95       	ret
+
+0000074e <select_menu>:
+	_delay_ms(10);
+	sei();//인터럽트를 허용한다
+}
+
+void select_menu(void) //메뉴 출력 함수
+{
+     74e:	0f 93       	push	r16
+     750:	cf 93       	push	r28
+     752:	df 93       	push	r29
+	game_state = 0;
+     754:	10 92 ad 0c 	sts	0x0CAD, r1	; 0x800cad <game_state>
+     758:	ce e6       	ldi	r28, 0x6E	; 110
+		if (Data_ADC4<20){  //up = start
+			game_state = 0;    //조이스틱을 통해 ADC값이 읽혀졌을 때, 그 값이 20보다 작으면 up으로 간주
+			_delay_ms(200);
+		}
+		else if (Data_ADC4>50){ //50보다 크다면 down으로 간주한다
+			game_state = 1;
+     75a:	d1 e0       	ldi	r29, 0x01	; 1
+	unsigned char pos_bird = 110; //화면 위에 움직이는 오브젝트(새)를 출력하기 위해 기본 위치 설정
+	while (1){//메뉴가 선택될 때까지 무한루프를 반복한다
+		if (game_state == 2) //만약 앞서 선택된 메뉴에 의해서 game_state가 변경될 경우 무한루프 탈출한다 = 게임시작
+		break;
+		
+		lcd_clear();
+     75c:	e0 d4       	rcall	.+2496   	; 0x111e <lcd_clear>
+		ScreenBuffer_clear();
+     75e:	c9 d5       	rcall	.+2962   	; 0x12f2 <ScreenBuffer_clear>
+		
+		print_bitmap(bird, pos_bird, 10, 8, 8); //오브젝트(새)를 계속해서 출력한다 (위치를 계속 변경시킨다=움직인다)
+     760:	08 e0       	ldi	r16, 0x08	; 8
+     762:	28 e0       	ldi	r18, 0x08	; 8
+     764:	4a e0       	ldi	r20, 0x0A	; 10
+     766:	6c 2f       	mov	r22, r28
+     768:	88 e0       	ldi	r24, 0x08	; 8
+     76a:	91 e0       	ldi	r25, 0x01	; 1
+     76c:	06 df       	rcall	.-500    	; 0x57a <print_bitmap>
+		pos_bird -= 5; if (pos_bird<0) pos_bird = 110; //왼쪽으로 5칸씩 움직이고, 끝에 도달하였을 경우, 처음 위치로 초기화
+     76e:	c5 50       	subi	r28, 0x05	; 5
+		lcd_string(3, 5, "GAME START"); //메뉴 출력
+     770:	42 ef       	ldi	r20, 0xF2	; 242
+     772:	5b e0       	ldi	r21, 0x0B	; 11
+     774:	65 e0       	ldi	r22, 0x05	; 5
+     776:	83 e0       	ldi	r24, 0x03	; 3
+     778:	30 d5       	rcall	.+2656   	; 0x11da <lcd_string>
+		lcd_string(4, 5, "CREDIT ");
+     77a:	4d ef       	ldi	r20, 0xFD	; 253
+     77c:	5b e0       	ldi	r21, 0x0B	; 11
+     77e:	65 e0       	ldi	r22, 0x05	; 5
+     780:	84 e0       	ldi	r24, 0x04	; 4
+     782:	2b d5       	rcall	.+2646   	; 0x11da <lcd_string>
+		lcd_string(7, 3, "Choo N Kyu 2016");
+     784:	45 e0       	ldi	r20, 0x05	; 5
+     786:	5c e0       	ldi	r21, 0x0C	; 12
+     788:	63 e0       	ldi	r22, 0x03	; 3
+     78a:	87 e0       	ldi	r24, 0x07	; 7
+     78c:	26 d5       	rcall	.+2636   	; 0x11da <lcd_string>
+		print_bitmap(lin, 13, 54, 8, 8); //오브젝트2 출력
+     78e:	28 e0       	ldi	r18, 0x08	; 8
+     790:	46 e3       	ldi	r20, 0x36	; 54
+     792:	6d e0       	ldi	r22, 0x0D	; 13
+     794:	80 e3       	ldi	r24, 0x30	; 48
+     796:	91 e0       	ldi	r25, 0x01	; 1
+     798:	f0 de       	rcall	.-544    	; 0x57a <print_bitmap>
+		if (game_state == 0){//gamestart
+     79a:	80 91 ad 0c 	lds	r24, 0x0CAD	; 0x800cad <game_state>
+     79e:	81 11       	cpse	r24, r1
+     7a0:	06 c0       	rjmp	.+12     	; 0x7ae <select_menu+0x60>
+			GLCD_Rectangle_black(24, 24, 30, 30); //선택 커서를 블랙박스를 통해 표현
+     7a2:	2e e1       	ldi	r18, 0x1E	; 30
+     7a4:	4e e1       	ldi	r20, 0x1E	; 30
+     7a6:	68 e1       	ldi	r22, 0x18	; 24
+     7a8:	88 e1       	ldi	r24, 0x18	; 24
+     7aa:	5b d6       	rcall	.+3254   	; 0x1462 <GLCD_Rectangle_black>
+     7ac:	07 c0       	rjmp	.+14     	; 0x7bc <select_menu+0x6e>
+		}
+		else if (game_state == 1){//credit
+     7ae:	81 30       	cpi	r24, 0x01	; 1
+     7b0:	29 f4       	brne	.+10     	; 0x7bc <select_menu+0x6e>
+			GLCD_Rectangle_black(32, 24, 38, 30);
+     7b2:	2e e1       	ldi	r18, 0x1E	; 30
+     7b4:	46 e2       	ldi	r20, 0x26	; 38
+     7b6:	68 e1       	ldi	r22, 0x18	; 24
+     7b8:	80 e2       	ldi	r24, 0x20	; 32
+     7ba:	53 d6       	rcall	.+3238   	; 0x1462 <GLCD_Rectangle_black>
+     7bc:	2f ef       	ldi	r18, 0xFF	; 255
+     7be:	8f ef       	ldi	r24, 0xFF	; 255
+     7c0:	98 e0       	ldi	r25, 0x08	; 8
+     7c2:	21 50       	subi	r18, 0x01	; 1
+     7c4:	80 40       	sbci	r24, 0x00	; 0
+     7c6:	90 40       	sbci	r25, 0x00	; 0
+     7c8:	e1 f7       	brne	.-8      	; 0x7c2 <select_menu+0x74>
+     7ca:	00 c0       	rjmp	.+0      	; 0x7cc <select_menu+0x7e>
+     7cc:	00 00       	nop
+		}
+		_delay_ms(200);
+		//조이스틱은 Data_ADC4 상/하 , Data_ADC3 좌/우 연결되어 있고, 메뉴에서는 상하 ADC4만 이용된다.
+		if (Data_ADC4<20){  //up = start
+     7ce:	80 91 b3 0c 	lds	r24, 0x0CB3	; 0x800cb3 <Data_ADC4>
+     7d2:	90 91 b4 0c 	lds	r25, 0x0CB4	; 0x800cb4 <Data_ADC4+0x1>
+     7d6:	84 31       	cpi	r24, 0x14	; 20
+     7d8:	91 05       	cpc	r25, r1
+     7da:	60 f4       	brcc	.+24     	; 0x7f4 <select_menu+0xa6>
+			game_state = 0;    //조이스틱을 통해 ADC값이 읽혀졌을 때, 그 값이 20보다 작으면 up으로 간주
+     7dc:	10 92 ad 0c 	sts	0x0CAD, r1	; 0x800cad <game_state>
+     7e0:	2f ef       	ldi	r18, 0xFF	; 255
+     7e2:	8f ef       	ldi	r24, 0xFF	; 255
+     7e4:	98 e0       	ldi	r25, 0x08	; 8
+     7e6:	21 50       	subi	r18, 0x01	; 1
+     7e8:	80 40       	sbci	r24, 0x00	; 0
+     7ea:	90 40       	sbci	r25, 0x00	; 0
+     7ec:	e1 f7       	brne	.-8      	; 0x7e6 <select_menu+0x98>
+     7ee:	00 c0       	rjmp	.+0      	; 0x7f0 <select_menu+0xa2>
+     7f0:	00 00       	nop
+     7f2:	0d c0       	rjmp	.+26     	; 0x80e <select_menu+0xc0>
+			_delay_ms(200);
+		}
+		else if (Data_ADC4>50){ //50보다 크다면 down으로 간주한다
+     7f4:	c3 97       	sbiw	r24, 0x33	; 51
+     7f6:	58 f0       	brcs	.+22     	; 0x80e <select_menu+0xc0>
+			game_state = 1;
+     7f8:	d0 93 ad 0c 	sts	0x0CAD, r29	; 0x800cad <game_state>
+     7fc:	2f ef       	ldi	r18, 0xFF	; 255
+     7fe:	8f ef       	ldi	r24, 0xFF	; 255
+     800:	98 e0       	ldi	r25, 0x08	; 8
+     802:	21 50       	subi	r18, 0x01	; 1
+     804:	80 40       	sbci	r24, 0x00	; 0
+     806:	90 40       	sbci	r25, 0x00	; 0
+     808:	e1 f7       	brne	.-8      	; 0x802 <select_menu+0xb4>
+     80a:	00 c0       	rjmp	.+0      	; 0x80c <select_menu+0xbe>
+     80c:	00 00       	nop
+			_delay_ms(200);
+		}
+		Data_ADC4 = Read_Adc_Data(4) / 14; //Data4_ADC4라는 변수에 조이스틱의 입력값을 가져온다
+     80e:	84 e0       	ldi	r24, 0x04	; 4
+     810:	1c d4       	rcall	.+2104   	; 0x104a <Read_Adc_Data>
+     812:	9c 01       	movw	r18, r24
+     814:	36 95       	lsr	r19
+     816:	27 95       	ror	r18
+     818:	a5 e2       	ldi	r26, 0x25	; 37
+     81a:	b9 e4       	ldi	r27, 0x49	; 73
+     81c:	0e 94 89 0d 	call	0x1b12	; 0x1b12 <__umulhisi3>
+     820:	96 95       	lsr	r25
+     822:	87 95       	ror	r24
+     824:	90 93 b4 0c 	sts	0x0CB4, r25	; 0x800cb4 <Data_ADC4+0x1>
+     828:	80 93 b3 0c 	sts	0x0CB3, r24	; 0x800cb3 <Data_ADC4>
+void select_menu(void) //메뉴 출력 함수
+{
+	game_state = 0;
+	unsigned char pos_bird = 110; //화면 위에 움직이는 오브젝트(새)를 출력하기 위해 기본 위치 설정
+	while (1){//메뉴가 선택될 때까지 무한루프를 반복한다
+		if (game_state == 2) //만약 앞서 선택된 메뉴에 의해서 game_state가 변경될 경우 무한루프 탈출한다 = 게임시작
+     82c:	80 91 ad 0c 	lds	r24, 0x0CAD	; 0x800cad <game_state>
+     830:	82 30       	cpi	r24, 0x02	; 2
+     832:	09 f0       	breq	.+2      	; 0x836 <select_menu+0xe8>
+     834:	93 cf       	rjmp	.-218    	; 0x75c <select_menu+0xe>
+			game_state = 1;
+			_delay_ms(200);
+		}
+		Data_ADC4 = Read_Adc_Data(4) / 14; //Data4_ADC4라는 변수에 조이스틱의 입력값을 가져온다
+	}
+	GLCD_Rectangle_black(0, 0, 64, 128); //게임 시작을 알리는 화면 blink
+     836:	20 e8       	ldi	r18, 0x80	; 128
+     838:	40 e4       	ldi	r20, 0x40	; 64
+     83a:	60 e0       	ldi	r22, 0x00	; 0
+     83c:	80 e0       	ldi	r24, 0x00	; 0
+     83e:	11 d6       	rcall	.+3106   	; 0x1462 <GLCD_Rectangle_black>
+     840:	2f ef       	ldi	r18, 0xFF	; 255
+     842:	8f ef       	ldi	r24, 0xFF	; 255
+     844:	98 e0       	ldi	r25, 0x08	; 8
+     846:	21 50       	subi	r18, 0x01	; 1
+     848:	80 40       	sbci	r24, 0x00	; 0
+     84a:	90 40       	sbci	r25, 0x00	; 0
+     84c:	e1 f7       	brne	.-8      	; 0x846 <select_menu+0xf8>
+     84e:	00 c0       	rjmp	.+0      	; 0x850 <select_menu+0x102>
+     850:	00 00       	nop
+	_delay_ms(200);
+	ScreenBuffer_clear();
+     852:	4f d5       	rcall	.+2718   	; 0x12f2 <ScreenBuffer_clear>
+	lcd_clear();
+     854:	64 d4       	rcall	.+2248   	; 0x111e <lcd_clear>
+	print_bitmap(esc, 0, 0, 128, 64); //게임 시작 스토리를 위한 이미지 및 문자열 출력
+     856:	00 e4       	ldi	r16, 0x40	; 64
+     858:	20 e8       	ldi	r18, 0x80	; 128
+     85a:	40 e0       	ldi	r20, 0x00	; 0
+     85c:	60 e0       	ldi	r22, 0x00	; 0
+     85e:	88 e3       	ldi	r24, 0x38	; 56
+     860:	91 e0       	ldi	r25, 0x01	; 1
+     862:	8b de       	rcall	.-746    	; 0x57a <print_bitmap>
+     864:	2f ef       	ldi	r18, 0xFF	; 255
+     866:	8f e7       	ldi	r24, 0x7F	; 127
+     868:	93 e4       	ldi	r25, 0x43	; 67
+     86a:	21 50       	subi	r18, 0x01	; 1
+     86c:	80 40       	sbci	r24, 0x00	; 0
+     86e:	90 40       	sbci	r25, 0x00	; 0
+     870:	e1 f7       	brne	.-8      	; 0x86a <select_menu+0x11c>
+     872:	00 c0       	rjmp	.+0      	; 0x874 <select_menu+0x126>
+     874:	00 00       	nop
+	_delay_ms(1500);
+	lcd_clear();
+     876:	53 d4       	rcall	.+2214   	; 0x111e <lcd_clear>
+	ScreenBuffer_clear();
+     878:	3c d5       	rcall	.+2680   	; 0x12f2 <ScreenBuffer_clear>
+	lcd_string(3, 0, "The boy is in danger!");
+     87a:	45 e1       	ldi	r20, 0x15	; 21
+     87c:	5c e0       	ldi	r21, 0x0C	; 12
+     87e:	60 e0       	ldi	r22, 0x00	; 0
+     880:	83 e0       	ldi	r24, 0x03	; 3
+     882:	ab d4       	rcall	.+2390   	; 0x11da <lcd_string>
+     884:	2f ef       	ldi	r18, 0xFF	; 255
+     886:	8f e7       	ldi	r24, 0x7F	; 127
+     888:	90 e7       	ldi	r25, 0x70	; 112
+     88a:	21 50       	subi	r18, 0x01	; 1
+     88c:	80 40       	sbci	r24, 0x00	; 0
+     88e:	90 40       	sbci	r25, 0x00	; 0
+     890:	e1 f7       	brne	.-8      	; 0x88a <select_menu+0x13c>
+     892:	00 c0       	rjmp	.+0      	; 0x894 <select_menu+0x146>
+     894:	00 00       	nop
+	_delay_ms(2500);
+	lcd_string(4, 0, "Help him escape");
+     896:	4b e2       	ldi	r20, 0x2B	; 43
+     898:	5c e0       	ldi	r21, 0x0C	; 12
+     89a:	60 e0       	ldi	r22, 0x00	; 0
+     89c:	84 e0       	ldi	r24, 0x04	; 4
+     89e:	9d d4       	rcall	.+2362   	; 0x11da <lcd_string>
+     8a0:	2f ef       	ldi	r18, 0xFF	; 255
+     8a2:	8f e7       	ldi	r24, 0x7F	; 127
+     8a4:	90 e7       	ldi	r25, 0x70	; 112
+     8a6:	21 50       	subi	r18, 0x01	; 1
+     8a8:	80 40       	sbci	r24, 0x00	; 0
+     8aa:	90 40       	sbci	r25, 0x00	; 0
+     8ac:	e1 f7       	brne	.-8      	; 0x8a6 <select_menu+0x158>
+     8ae:	00 c0       	rjmp	.+0      	; 0x8b0 <select_menu+0x162>
+     8b0:	00 00       	nop
+	_delay_ms(2500);
+}
+     8b2:	df 91       	pop	r29
+     8b4:	cf 91       	pop	r28
+     8b6:	0f 91       	pop	r16
+     8b8:	08 95       	ret
+
+000008ba <First_step>:
+
+void First_step(void) //게이지를 모으는 단계
+{
+     8ba:	ef 92       	push	r14
+     8bc:	ff 92       	push	r15
+     8be:	0f 93       	push	r16
+     8c0:	cf 93       	push	r28
+     8c2:	df 93       	push	r29
+	t0_count = 0;
+     8c4:	10 92 aa 0c 	sts	0x0CAA, r1	; 0x800caa <t0_count+0x1>
+     8c8:	10 92 a9 0c 	sts	0x0CA9, r1	; 0x800ca9 <t0_count>
+		lcd_clear();
+		ScreenBuffer_clear();
+
+		//게이지의 상태를 시각적으로 보여주는 그래픽 출력
+		GLCD_Rectangle(16, 18, 23, 18 * 6);// y1, x1, y2, x2
+		GLCD_Rectangle_black(16, 18, 23, 18 * box_state);
+     8cc:	0f 2e       	mov	r0, r31
+     8ce:	f1 eb       	ldi	r31, 0xB1	; 177
+     8d0:	ef 2e       	mov	r14, r31
+     8d2:	fc e0       	ldi	r31, 0x0C	; 12
+     8d4:	ff 2e       	mov	r15, r31
+     8d6:	f0 2d       	mov	r31, r0
+		//PD1을 통해 설정된 box_state를 통해 게이지의 차징 상태를 표현한다
+		
+		lcd_string(1, 3, "time : ");
+		lcd_xy(1, 11); GLCD_4DigitDecimal(15 - t0_count);
+     8d8:	cf e0       	ldi	r28, 0x0F	; 15
+     8da:	d0 e0       	ldi	r29, 0x00	; 0
+{
+	t0_count = 0;
+
+	while (1)
+	{
+		lcd_clear();
+     8dc:	20 d4       	rcall	.+2112   	; 0x111e <lcd_clear>
+		ScreenBuffer_clear();
+     8de:	09 d5       	rcall	.+2578   	; 0x12f2 <ScreenBuffer_clear>
+
+		//게이지의 상태를 시각적으로 보여주는 그래픽 출력
+		GLCD_Rectangle(16, 18, 23, 18 * 6);// y1, x1, y2, x2
+     8e0:	2c e6       	ldi	r18, 0x6C	; 108
+     8e2:	47 e1       	ldi	r20, 0x17	; 23
+     8e4:	62 e1       	ldi	r22, 0x12	; 18
+     8e6:	80 e1       	ldi	r24, 0x10	; 16
+     8e8:	9e d5       	rcall	.+2876   	; 0x1426 <GLCD_Rectangle>
+		GLCD_Rectangle_black(16, 18, 23, 18 * box_state);
+     8ea:	f7 01       	movw	r30, r14
+     8ec:	20 81       	ld	r18, Z
+     8ee:	22 0f       	add	r18, r18
+     8f0:	82 2f       	mov	r24, r18
+     8f2:	88 0f       	add	r24, r24
+     8f4:	88 0f       	add	r24, r24
+     8f6:	88 0f       	add	r24, r24
+     8f8:	28 0f       	add	r18, r24
+     8fa:	47 e1       	ldi	r20, 0x17	; 23
+     8fc:	62 e1       	ldi	r22, 0x12	; 18
+     8fe:	80 e1       	ldi	r24, 0x10	; 16
+     900:	b0 d5       	rcall	.+2912   	; 0x1462 <GLCD_Rectangle_black>
+		//PD1을 통해 설정된 box_state를 통해 게이지의 차징 상태를 표현한다
+		
+		lcd_string(1, 3, "time : ");
+     902:	4b e3       	ldi	r20, 0x3B	; 59
+     904:	5c e0       	ldi	r21, 0x0C	; 12
+     906:	63 e0       	ldi	r22, 0x03	; 3
+     908:	81 e0       	ldi	r24, 0x01	; 1
+     90a:	67 d4       	rcall	.+2254   	; 0x11da <lcd_string>
+		lcd_xy(1, 11); GLCD_4DigitDecimal(15 - t0_count);
+     90c:	6b e0       	ldi	r22, 0x0B	; 11
+     90e:	81 e0       	ldi	r24, 0x01	; 1
+     910:	21 d4       	rcall	.+2114   	; 0x1154 <lcd_xy>
+     912:	80 91 a9 0c 	lds	r24, 0x0CA9	; 0x800ca9 <t0_count>
+     916:	90 91 aa 0c 	lds	r25, 0x0CAA	; 0x800caa <t0_count+0x1>
+     91a:	9e 01       	movw	r18, r28
+     91c:	28 1b       	sub	r18, r24
+     91e:	39 0b       	sbc	r19, r25
+     920:	c9 01       	movw	r24, r18
+     922:	de d6       	rcall	.+3516   	; 0x16e0 <GLCD_4DigitDecimal>
+		//남은 시간을 출력한다. timer0 INT를 통해 계측된 t0_count를 이용.
+		
+		
+		//게이지 차징 상태에 따라 케릭터를 다르게 표현한다
+		if (box_state <3)//작은 케릭터
+     924:	80 91 b1 0c 	lds	r24, 0x0CB1	; 0x800cb1 <box_state>
+     928:	90 91 b2 0c 	lds	r25, 0x0CB2	; 0x800cb2 <box_state+0x1>
+     92c:	03 97       	sbiw	r24, 0x03	; 3
+     92e:	40 f4       	brcc	.+16     	; 0x940 <First_step+0x86>
+		print_bitmap(base1, 57, 38, 8, 8);
+     930:	08 e0       	ldi	r16, 0x08	; 8
+     932:	28 e0       	ldi	r18, 0x08	; 8
+     934:	46 e2       	ldi	r20, 0x26	; 38
+     936:	69 e3       	ldi	r22, 0x39	; 57
+     938:	80 e0       	ldi	r24, 0x00	; 0
+     93a:	91 e0       	ldi	r25, 0x01	; 1
+     93c:	1e de       	rcall	.-964    	; 0x57a <print_bitmap>
+     93e:	07 c0       	rjmp	.+14     	; 0x94e <First_step+0x94>
+		else if (box_state >= 3) //큰 케릭터(변신 후)
+		print_bitmap(jumper, 55, 30, 16, 16);
+     940:	00 e1       	ldi	r16, 0x10	; 16
+     942:	20 e1       	ldi	r18, 0x10	; 16
+     944:	4e e1       	ldi	r20, 0x1E	; 30
+     946:	67 e3       	ldi	r22, 0x37	; 55
+     948:	80 e1       	ldi	r24, 0x10	; 16
+     94a:	91 e0       	ldi	r25, 0x01	; 1
+     94c:	16 de       	rcall	.-980    	; 0x57a <print_bitmap>
+     94e:	3f ef       	ldi	r19, 0xFF	; 255
+     950:	8f e7       	ldi	r24, 0x7F	; 127
+     952:	96 e1       	ldi	r25, 0x16	; 22
+     954:	31 50       	subi	r19, 0x01	; 1
+     956:	80 40       	sbci	r24, 0x00	; 0
+     958:	90 40       	sbci	r25, 0x00	; 0
+     95a:	e1 f7       	brne	.-8      	; 0x954 <First_step+0x9a>
+     95c:	00 c0       	rjmp	.+0      	; 0x95e <First_step+0xa4>
+     95e:	00 00       	nop
+
+
+		_delay_ms(500);
+		if (box_state == 6) break; //만약 게이지가 완전히 채워진다면 시간과 상관없이 다음 단계로 넘어간다
+     960:	80 91 b1 0c 	lds	r24, 0x0CB1	; 0x800cb1 <box_state>
+     964:	90 91 b2 0c 	lds	r25, 0x0CB2	; 0x800cb2 <box_state+0x1>
+     968:	06 97       	sbiw	r24, 0x06	; 6
+     96a:	a9 f0       	breq	.+42     	; 0x996 <First_step+0xdc>
+		if (t0_count >= 15) break; //시간이 15초가 경과했다면 종료한다.
+     96c:	80 91 a9 0c 	lds	r24, 0x0CA9	; 0x800ca9 <t0_count>
+     970:	90 91 aa 0c 	lds	r25, 0x0CAA	; 0x800caa <t0_count+0x1>
+     974:	0f 97       	sbiw	r24, 0x0f	; 15
+     976:	78 f4       	brcc	.+30     	; 0x996 <First_step+0xdc>
+		lcd_string(7, 1, "Push PD1 for power!"); //안내문
+     978:	43 e4       	ldi	r20, 0x43	; 67
+     97a:	5c e0       	ldi	r21, 0x0C	; 12
+     97c:	61 e0       	ldi	r22, 0x01	; 1
+     97e:	87 e0       	ldi	r24, 0x07	; 7
+     980:	2c d4       	rcall	.+2136   	; 0x11da <lcd_string>
+     982:	ef ef       	ldi	r30, 0xFF	; 255
+     984:	ff e7       	ldi	r31, 0x7F	; 127
+     986:	2d e0       	ldi	r18, 0x0D	; 13
+     988:	e1 50       	subi	r30, 0x01	; 1
+     98a:	f0 40       	sbci	r31, 0x00	; 0
+     98c:	20 40       	sbci	r18, 0x00	; 0
+     98e:	e1 f7       	brne	.-8      	; 0x988 <First_step+0xce>
+     990:	00 c0       	rjmp	.+0      	; 0x992 <First_step+0xd8>
+     992:	00 00       	nop
+     994:	a3 cf       	rjmp	.-186    	; 0x8dc <First_step+0x22>
+		_delay_ms(300);
+	}
+	lcd_clear();
+     996:	c3 d3       	rcall	.+1926   	; 0x111e <lcd_clear>
+	ScreenBuffer_clear();
+     998:	ac d4       	rcall	.+2392   	; 0x12f2 <ScreenBuffer_clear>
+	if (box_state < 3){ //만일 게이지가 최소 요구사항보다 채워지지 않았다면 게임이 종료된다
+     99a:	20 91 b1 0c 	lds	r18, 0x0CB1	; 0x800cb1 <box_state>
+     99e:	30 91 b2 0c 	lds	r19, 0x0CB2	; 0x800cb2 <box_state+0x1>
+     9a2:	23 30       	cpi	r18, 0x03	; 3
+     9a4:	31 05       	cpc	r19, r1
+     9a6:	08 f0       	brcs	.+2      	; 0x9aa <First_step+0xf0>
+     9a8:	3c c0       	rjmp	.+120    	; 0xa22 <First_step+0x168>
+		GLCD_Rectangle_black(0,0,64,128);
+     9aa:	20 e8       	ldi	r18, 0x80	; 128
+     9ac:	40 e4       	ldi	r20, 0x40	; 64
+     9ae:	60 e0       	ldi	r22, 0x00	; 0
+     9b0:	80 e0       	ldi	r24, 0x00	; 0
+     9b2:	57 d5       	rcall	.+2734   	; 0x1462 <GLCD_Rectangle_black>
+     9b4:	3f ef       	ldi	r19, 0xFF	; 255
+     9b6:	8f ef       	ldi	r24, 0xFF	; 255
+     9b8:	9c e2       	ldi	r25, 0x2C	; 44
+     9ba:	31 50       	subi	r19, 0x01	; 1
+     9bc:	80 40       	sbci	r24, 0x00	; 0
+     9be:	90 40       	sbci	r25, 0x00	; 0
+     9c0:	e1 f7       	brne	.-8      	; 0x9ba <First_step+0x100>
+     9c2:	00 c0       	rjmp	.+0      	; 0x9c4 <First_step+0x10a>
+     9c4:	00 00       	nop
+		_delay_ms(1000);
+		lcd_clear(); ScreenBuffer_clear(); _delay_ms(100);
+     9c6:	ab d3       	rcall	.+1878   	; 0x111e <lcd_clear>
+     9c8:	94 d4       	rcall	.+2344   	; 0x12f2 <ScreenBuffer_clear>
+     9ca:	ef ef       	ldi	r30, 0xFF	; 255
+     9cc:	ff e7       	ldi	r31, 0x7F	; 127
+     9ce:	24 e0       	ldi	r18, 0x04	; 4
+     9d0:	e1 50       	subi	r30, 0x01	; 1
+     9d2:	f0 40       	sbci	r31, 0x00	; 0
+     9d4:	20 40       	sbci	r18, 0x00	; 0
+     9d6:	e1 f7       	brne	.-8      	; 0x9d0 <First_step+0x116>
+     9d8:	00 c0       	rjmp	.+0      	; 0x9da <First_step+0x120>
+     9da:	00 00       	nop
+		lcd_string(3, 0, "Power is not enough..");
+     9dc:	47 e5       	ldi	r20, 0x57	; 87
+     9de:	5c e0       	ldi	r21, 0x0C	; 12
+     9e0:	60 e0       	ldi	r22, 0x00	; 0
+     9e2:	83 e0       	ldi	r24, 0x03	; 3
+     9e4:	fa d3       	rcall	.+2036   	; 0x11da <lcd_string>
+     9e6:	3f ef       	ldi	r19, 0xFF	; 255
+     9e8:	8f ef       	ldi	r24, 0xFF	; 255
+     9ea:	99 e5       	ldi	r25, 0x59	; 89
+     9ec:	31 50       	subi	r19, 0x01	; 1
+     9ee:	80 40       	sbci	r24, 0x00	; 0
+     9f0:	90 40       	sbci	r25, 0x00	; 0
+     9f2:	e1 f7       	brne	.-8      	; 0x9ec <First_step+0x132>
+     9f4:	00 c0       	rjmp	.+0      	; 0x9f6 <First_step+0x13c>
+     9f6:	00 00       	nop
+		_delay_ms(2000);
+		lcd_string(4, 0, "Our Boy catched...");
+     9f8:	4d e6       	ldi	r20, 0x6D	; 109
+     9fa:	5c e0       	ldi	r21, 0x0C	; 12
+     9fc:	60 e0       	ldi	r22, 0x00	; 0
+     9fe:	84 e0       	ldi	r24, 0x04	; 4
+     a00:	ec d3       	rcall	.+2008   	; 0x11da <lcd_string>
+     a02:	ef ef       	ldi	r30, 0xFF	; 255
+     a04:	ff ef       	ldi	r31, 0xFF	; 255
+     a06:	26 e8       	ldi	r18, 0x86	; 134
+     a08:	e1 50       	subi	r30, 0x01	; 1
+     a0a:	f0 40       	sbci	r31, 0x00	; 0
+     a0c:	20 40       	sbci	r18, 0x00	; 0
+     a0e:	e1 f7       	brne	.-8      	; 0xa08 <First_step+0x14e>
+     a10:	00 c0       	rjmp	.+0      	; 0xa12 <First_step+0x158>
+     a12:	00 00       	nop
+		_delay_ms(3000);
+		lcd_clear();
+     a14:	84 d3       	rcall	.+1800   	; 0x111e <lcd_clear>
+		end_flag = 0; //GAME OVER를 나타내는 종료 플래그
+     a16:	10 92 a5 0c 	sts	0x0CA5, r1	; 0x800ca5 <end_flag>
+		game_state = 5;
+     a1a:	85 e0       	ldi	r24, 0x05	; 5
+     a1c:	80 93 ad 0c 	sts	0x0CAD, r24	; 0x800cad <game_state>
+		return;
+     a20:	3f c0       	rjmp	.+126    	; 0xaa0 <First_step+0x1e6>
+	}
+	//게이지의 차지 상태에 따라 다음 단계에서 오브젝트와 충돌하여도 게임을 지속할 수 있는 횟수가 결정된다.
+	life = box_state / 2;
+     a22:	c9 01       	movw	r24, r18
+     a24:	96 95       	lsr	r25
+     a26:	87 95       	ror	r24
+     a28:	80 93 ae 0c 	sts	0x0CAE, r24	; 0x800cae <life>
+	//게이지 상태는 점수와 연결된다.
+	cur_score += box_state * 20;
+     a2c:	c4 e1       	ldi	r28, 0x14	; 20
+     a2e:	c2 9f       	mul	r28, r18
+     a30:	a0 01       	movw	r20, r0
+     a32:	c3 9f       	mul	r28, r19
+     a34:	50 0d       	add	r21, r0
+     a36:	11 24       	eor	r1, r1
+     a38:	20 91 a0 0c 	lds	r18, 0x0CA0	; 0x800ca0 <__data_end>
+     a3c:	30 91 a1 0c 	lds	r19, 0x0CA1	; 0x800ca1 <__data_end+0x1>
+     a40:	24 0f       	add	r18, r20
+     a42:	35 1f       	adc	r19, r21
+     a44:	30 93 a1 0c 	sts	0x0CA1, r19	; 0x800ca1 <__data_end+0x1>
+     a48:	20 93 a0 0c 	sts	0x0CA0, r18	; 0x800ca0 <__data_end>
+	lcd_string(3, 4, "SCORE + ");
+     a4c:	40 e8       	ldi	r20, 0x80	; 128
+     a4e:	5c e0       	ldi	r21, 0x0C	; 12
+     a50:	64 e0       	ldi	r22, 0x04	; 4
+     a52:	83 e0       	ldi	r24, 0x03	; 3
+     a54:	c2 d3       	rcall	.+1924   	; 0x11da <lcd_string>
+	lcd_xy(3, 11);
+     a56:	6b e0       	ldi	r22, 0x0B	; 11
+     a58:	83 e0       	ldi	r24, 0x03	; 3
+     a5a:	7c d3       	rcall	.+1784   	; 0x1154 <lcd_xy>
+	GLCD_4DigitDecimal(box_state * 20);
+     a5c:	80 91 b1 0c 	lds	r24, 0x0CB1	; 0x800cb1 <box_state>
+     a60:	90 91 b2 0c 	lds	r25, 0x0CB2	; 0x800cb2 <box_state+0x1>
+     a64:	fc 01       	movw	r30, r24
+     a66:	ce 9f       	mul	r28, r30
+     a68:	c0 01       	movw	r24, r0
+     a6a:	cf 9f       	mul	r28, r31
+     a6c:	90 0d       	add	r25, r0
+     a6e:	11 24       	eor	r1, r1
+     a70:	37 d6       	rcall	.+3182   	; 0x16e0 <GLCD_4DigitDecimal>
+	lcd_string(4, 4, "LIFE  +");
+     a72:	49 e8       	ldi	r20, 0x89	; 137
+     a74:	5c e0       	ldi	r21, 0x0C	; 12
+     a76:	64 e0       	ldi	r22, 0x04	; 4
+     a78:	84 e0       	ldi	r24, 0x04	; 4
+     a7a:	af d3       	rcall	.+1886   	; 0x11da <lcd_string>
+	lcd_xy(4, 13);
+     a7c:	6d e0       	ldi	r22, 0x0D	; 13
+     a7e:	84 e0       	ldi	r24, 0x04	; 4
+     a80:	69 d3       	rcall	.+1746   	; 0x1154 <lcd_xy>
+	GLCD_2DigitDecimal(life);
+     a82:	80 91 ae 0c 	lds	r24, 0x0CAE	; 0x800cae <life>
+     a86:	09 d6       	rcall	.+3090   	; 0x169a <GLCD_2DigitDecimal>
+	game_state = 3;
+     a88:	83 e0       	ldi	r24, 0x03	; 3
+     a8a:	80 93 ad 0c 	sts	0x0CAD, r24	; 0x800cad <game_state>
+     a8e:	ff ef       	ldi	r31, 0xFF	; 255
+     a90:	2f e7       	ldi	r18, 0x7F	; 127
+     a92:	33 e4       	ldi	r19, 0x43	; 67
+     a94:	f1 50       	subi	r31, 0x01	; 1
+     a96:	20 40       	sbci	r18, 0x00	; 0
+     a98:	30 40       	sbci	r19, 0x00	; 0
+     a9a:	e1 f7       	brne	.-8      	; 0xa94 <First_step+0x1da>
+     a9c:	00 c0       	rjmp	.+0      	; 0xa9e <First_step+0x1e4>
+     a9e:	00 00       	nop
+	_delay_ms(1500);
+}
+     aa0:	df 91       	pop	r29
+     aa2:	cf 91       	pop	r28
+     aa4:	0f 91       	pop	r16
+     aa6:	ff 90       	pop	r15
+     aa8:	ef 90       	pop	r14
+     aaa:	08 95       	ret
+
+00000aac <start_jump>:
+	init_INT();
+	sei();
+}
+
+//  피하기 시작후, 점프보이가 출발지에서 점프하는 장면을 출력
+void start_jump(unsigned char* y, unsigned char* x){ // 점프보이의 x, y좌표에 관한 포인터를 받아옴. call by reference
+     aac:	ef 92       	push	r14
+     aae:	ff 92       	push	r15
+     ab0:	0f 93       	push	r16
+     ab2:	1f 93       	push	r17
+     ab4:	cf 93       	push	r28
+     ab6:	df 93       	push	r29
+     ab8:	ec 01       	movw	r28, r24
+     aba:	7b 01       	movw	r14, r22
+
+	unsigned char sor = 32;   // 출발지의 x좌표
+	*x = 32;      // 점프 보이의 x좌표 설정
+     abc:	80 e2       	ldi	r24, 0x20	; 32
+     abe:	fb 01       	movw	r30, r22
+     ac0:	80 83       	st	Z, r24
+	*y = 64 - 16;  // 점프 보이의 y좌표 설정
+     ac2:	80 e3       	ldi	r24, 0x30	; 48
+     ac4:	88 83       	st	Y, r24
+     ac6:	10 e2       	ldi	r17, 0x20	; 32
+	while (*y >= 32){
+		ScreenBuffer_clear(); // 스크린의 버퍼를 클리어
+     ac8:	14 d4       	rcall	.+2088   	; 0x12f2 <ScreenBuffer_clear>
+		lcd_clear();        // lcd 클리어
+     aca:	29 d3       	rcall	.+1618   	; 0x111e <lcd_clear>
+		*y -= 2;           // 점프보이의 y좌표를 2씩 감소하여 대각선으로 점프함을 보임
+     acc:	88 81       	ld	r24, Y
+     ace:	82 50       	subi	r24, 0x02	; 2
+     ad0:	88 83       	st	Y, r24
+		GLCD_Circle(64, sor, 20); // x좌표가 sor인 위치에 출발지를 반원형으로 출력
+     ad2:	44 e1       	ldi	r20, 0x14	; 20
+     ad4:	61 2f       	mov	r22, r17
+     ad6:	80 e4       	ldi	r24, 0x40	; 64
+     ad8:	f4 d4       	rcall	.+2536   	; 0x14c2 <GLCD_Circle>
+		sor -= 2;           // 출발지가 점차 왼쪽으로 밀림
+     ada:	12 50       	subi	r17, 0x02	; 2
+		print_bitmap(jumper, *x - 8, *y - 8, 16, 16); // 점프보이를 해당위치에 출력
+     adc:	48 81       	ld	r20, Y
+     ade:	48 50       	subi	r20, 0x08	; 8
+     ae0:	f7 01       	movw	r30, r14
+     ae2:	60 81       	ld	r22, Z
+     ae4:	68 50       	subi	r22, 0x08	; 8
+     ae6:	00 e1       	ldi	r16, 0x10	; 16
+     ae8:	20 e1       	ldi	r18, 0x10	; 16
+     aea:	80 e1       	ldi	r24, 0x10	; 16
+     aec:	91 e0       	ldi	r25, 0x01	; 1
+     aee:	45 dd       	rcall	.-1398   	; 0x57a <print_bitmap>
+		GLCD_Rectangle_black(60, 0, 64, 128);
+     af0:	20 e8       	ldi	r18, 0x80	; 128
+     af2:	40 e4       	ldi	r20, 0x40	; 64
+     af4:	60 e0       	ldi	r22, 0x00	; 0
+     af6:	8c e3       	ldi	r24, 0x3C	; 60
+     af8:	b4 d4       	rcall	.+2408   	; 0x1462 <GLCD_Rectangle_black>
+     afa:	ff ef       	ldi	r31, 0xFF	; 255
+     afc:	2f e7       	ldi	r18, 0x7F	; 127
+     afe:	84 e0       	ldi	r24, 0x04	; 4
+     b00:	f1 50       	subi	r31, 0x01	; 1
+     b02:	20 40       	sbci	r18, 0x00	; 0
+     b04:	80 40       	sbci	r24, 0x00	; 0
+     b06:	e1 f7       	brne	.-8      	; 0xb00 <start_jump+0x54>
+     b08:	00 c0       	rjmp	.+0      	; 0xb0a <start_jump+0x5e>
+     b0a:	00 00       	nop
+void start_jump(unsigned char* y, unsigned char* x){ // 점프보이의 x, y좌표에 관한 포인터를 받아옴. call by reference
+
+	unsigned char sor = 32;   // 출발지의 x좌표
+	*x = 32;      // 점프 보이의 x좌표 설정
+	*y = 64 - 16;  // 점프 보이의 y좌표 설정
+	while (*y >= 32){
+     b0c:	88 81       	ld	r24, Y
+     b0e:	80 32       	cpi	r24, 0x20	; 32
+     b10:	d8 f6       	brcc	.-74     	; 0xac8 <start_jump+0x1c>
+		GLCD_Circle(64, sor, 20);
+		print_bitmap(jumper, *x - 8, *y - 8, 16, 16);
+		GLCD_Rectangle_black(60, 0, 64, 128);
+		_delay_ms(100);
+	}
+}
+     b12:	df 91       	pop	r29
+     b14:	cf 91       	pop	r28
+     b16:	1f 91       	pop	r17
+     b18:	0f 91       	pop	r16
+     b1a:	ff 90       	pop	r15
+     b1c:	ef 90       	pop	r14
+     b1e:	08 95       	ret
+
+00000b20 <compare_round_time>:
+	}
+	else
+	crash_flag[bird_num] = 0; // 범위를 벗어나면 해당 새와 충돌이 끝났음을 flag로 체크
+}
+
+void compare_round_time(unsigned char *y, unsigned char *x){ // 정해진 stage진행 시간보다 play_time이 커지면 stage 종료하는 함수
+     b20:	ef 92       	push	r14
+     b22:	ff 92       	push	r15
+     b24:	0f 93       	push	r16
+     b26:	1f 93       	push	r17
+     b28:	cf 93       	push	r28
+     b2a:	df 93       	push	r29
+	if (round_time <= play_time){ // round_time보다 play_time이 커지면
+     b2c:	40 91 38 09 	lds	r20, 0x0938	; 0x800938 <round_time>
+     b30:	50 91 39 09 	lds	r21, 0x0939	; 0x800939 <round_time+0x1>
+     b34:	20 91 a6 0c 	lds	r18, 0x0CA6	; 0x800ca6 <play_time>
+     b38:	30 91 a7 0c 	lds	r19, 0x0CA7	; 0x800ca7 <play_time+0x1>
+     b3c:	24 17       	cp	r18, r20
+     b3e:	35 07       	cpc	r19, r21
+     b40:	08 f4       	brcc	.+2      	; 0xb44 <compare_round_time+0x24>
+     b42:	14 c1       	rjmp	.+552    	; 0xd6c <compare_round_time+0x24c>
+     b44:	7b 01       	movw	r14, r22
+     b46:	ec 01       	movw	r28, r24
+		while (*y <= 30){       // 점프보이의 y좌표가 30보다 작을 때 좌표를 30으로 점차 이동
+     b48:	88 81       	ld	r24, Y
+     b4a:	8f 31       	cpi	r24, 0x1F	; 31
+     b4c:	00 f5       	brcc	.+64     	; 0xb8e <compare_round_time+0x6e>
+			lcd_clear();
+     b4e:	e7 d2       	rcall	.+1486   	; 0x111e <lcd_clear>
+			ScreenBuffer_clear();
+     b50:	d0 d3       	rcall	.+1952   	; 0x12f2 <ScreenBuffer_clear>
+			*y += 2;
+     b52:	48 81       	ld	r20, Y
+     b54:	82 e0       	ldi	r24, 0x02	; 2
+     b56:	84 0f       	add	r24, r20
+     b58:	88 83       	st	Y, r24
+			print_bitmap(jumper, *x - 8, *y - 8, 16, 16); // 점프보이 그림을 해당 좌표에 출력
+     b5a:	46 50       	subi	r20, 0x06	; 6
+     b5c:	f7 01       	movw	r30, r14
+     b5e:	60 81       	ld	r22, Z
+     b60:	68 50       	subi	r22, 0x08	; 8
+     b62:	00 e1       	ldi	r16, 0x10	; 16
+     b64:	20 e1       	ldi	r18, 0x10	; 16
+     b66:	80 e1       	ldi	r24, 0x10	; 16
+     b68:	91 e0       	ldi	r25, 0x01	; 1
+     b6a:	07 dd       	rcall	.-1522   	; 0x57a <print_bitmap>
+			GLCD_Rectangle_black(60, 0, 64, 128);
+     b6c:	20 e8       	ldi	r18, 0x80	; 128
+     b6e:	40 e4       	ldi	r20, 0x40	; 64
+     b70:	60 e0       	ldi	r22, 0x00	; 0
+     b72:	8c e3       	ldi	r24, 0x3C	; 60
+     b74:	76 d4       	rcall	.+2284   	; 0x1462 <GLCD_Rectangle_black>
+     b76:	ff ef       	ldi	r31, 0xFF	; 255
+     b78:	2f e3       	ldi	r18, 0x3F	; 63
+     b7a:	32 e0       	ldi	r19, 0x02	; 2
+     b7c:	f1 50       	subi	r31, 0x01	; 1
+     b7e:	20 40       	sbci	r18, 0x00	; 0
+     b80:	30 40       	sbci	r19, 0x00	; 0
+     b82:	e1 f7       	brne	.-8      	; 0xb7c <compare_round_time+0x5c>
+     b84:	00 c0       	rjmp	.+0      	; 0xb86 <compare_round_time+0x66>
+     b86:	00 00       	nop
+	crash_flag[bird_num] = 0; // 범위를 벗어나면 해당 새와 충돌이 끝났음을 flag로 체크
+}
+
+void compare_round_time(unsigned char *y, unsigned char *x){ // 정해진 stage진행 시간보다 play_time이 커지면 stage 종료하는 함수
+	if (round_time <= play_time){ // round_time보다 play_time이 커지면
+		while (*y <= 30){       // 점프보이의 y좌표가 30보다 작을 때 좌표를 30으로 점차 이동
+     b88:	88 81       	ld	r24, Y
+     b8a:	8f 31       	cpi	r24, 0x1F	; 31
+     b8c:	00 f3       	brcs	.-64     	; 0xb4e <compare_round_time+0x2e>
+			*y += 2;
+			print_bitmap(jumper, *x - 8, *y - 8, 16, 16); // 점프보이 그림을 해당 좌표에 출력
+			GLCD_Rectangle_black(60, 0, 64, 128);
+			_delay_ms(50);
+		}
+		while (*y >= 30){         // 점프보이의 y좌표가 30보다 클 때 좌표를 30으로 점차 이동
+     b8e:	88 81       	ld	r24, Y
+     b90:	8e 31       	cpi	r24, 0x1E	; 30
+     b92:	00 f1       	brcs	.+64     	; 0xbd4 <compare_round_time+0xb4>
+			lcd_clear();
+     b94:	c4 d2       	rcall	.+1416   	; 0x111e <lcd_clear>
+			ScreenBuffer_clear();
+     b96:	ad d3       	rcall	.+1882   	; 0x12f2 <ScreenBuffer_clear>
+			*y -= 2;
+     b98:	48 81       	ld	r20, Y
+     b9a:	8e ef       	ldi	r24, 0xFE	; 254
+     b9c:	84 0f       	add	r24, r20
+     b9e:	88 83       	st	Y, r24
+			print_bitmap(jumper, *x - 8, *y - 8, 16, 16); // 점프보이 그림을 해당 좌표에 출력
+     ba0:	4a 50       	subi	r20, 0x0A	; 10
+     ba2:	f7 01       	movw	r30, r14
+     ba4:	60 81       	ld	r22, Z
+     ba6:	68 50       	subi	r22, 0x08	; 8
+     ba8:	00 e1       	ldi	r16, 0x10	; 16
+     baa:	20 e1       	ldi	r18, 0x10	; 16
+     bac:	80 e1       	ldi	r24, 0x10	; 16
+     bae:	91 e0       	ldi	r25, 0x01	; 1
+     bb0:	e4 dc       	rcall	.-1592   	; 0x57a <print_bitmap>
+			GLCD_Rectangle_black(60, 0, 64, 128);
+     bb2:	20 e8       	ldi	r18, 0x80	; 128
+     bb4:	40 e4       	ldi	r20, 0x40	; 64
+     bb6:	60 e0       	ldi	r22, 0x00	; 0
+     bb8:	8c e3       	ldi	r24, 0x3C	; 60
+     bba:	53 d4       	rcall	.+2214   	; 0x1462 <GLCD_Rectangle_black>
+     bbc:	ff ef       	ldi	r31, 0xFF	; 255
+     bbe:	2f e3       	ldi	r18, 0x3F	; 63
+     bc0:	32 e0       	ldi	r19, 0x02	; 2
+     bc2:	f1 50       	subi	r31, 0x01	; 1
+     bc4:	20 40       	sbci	r18, 0x00	; 0
+     bc6:	30 40       	sbci	r19, 0x00	; 0
+     bc8:	e1 f7       	brne	.-8      	; 0xbc2 <compare_round_time+0xa2>
+     bca:	00 c0       	rjmp	.+0      	; 0xbcc <compare_round_time+0xac>
+     bcc:	00 00       	nop
+			*y += 2;
+			print_bitmap(jumper, *x - 8, *y - 8, 16, 16); // 점프보이 그림을 해당 좌표에 출력
+			GLCD_Rectangle_black(60, 0, 64, 128);
+			_delay_ms(50);
+		}
+		while (*y >= 30){         // 점프보이의 y좌표가 30보다 클 때 좌표를 30으로 점차 이동
+     bce:	88 81       	ld	r24, Y
+     bd0:	8e 31       	cpi	r24, 0x1E	; 30
+     bd2:	00 f7       	brcc	.-64     	; 0xb94 <compare_round_time+0x74>
+			*y -= 2;
+			print_bitmap(jumper, *x - 8, *y - 8, 16, 16); // 점프보이 그림을 해당 좌표에 출력
+			GLCD_Rectangle_black(60, 0, 64, 128);
+			_delay_ms(50);
+		}
+		while (*x > 11){         // 점프보이의 x좌표를 왼쪽 맨 끝으로 이동
+     bd4:	f7 01       	movw	r30, r14
+     bd6:	80 81       	ld	r24, Z
+     bd8:	8c 30       	cpi	r24, 0x0C	; 12
+     bda:	08 f4       	brcc	.+2      	; 0xbde <compare_round_time+0xbe>
+     bdc:	c5 c0       	rjmp	.+394    	; 0xd68 <compare_round_time+0x248>
+			lcd_clear();
+     bde:	9f d2       	rcall	.+1342   	; 0x111e <lcd_clear>
+			ScreenBuffer_clear();
+     be0:	88 d3       	rcall	.+1808   	; 0x12f2 <ScreenBuffer_clear>
+			*x -= 4;
+     be2:	f7 01       	movw	r30, r14
+     be4:	60 81       	ld	r22, Z
+     be6:	8c ef       	ldi	r24, 0xFC	; 252
+     be8:	86 0f       	add	r24, r22
+     bea:	80 83       	st	Z, r24
+			print_bitmap(jumper, *x - 8, *y - 8, 16, 16); // 점프보이 그림을 해당 좌표에 출력
+     bec:	48 81       	ld	r20, Y
+     bee:	48 50       	subi	r20, 0x08	; 8
+     bf0:	6c 50       	subi	r22, 0x0C	; 12
+     bf2:	00 e1       	ldi	r16, 0x10	; 16
+     bf4:	20 e1       	ldi	r18, 0x10	; 16
+     bf6:	80 e1       	ldi	r24, 0x10	; 16
+     bf8:	91 e0       	ldi	r25, 0x01	; 1
+     bfa:	bf dc       	rcall	.-1666   	; 0x57a <print_bitmap>
+			GLCD_Rectangle_black(60, 0, 64, 128);
+     bfc:	20 e8       	ldi	r18, 0x80	; 128
+     bfe:	40 e4       	ldi	r20, 0x40	; 64
+     c00:	60 e0       	ldi	r22, 0x00	; 0
+     c02:	8c e3       	ldi	r24, 0x3C	; 60
+     c04:	2e d4       	rcall	.+2140   	; 0x1462 <GLCD_Rectangle_black>
+     c06:	ff ef       	ldi	r31, 0xFF	; 255
+     c08:	2f e3       	ldi	r18, 0x3F	; 63
+     c0a:	32 e0       	ldi	r19, 0x02	; 2
+     c0c:	f1 50       	subi	r31, 0x01	; 1
+     c0e:	20 40       	sbci	r18, 0x00	; 0
+     c10:	30 40       	sbci	r19, 0x00	; 0
+     c12:	e1 f7       	brne	.-8      	; 0xc0c <compare_round_time+0xec>
+     c14:	00 c0       	rjmp	.+0      	; 0xc16 <compare_round_time+0xf6>
+     c16:	00 00       	nop
+			*y -= 2;
+			print_bitmap(jumper, *x - 8, *y - 8, 16, 16); // 점프보이 그림을 해당 좌표에 출력
+			GLCD_Rectangle_black(60, 0, 64, 128);
+			_delay_ms(50);
+		}
+		while (*x > 11){         // 점프보이의 x좌표를 왼쪽 맨 끝으로 이동
+     c18:	f7 01       	movw	r30, r14
+     c1a:	80 81       	ld	r24, Z
+     c1c:	8c 30       	cpi	r24, 0x0C	; 12
+     c1e:	f8 f6       	brcc	.-66     	; 0xbde <compare_round_time+0xbe>
+     c20:	a3 c0       	rjmp	.+326    	; 0xd68 <compare_round_time+0x248>
+			_delay_ms(50);
+		}
+
+		unsigned char dest = 128;   // 목적지의 x좌표를 128으로 설정
+		while (dest >= 105){         // 목적지의 x좌표가 105보다 작아질 때 까지 목적지를 점차 이동
+			lcd_clear();
+     c22:	7d d2       	rcall	.+1274   	; 0x111e <lcd_clear>
+			ScreenBuffer_clear();
+     c24:	66 d3       	rcall	.+1740   	; 0x12f2 <ScreenBuffer_clear>
+			print_bitmap(jumper, *x - 8, *y - 8, 16, 16); // 점프보이 그림을 출력
+     c26:	48 81       	ld	r20, Y
+     c28:	48 50       	subi	r20, 0x08	; 8
+     c2a:	f7 01       	movw	r30, r14
+     c2c:	60 81       	ld	r22, Z
+     c2e:	68 50       	subi	r22, 0x08	; 8
+     c30:	00 e1       	ldi	r16, 0x10	; 16
+     c32:	20 e1       	ldi	r18, 0x10	; 16
+     c34:	80 e1       	ldi	r24, 0x10	; 16
+     c36:	91 e0       	ldi	r25, 0x01	; 1
+     c38:	a0 dc       	rcall	.-1728   	; 0x57a <print_bitmap>
+			GLCD_Circle(64, dest, 20); // 해당 x좌표(dest)에 목적지(원형) 출력
+     c3a:	44 e1       	ldi	r20, 0x14	; 20
+     c3c:	61 2f       	mov	r22, r17
+     c3e:	80 e4       	ldi	r24, 0x40	; 64
+     c40:	40 d4       	rcall	.+2176   	; 0x14c2 <GLCD_Circle>
+			dest -= 2;   // 목적지의 x좌표를 2씩 감소시킴
+     c42:	12 50       	subi	r17, 0x02	; 2
+			GLCD_Rectangle_black(60, 0, 64, 128);
+     c44:	20 e8       	ldi	r18, 0x80	; 128
+     c46:	40 e4       	ldi	r20, 0x40	; 64
+     c48:	60 e0       	ldi	r22, 0x00	; 0
+     c4a:	8c e3       	ldi	r24, 0x3C	; 60
+     c4c:	0a d4       	rcall	.+2068   	; 0x1462 <GLCD_Rectangle_black>
+     c4e:	ff ef       	ldi	r31, 0xFF	; 255
+     c50:	2f ef       	ldi	r18, 0xFF	; 255
+     c52:	38 e0       	ldi	r19, 0x08	; 8
+     c54:	f1 50       	subi	r31, 0x01	; 1
+     c56:	20 40       	sbci	r18, 0x00	; 0
+     c58:	30 40       	sbci	r19, 0x00	; 0
+     c5a:	e1 f7       	brne	.-8      	; 0xc54 <compare_round_time+0x134>
+     c5c:	00 c0       	rjmp	.+0      	; 0xc5e <compare_round_time+0x13e>
+     c5e:	00 00       	nop
+			GLCD_Rectangle_black(60, 0, 64, 128);
+			_delay_ms(50);
+		}
+
+		unsigned char dest = 128;   // 목적지의 x좌표를 128으로 설정
+		while (dest >= 105){         // 목적지의 x좌표가 105보다 작아질 때 까지 목적지를 점차 이동
+     c60:	18 36       	cpi	r17, 0x68	; 104
+     c62:	f9 f6       	brne	.-66     	; 0xc22 <compare_round_time+0x102>
+			dest -= 2;   // 목적지의 x좌표를 2씩 감소시킴
+			GLCD_Rectangle_black(60, 0, 64, 128);
+			_delay_ms(200);
+		}
+
+		while (*x <= dest - 24){   // 점프보이를 수평으로 약간 이동시킴
+     c64:	f7 01       	movw	r30, r14
+     c66:	80 81       	ld	r24, Z
+     c68:	90 e0       	ldi	r25, 0x00	; 0
+     c6a:	81 35       	cpi	r24, 0x51	; 81
+     c6c:	91 05       	cpc	r25, r1
+     c6e:	44 f5       	brge	.+80     	; 0xcc0 <compare_round_time+0x1a0>
+			lcd_clear();
+     c70:	56 d2       	rcall	.+1196   	; 0x111e <lcd_clear>
+			ScreenBuffer_clear();
+     c72:	3f d3       	rcall	.+1662   	; 0x12f2 <ScreenBuffer_clear>
+
+			*x += 4;   // 점프보이의 x좌표를 4씩 증가
+     c74:	f7 01       	movw	r30, r14
+     c76:	80 81       	ld	r24, Z
+     c78:	8c 5f       	subi	r24, 0xFC	; 252
+     c7a:	80 83       	st	Z, r24
+			GLCD_Circle(64, dest, 20);
+     c7c:	44 e1       	ldi	r20, 0x14	; 20
+     c7e:	68 e6       	ldi	r22, 0x68	; 104
+     c80:	80 e4       	ldi	r24, 0x40	; 64
+     c82:	1f d4       	rcall	.+2110   	; 0x14c2 <GLCD_Circle>
+			print_bitmap(jumper, *x - 8, *y - 8, 16, 16);
+     c84:	48 81       	ld	r20, Y
+     c86:	48 50       	subi	r20, 0x08	; 8
+     c88:	f7 01       	movw	r30, r14
+     c8a:	60 81       	ld	r22, Z
+     c8c:	68 50       	subi	r22, 0x08	; 8
+     c8e:	00 e1       	ldi	r16, 0x10	; 16
+     c90:	20 e1       	ldi	r18, 0x10	; 16
+     c92:	80 e1       	ldi	r24, 0x10	; 16
+     c94:	91 e0       	ldi	r25, 0x01	; 1
+     c96:	71 dc       	rcall	.-1822   	; 0x57a <print_bitmap>
+			GLCD_Rectangle_black(60, 0, 64, 128);
+     c98:	20 e8       	ldi	r18, 0x80	; 128
+     c9a:	40 e4       	ldi	r20, 0x40	; 64
+     c9c:	60 e0       	ldi	r22, 0x00	; 0
+     c9e:	8c e3       	ldi	r24, 0x3C	; 60
+     ca0:	e0 d3       	rcall	.+1984   	; 0x1462 <GLCD_Rectangle_black>
+     ca2:	ff ef       	ldi	r31, 0xFF	; 255
+     ca4:	2f e3       	ldi	r18, 0x3F	; 63
+     ca6:	32 e0       	ldi	r19, 0x02	; 2
+     ca8:	f1 50       	subi	r31, 0x01	; 1
+     caa:	20 40       	sbci	r18, 0x00	; 0
+     cac:	30 40       	sbci	r19, 0x00	; 0
+     cae:	e1 f7       	brne	.-8      	; 0xca8 <compare_round_time+0x188>
+     cb0:	00 c0       	rjmp	.+0      	; 0xcb2 <compare_round_time+0x192>
+     cb2:	00 00       	nop
+			dest -= 2;   // 목적지의 x좌표를 2씩 감소시킴
+			GLCD_Rectangle_black(60, 0, 64, 128);
+			_delay_ms(200);
+		}
+
+		while (*x <= dest - 24){   // 점프보이를 수평으로 약간 이동시킴
+     cb4:	f7 01       	movw	r30, r14
+     cb6:	80 81       	ld	r24, Z
+     cb8:	90 e0       	ldi	r25, 0x00	; 0
+     cba:	81 35       	cpi	r24, 0x51	; 81
+     cbc:	91 05       	cpc	r25, r1
+     cbe:	c4 f2       	brlt	.-80     	; 0xc70 <compare_round_time+0x150>
+			GLCD_Circle(64, dest, 20);
+			print_bitmap(jumper, *x - 8, *y - 8, 16, 16);
+			GLCD_Rectangle_black(60, 0, 64, 128);
+			_delay_ms(50);
+		}
+		while (*y <= 64 - 15){ // 점프보이가 목적지에 착지할 수 있도록 대각선방향으로 이동
+     cc0:	88 81       	ld	r24, Y
+     cc2:	82 33       	cpi	r24, 0x32	; 50
+     cc4:	40 f5       	brcc	.+80     	; 0xd16 <compare_round_time+0x1f6>
+			lcd_clear();
+     cc6:	2b d2       	rcall	.+1110   	; 0x111e <lcd_clear>
+			ScreenBuffer_clear();
+     cc8:	14 d3       	rcall	.+1576   	; 0x12f2 <ScreenBuffer_clear>
+			*x += 2;   // 점프보이의 x좌표 2증가
+     cca:	f7 01       	movw	r30, r14
+     ccc:	80 81       	ld	r24, Z
+     cce:	8e 5f       	subi	r24, 0xFE	; 254
+     cd0:	80 83       	st	Z, r24
+			*y += 2;   // 점프보이의 y좌표 2증가
+     cd2:	88 81       	ld	r24, Y
+     cd4:	8e 5f       	subi	r24, 0xFE	; 254
+     cd6:	88 83       	st	Y, r24
+			GLCD_Circle(64, dest, 20); // 목적지는 그대로 출력
+     cd8:	44 e1       	ldi	r20, 0x14	; 20
+     cda:	68 e6       	ldi	r22, 0x68	; 104
+     cdc:	80 e4       	ldi	r24, 0x40	; 64
+     cde:	f1 d3       	rcall	.+2018   	; 0x14c2 <GLCD_Circle>
+			print_bitmap(jumper, *x - 8, *y - 8, 16, 16); // 점프보이 출력
+     ce0:	48 81       	ld	r20, Y
+     ce2:	48 50       	subi	r20, 0x08	; 8
+     ce4:	f7 01       	movw	r30, r14
+     ce6:	60 81       	ld	r22, Z
+     ce8:	68 50       	subi	r22, 0x08	; 8
+     cea:	00 e1       	ldi	r16, 0x10	; 16
+     cec:	20 e1       	ldi	r18, 0x10	; 16
+     cee:	80 e1       	ldi	r24, 0x10	; 16
+     cf0:	91 e0       	ldi	r25, 0x01	; 1
+     cf2:	43 dc       	rcall	.-1914   	; 0x57a <print_bitmap>
+			GLCD_Rectangle_black(60, 0, 64, 128);
+     cf4:	20 e8       	ldi	r18, 0x80	; 128
+     cf6:	40 e4       	ldi	r20, 0x40	; 64
+     cf8:	60 e0       	ldi	r22, 0x00	; 0
+     cfa:	8c e3       	ldi	r24, 0x3C	; 60
+     cfc:	b2 d3       	rcall	.+1892   	; 0x1462 <GLCD_Rectangle_black>
+     cfe:	ff ef       	ldi	r31, 0xFF	; 255
+     d00:	2f e7       	ldi	r18, 0x7F	; 127
+     d02:	34 e0       	ldi	r19, 0x04	; 4
+     d04:	f1 50       	subi	r31, 0x01	; 1
+     d06:	20 40       	sbci	r18, 0x00	; 0
+     d08:	30 40       	sbci	r19, 0x00	; 0
+     d0a:	e1 f7       	brne	.-8      	; 0xd04 <compare_round_time+0x1e4>
+     d0c:	00 c0       	rjmp	.+0      	; 0xd0e <compare_round_time+0x1ee>
+     d0e:	00 00       	nop
+			GLCD_Circle(64, dest, 20);
+			print_bitmap(jumper, *x - 8, *y - 8, 16, 16);
+			GLCD_Rectangle_black(60, 0, 64, 128);
+			_delay_ms(50);
+		}
+		while (*y <= 64 - 15){ // 점프보이가 목적지에 착지할 수 있도록 대각선방향으로 이동
+     d10:	88 81       	ld	r24, Y
+     d12:	82 33       	cpi	r24, 0x32	; 50
+     d14:	c0 f2       	brcs	.-80     	; 0xcc6 <compare_round_time+0x1a6>
+			GLCD_Circle(64, dest, 20); // 목적지는 그대로 출력
+			print_bitmap(jumper, *x - 8, *y - 8, 16, 16); // 점프보이 출력
+			GLCD_Rectangle_black(60, 0, 64, 128);
+			_delay_ms(100);
+		}
+		game_flag = 0; // 새 피하기가 끝났음을 알림
+     d16:	10 92 a4 0c 	sts	0x0CA4, r1	; 0x800ca4 <game_flag>
+		cur_score += life * 50; // 남은 life에 따른 추가 점수를 현재 점수에 더함
+     d1a:	20 91 ae 0c 	lds	r18, 0x0CAE	; 0x800cae <life>
+     d1e:	80 91 a0 0c 	lds	r24, 0x0CA0	; 0x800ca0 <__data_end>
+     d22:	90 91 a1 0c 	lds	r25, 0x0CA1	; 0x800ca1 <__data_end+0x1>
+     d26:	e2 e3       	ldi	r30, 0x32	; 50
+     d28:	2e 9f       	mul	r18, r30
+     d2a:	80 0d       	add	r24, r0
+     d2c:	91 1d       	adc	r25, r1
+     d2e:	11 24       	eor	r1, r1
+     d30:	90 93 a1 0c 	sts	0x0CA1, r25	; 0x800ca1 <__data_end+0x1>
+     d34:	80 93 a0 0c 	sts	0x0CA0, r24	; 0x800ca0 <__data_end>
+		if (stage_number != 3){  // stage가 3이아니었다면
+     d38:	80 91 a8 0c 	lds	r24, 0x0CA8	; 0x800ca8 <stage_number>
+     d3c:	83 30       	cpi	r24, 0x03	; 3
+     d3e:	69 f0       	breq	.+26     	; 0xd5a <compare_round_time+0x23a>
+			game_state = 2;      // 다음 stage로 넘어감
+     d40:	82 e0       	ldi	r24, 0x02	; 2
+     d42:	80 93 ad 0c 	sts	0x0CAD, r24	; 0x800cad <game_state>
+     d46:	ff ef       	ldi	r31, 0xFF	; 255
+     d48:	2f e7       	ldi	r18, 0x7F	; 127
+     d4a:	33 e4       	ldi	r19, 0x43	; 67
+     d4c:	f1 50       	subi	r31, 0x01	; 1
+     d4e:	20 40       	sbci	r18, 0x00	; 0
+     d50:	30 40       	sbci	r19, 0x00	; 0
+     d52:	e1 f7       	brne	.-8      	; 0xd4c <compare_round_time+0x22c>
+     d54:	00 c0       	rjmp	.+0      	; 0xd56 <compare_round_time+0x236>
+     d56:	00 00       	nop
+     d58:	09 c0       	rjmp	.+18     	; 0xd6c <compare_round_time+0x24c>
+			_delay_ms(1500);
+		}
+		else{           // 현재 stage가 3이었다면
+			end_flag = 1; // clear를 알리기 위해 end_flag를 1로 설정
+     d5a:	81 e0       	ldi	r24, 0x01	; 1
+     d5c:	80 93 a5 0c 	sts	0x0CA5, r24	; 0x800ca5 <end_flag>
+			game_state = 5; // game종료 state설정
+     d60:	85 e0       	ldi	r24, 0x05	; 5
+     d62:	80 93 ad 0c 	sts	0x0CAD, r24	; 0x800cad <game_state>
+     d66:	02 c0       	rjmp	.+4      	; 0xd6c <compare_round_time+0x24c>
+	}
+	else
+	crash_flag[bird_num] = 0; // 범위를 벗어나면 해당 새와 충돌이 끝났음을 flag로 체크
+}
+
+void compare_round_time(unsigned char *y, unsigned char *x){ // 정해진 stage진행 시간보다 play_time이 커지면 stage 종료하는 함수
+     d68:	10 e8       	ldi	r17, 0x80	; 128
+     d6a:	5b cf       	rjmp	.-330    	; 0xc22 <compare_round_time+0x102>
+		else{           // 현재 stage가 3이었다면
+			end_flag = 1; // clear를 알리기 위해 end_flag를 1로 설정
+			game_state = 5; // game종료 state설정
+		}
+	}
+}
+     d6c:	df 91       	pop	r29
+     d6e:	cf 91       	pop	r28
+     d70:	1f 91       	pop	r17
+     d72:	0f 91       	pop	r16
+     d74:	ff 90       	pop	r15
+     d76:	ef 90       	pop	r14
+     d78:	08 95       	ret
+
+00000d7a <joystick_move>:
+
+void joystick_move(unsigned char* y, unsigned char* x){
+     d7a:	0f 93       	push	r16
+     d7c:	1f 93       	push	r17
+     d7e:	cf 93       	push	r28
+     d80:	df 93       	push	r29
+     d82:	8c 01       	movw	r16, r24
+     d84:	eb 01       	movw	r28, r22
+	Data_ADC3 = Read_Adc_Data(3) / 14; // 아날로그 3번 포트에서 값을 읽는다. 조이스틱의 y축에 해당
+     d86:	83 e0       	ldi	r24, 0x03	; 3
+     d88:	60 d1       	rcall	.+704    	; 0x104a <Read_Adc_Data>
+     d8a:	9c 01       	movw	r18, r24
+     d8c:	36 95       	lsr	r19
+     d8e:	27 95       	ror	r18
+     d90:	a5 e2       	ldi	r26, 0x25	; 37
+     d92:	b9 e4       	ldi	r27, 0x49	; 73
+     d94:	be d6       	rcall	.+3452   	; 0x1b12 <__umulhisi3>
+     d96:	96 95       	lsr	r25
+     d98:	87 95       	ror	r24
+     d9a:	90 93 b6 0c 	sts	0x0CB6, r25	; 0x800cb6 <Data_ADC3+0x1>
+     d9e:	80 93 b5 0c 	sts	0x0CB5, r24	; 0x800cb5 <Data_ADC3>
+	Data_ADC4 = Read_Adc_Data(4) / 14; // 아날로그 4번 포트에서 값을 읽는다. 조이스틱의 x축에 해당
+     da2:	84 e0       	ldi	r24, 0x04	; 4
+     da4:	52 d1       	rcall	.+676    	; 0x104a <Read_Adc_Data>
+     da6:	9c 01       	movw	r18, r24
+     da8:	36 95       	lsr	r19
+     daa:	27 95       	ror	r18
+     dac:	a5 e2       	ldi	r26, 0x25	; 37
+     dae:	b9 e4       	ldi	r27, 0x49	; 73
+     db0:	b0 d6       	rcall	.+3424   	; 0x1b12 <__umulhisi3>
+     db2:	96 95       	lsr	r25
+     db4:	87 95       	ror	r24
+     db6:	90 93 b4 0c 	sts	0x0CB4, r25	; 0x800cb4 <Data_ADC4+0x1>
+     dba:	80 93 b3 0c 	sts	0x0CB3, r24	; 0x800cb3 <Data_ADC4>
+	// 상하 좌우 선택
+	if (Data_ADC3 < 20){  // 조이스틱을 오른쪽으로 했을 때, x좌표를 +3만큼 이동
+     dbe:	20 91 b5 0c 	lds	r18, 0x0CB5	; 0x800cb5 <Data_ADC3>
+     dc2:	30 91 b6 0c 	lds	r19, 0x0CB6	; 0x800cb6 <Data_ADC3+0x1>
+     dc6:	24 31       	cpi	r18, 0x14	; 20
+     dc8:	31 05       	cpc	r19, r1
+     dca:	50 f4       	brcc	.+20     	; 0xde0 <joystick_move+0x66>
+		if (*x + 11 <128)
+     dcc:	28 81       	ld	r18, Y
+     dce:	82 2f       	mov	r24, r18
+     dd0:	90 e0       	ldi	r25, 0x00	; 0
+     dd2:	0b 96       	adiw	r24, 0x0b	; 11
+     dd4:	80 38       	cpi	r24, 0x80	; 128
+     dd6:	91 05       	cpc	r25, r1
+     dd8:	64 f5       	brge	.+88     	; 0xe32 <joystick_move+0xb8>
+		*x += 3;
+     dda:	2d 5f       	subi	r18, 0xFD	; 253
+     ddc:	28 83       	st	Y, r18
+     dde:	29 c0       	rjmp	.+82     	; 0xe32 <joystick_move+0xb8>
+	}
+	else if (Data_ADC3 > 50){ // 조이스틱을 왼쪽으로 했을 때, x좌표를 -3만큼 이동
+     de0:	23 33       	cpi	r18, 0x33	; 51
+     de2:	31 05       	cpc	r19, r1
+     de4:	58 f0       	brcs	.+22     	; 0xdfc <joystick_move+0x82>
+		if (*x - 11 > 0)
+     de6:	88 81       	ld	r24, Y
+     de8:	28 2f       	mov	r18, r24
+     dea:	30 e0       	ldi	r19, 0x00	; 0
+     dec:	2b 50       	subi	r18, 0x0B	; 11
+     dee:	31 09       	sbc	r19, r1
+     df0:	12 16       	cp	r1, r18
+     df2:	13 06       	cpc	r1, r19
+     df4:	f4 f4       	brge	.+60     	; 0xe32 <joystick_move+0xb8>
+		*x -= 3;
+     df6:	83 50       	subi	r24, 0x03	; 3
+     df8:	88 83       	st	Y, r24
+     dfa:	1b c0       	rjmp	.+54     	; 0xe32 <joystick_move+0xb8>
+	}
+	else if (Data_ADC4 > 50){ // 조이스틱을 아래로 했을 때, y좌표를 +3만큼 이동
+     dfc:	83 33       	cpi	r24, 0x33	; 51
+     dfe:	91 05       	cpc	r25, r1
+     e00:	58 f0       	brcs	.+22     	; 0xe18 <joystick_move+0x9e>
+		if (*y + 11 < 64)
+     e02:	f8 01       	movw	r30, r16
+     e04:	20 81       	ld	r18, Z
+     e06:	82 2f       	mov	r24, r18
+     e08:	90 e0       	ldi	r25, 0x00	; 0
+     e0a:	0b 96       	adiw	r24, 0x0b	; 11
+     e0c:	80 34       	cpi	r24, 0x40	; 64
+     e0e:	91 05       	cpc	r25, r1
+     e10:	84 f4       	brge	.+32     	; 0xe32 <joystick_move+0xb8>
+		*y += 3;
+     e12:	2d 5f       	subi	r18, 0xFD	; 253
+     e14:	20 83       	st	Z, r18
+     e16:	0d c0       	rjmp	.+26     	; 0xe32 <joystick_move+0xb8>
+	}
+	else if (Data_ADC4 < 20){ // 조이스틱을 위로 했을 때, y좌표를 -3만큼 이동
+     e18:	44 97       	sbiw	r24, 0x14	; 20
+     e1a:	58 f4       	brcc	.+22     	; 0xe32 <joystick_move+0xb8>
+		if (*y - 11 > 0)
+     e1c:	f8 01       	movw	r30, r16
+     e1e:	80 81       	ld	r24, Z
+     e20:	28 2f       	mov	r18, r24
+     e22:	30 e0       	ldi	r19, 0x00	; 0
+     e24:	2b 50       	subi	r18, 0x0B	; 11
+     e26:	31 09       	sbc	r19, r1
+     e28:	12 16       	cp	r1, r18
+     e2a:	13 06       	cpc	r1, r19
+     e2c:	14 f4       	brge	.+4      	; 0xe32 <joystick_move+0xb8>
+		*y -= 3;
+     e2e:	83 50       	subi	r24, 0x03	; 3
+     e30:	80 83       	st	Z, r24
+	}
+	print_bitmap(jumper, *x - 8, *y - 8, 16, 16); // 좌표 이동후의 점프보이 출력
+     e32:	f8 01       	movw	r30, r16
+     e34:	40 81       	ld	r20, Z
+     e36:	48 50       	subi	r20, 0x08	; 8
+     e38:	68 81       	ld	r22, Y
+     e3a:	68 50       	subi	r22, 0x08	; 8
+     e3c:	00 e1       	ldi	r16, 0x10	; 16
+     e3e:	20 e1       	ldi	r18, 0x10	; 16
+     e40:	80 e1       	ldi	r24, 0x10	; 16
+     e42:	91 e0       	ldi	r25, 0x01	; 1
+     e44:	9a db       	rcall	.-2252   	; 0x57a <print_bitmap>
+     e46:	ff ef       	ldi	r31, 0xFF	; 255
+     e48:	2f e7       	ldi	r18, 0x7F	; 127
+     e4a:	84 e0       	ldi	r24, 0x04	; 4
+     e4c:	f1 50       	subi	r31, 0x01	; 1
+     e4e:	20 40       	sbci	r18, 0x00	; 0
+     e50:	80 40       	sbci	r24, 0x00	; 0
+     e52:	e1 f7       	brne	.-8      	; 0xe4c <joystick_move+0xd2>
+     e54:	00 c0       	rjmp	.+0      	; 0xe56 <joystick_move+0xdc>
+     e56:	00 00       	nop
+	_delay_ms(100);
+}
+     e58:	df 91       	pop	r29
+     e5a:	cf 91       	pop	r28
+     e5c:	1f 91       	pop	r17
+     e5e:	0f 91       	pop	r16
+     e60:	08 95       	ret
+
+00000e62 <main>:
+			}
+		}
+	}
+}
+
+int main(void){
+     e62:	cf 93       	push	r28
+     e64:	df 93       	push	r29
+     e66:	cd b7       	in	r28, 0x3d	; 61
+     e68:	de b7       	in	r29, 0x3e	; 62
+     e6a:	28 97       	sbiw	r28, 0x08	; 8
+     e6c:	0f b6       	in	r0, 0x3f	; 63
+     e6e:	f8 94       	cli
+     e70:	de bf       	out	0x3e, r29	; 62
+     e72:	0f be       	out	0x3f, r0	; 63
+     e74:	cd bf       	out	0x3d, r28	; 61
+
+	Adc_init();
+     e76:	e2 d0       	rcall	.+452    	; 0x103c <Adc_init>
+	init_devices();
+     e78:	51 da       	rcall	.-2910   	; 0x31c <init_devices>
+	Init_Timer0();
+     e7a:	27 d9       	rcall	.-3506   	; 0xca <Init_Timer0>
+	Port_init();
+     e7c:	3d da       	rcall	.-2950   	; 0x2f8 <Port_init>
+
+	Bird bd[3]; // 3마리의 새 생성. 구조체 변수
+	for (unsigned char i = 0; i < 3; ++i) // 세마리의 새가 아직 화면에서 나타나지 않았음을 의미. flag 초기화
+	flag[i] = 0;
+     e7e:	ec eb       	ldi	r30, 0xBC	; 188
+     e80:	fc e0       	ldi	r31, 0x0C	; 12
+     e82:	10 82       	st	Z, r1
+     e84:	11 82       	std	Z+1, r1	; 0x01
+     e86:	12 82       	std	Z+2, r1	; 0x02
+
+	unsigned char man_y = 0; // 점프보이의 x, y좌표를 나타내는 변수 생성
+     e88:	1f 82       	std	Y+7, r1	; 0x07
+	unsigned char man_x = 0;
+     e8a:	18 86       	std	Y+8, r1	; 0x08
+
+	lcd_clear();
+     e8c:	48 d1       	rcall	.+656    	; 0x111e <lcd_clear>
+	ScreenBuffer_clear();
+     e8e:	31 d2       	rcall	.+1122   	; 0x12f2 <ScreenBuffer_clear>
+	print_bitmap(img, 0, 0, 128, 64); // Super Jump Boy 이미지 출력
+     e90:	00 e4       	ldi	r16, 0x40	; 64
+     e92:	20 e8       	ldi	r18, 0x80	; 128
+     e94:	40 e0       	ldi	r20, 0x00	; 0
+     e96:	60 e0       	ldi	r22, 0x00	; 0
+     e98:	88 e3       	ldi	r24, 0x38	; 56
+     e9a:	95 e0       	ldi	r25, 0x05	; 5
+     e9c:	6e db       	rcall	.-2340   	; 0x57a <print_bitmap>
+     e9e:	2f ef       	ldi	r18, 0xFF	; 255
+     ea0:	8f ef       	ldi	r24, 0xFF	; 255
+     ea2:	93 eb       	ldi	r25, 0xB3	; 179
+     ea4:	21 50       	subi	r18, 0x01	; 1
+     ea6:	80 40       	sbci	r24, 0x00	; 0
+     ea8:	90 40       	sbci	r25, 0x00	; 0
+     eaa:	e1 f7       	brne	.-8      	; 0xea4 <main+0x42>
+     eac:	00 c0       	rjmp	.+0      	; 0xeae <main+0x4c>
+     eae:	00 00       	nop
+	_delay_ms(4000);
+	game_state = 0; // 게임시작화면부터 시작
+     eb0:	10 92 ad 0c 	sts	0x0CAD, r1	; 0x800cad <game_state>
+			select_menu();
+			stage_number = 0; // stage 번호 초기화
+			cur_score = 0;  // 현재 점수 초기화
+			break;
+			case 2:
+			box_state = 1;
+     eb4:	88 24       	eor	r8, r8
+     eb6:	83 94       	inc	r8
+     eb8:	91 2c       	mov	r9, r1
+     eba:	fe 01       	movw	r30, r28
+     ebc:	31 96       	adiw	r30, 0x01	; 1
+     ebe:	3f 01       	movw	r6, r30
+			lcd_string(0, 0, "SCORE ");   // 좌측 상단에 SCORE 출력
+			lcd_xy(0, 6);
+			GLCD_4DigitDecimal(cur_score);
+			lcd_string(0, 12, "LIFE * "); // 우측 상단에 남은 life 출력
+			lcd_xy(0, 18);
+			GLCD_2DigitDecimal(life);
+     ec0:	3e 2e       	mov	r3, r30
+     ec2:	47 2c       	mov	r4, r7
+			if (game_flag == 0){ // 새 피하기 시작 flag가 아직 set이 아니면
+				start_jump(&man_y, &man_x); // 점프보이가 출발지에서 점프하는 부분 출력하는 함수
+				game_flag = 1; // 새 피하기 시작 flag를 set
+				play_time = 0; // play_time 초기화
+				for (int i = 0; i < 3; ++i){ // 3마리의 새의 flag 초기화
+					flag[i] = 0;
+     ec4:	0f 2e       	mov	r0, r31
+     ec6:	fc eb       	ldi	r31, 0xBC	; 188
+     ec8:	af 2e       	mov	r10, r31
+     eca:	fc e0       	ldi	r31, 0x0C	; 12
+     ecc:	bf 2e       	mov	r11, r31
+     ece:	f0 2d       	mov	r31, r0
+	unsigned char y;
+}Bird;
+
+// 새의 좌표를 설정해주는 함수
+void set_Bird(unsigned char *y, unsigned char *x, unsigned char y_val){
+	*x = 120;
+     ed0:	0f 2e       	mov	r0, r31
+     ed2:	f8 e7       	ldi	r31, 0x78	; 120
+     ed4:	2f 2e       	mov	r2, r31
+     ed6:	f0 2d       	mov	r31, r0
+	print_bitmap(img, 0, 0, 128, 64); // Super Jump Boy 이미지 출력
+	_delay_ms(4000);
+	game_state = 0; // 게임시작화면부터 시작
+
+	while (1){
+		lcd_clear();
+     ed8:	22 d1       	rcall	.+580    	; 0x111e <lcd_clear>
+		ScreenBuffer_clear();
+     eda:	0b d2       	rcall	.+1046   	; 0x12f2 <ScreenBuffer_clear>
+		switch (game_state){    // 게임 상태를 switch 문으로 관리
+     edc:	80 91 ad 0c 	lds	r24, 0x0CAD	; 0x800cad <game_state>
+     ee0:	82 30       	cpi	r24, 0x02	; 2
+     ee2:	91 f0       	breq	.+36     	; 0xf08 <main+0xa6>
+     ee4:	18 f4       	brcc	.+6      	; 0xeec <main+0x8a>
+     ee6:	88 23       	and	r24, r24
+     ee8:	39 f0       	breq	.+14     	; 0xef8 <main+0x96>
+     eea:	9e c0       	rjmp	.+316    	; 0x1028 <main+0x1c6>
+     eec:	83 30       	cpi	r24, 0x03	; 3
+     eee:	d9 f0       	breq	.+54     	; 0xf26 <main+0xc4>
+     ef0:	85 30       	cpi	r24, 0x05	; 5
+     ef2:	09 f4       	brne	.+2      	; 0xef6 <main+0x94>
+     ef4:	89 c0       	rjmp	.+274    	; 0x1008 <main+0x1a6>
+     ef6:	98 c0       	rjmp	.+304    	; 0x1028 <main+0x1c6>
+			case 0: // 게임 시작화면
+			select_menu();
+     ef8:	2a dc       	rcall	.-1964   	; 0x74e <select_menu>
+			stage_number = 0; // stage 번호 초기화
+     efa:	10 92 a8 0c 	sts	0x0CA8, r1	; 0x800ca8 <stage_number>
+			cur_score = 0;  // 현재 점수 초기화
+     efe:	10 92 a1 0c 	sts	0x0CA1, r1	; 0x800ca1 <__data_end+0x1>
+     f02:	10 92 a0 0c 	sts	0x0CA0, r1	; 0x800ca0 <__data_end>
+			break;
+     f06:	90 c0       	rjmp	.+288    	; 0x1028 <main+0x1c6>
+			case 2:
+			box_state = 1;
+     f08:	90 92 b2 0c 	sts	0x0CB2, r9	; 0x800cb2 <box_state+0x1>
+     f0c:	80 92 b1 0c 	sts	0x0CB1, r8	; 0x800cb1 <box_state>
+			power_cnt = 0; // power_cnt 초기화
+     f10:	10 92 b0 0c 	sts	0x0CB0, r1	; 0x800cb0 <power_cnt+0x1>
+     f14:	10 92 af 0c 	sts	0x0CAF, r1	; 0x800caf <power_cnt>
+			next_stage_display(); // 다음 stage화면 출력
+     f18:	08 da       	rcall	.-3056   	; 0x32a <next_stage_display>
+			First_step();
+     f1a:	cf dc       	rcall	.-1634   	; 0x8ba <First_step>
+			cnt = 0; // cnt 초기화
+     f1c:	10 92 bb 0c 	sts	0x0CBB, r1	; 0x800cbb <cnt+0x1>
+     f20:	10 92 ba 0c 	sts	0x0CBA, r1	; 0x800cba <cnt>
+			break;
+     f24:	81 c0       	rjmp	.+258    	; 0x1028 <main+0x1c6>
+			case 3: // 새 피하기
+			if (game_flag == 0){ // 새 피하기 시작 flag가 아직 set이 아니면
+     f26:	80 91 a4 0c 	lds	r24, 0x0CA4	; 0x800ca4 <game_flag>
+     f2a:	81 11       	cpse	r24, r1
+     f2c:	1e c0       	rjmp	.+60     	; 0xf6a <main+0x108>
+				start_jump(&man_y, &man_x); // 점프보이가 출발지에서 점프하는 부분 출력하는 함수
+     f2e:	be 01       	movw	r22, r28
+     f30:	68 5f       	subi	r22, 0xF8	; 248
+     f32:	7f 4f       	sbci	r23, 0xFF	; 255
+     f34:	ce 01       	movw	r24, r28
+     f36:	07 96       	adiw	r24, 0x07	; 7
+     f38:	b9 dd       	rcall	.-1166   	; 0xaac <start_jump>
+				game_flag = 1; // 새 피하기 시작 flag를 set
+     f3a:	f1 e0       	ldi	r31, 0x01	; 1
+     f3c:	f0 93 a4 0c 	sts	0x0CA4, r31	; 0x800ca4 <game_flag>
+				play_time = 0; // play_time 초기화
+     f40:	10 92 a7 0c 	sts	0x0CA7, r1	; 0x800ca7 <play_time+0x1>
+     f44:	10 92 a6 0c 	sts	0x0CA6, r1	; 0x800ca6 <play_time>
+				for (int i = 0; i < 3; ++i){ // 3마리의 새의 flag 초기화
+					flag[i] = 0;
+     f48:	f5 01       	movw	r30, r10
+     f4a:	10 82       	st	Z, r1
+     f4c:	11 82       	std	Z+1, r1	; 0x01
+     f4e:	12 82       	std	Z+2, r1	; 0x02
+				}
+				cnt = 0; // cnt 초기화
+     f50:	10 92 bb 0c 	sts	0x0CBB, r1	; 0x800cbb <cnt+0x1>
+     f54:	10 92 ba 0c 	sts	0x0CBA, r1	; 0x800cba <cnt>
+	unsigned char y;
+}Bird;
+
+// 새의 좌표를 설정해주는 함수
+void set_Bird(unsigned char *y, unsigned char *x, unsigned char y_val){
+	*x = 120;
+     f58:	29 82       	std	Y+1, r2	; 0x01
+	*y = y_val;
+     f5a:	fe e0       	ldi	r31, 0x0E	; 14
+     f5c:	fa 83       	std	Y+2, r31	; 0x02
+	unsigned char y;
+}Bird;
+
+// 새의 좌표를 설정해주는 함수
+void set_Bird(unsigned char *y, unsigned char *x, unsigned char y_val){
+	*x = 120;
+     f5e:	2b 82       	std	Y+3, r2	; 0x03
+	*y = y_val;
+     f60:	21 e3       	ldi	r18, 0x31	; 49
+     f62:	2c 83       	std	Y+4, r18	; 0x04
+	unsigned char y;
+}Bird;
+
+// 새의 좌표를 설정해주는 함수
+void set_Bird(unsigned char *y, unsigned char *x, unsigned char y_val){
+	*x = 120;
+     f64:	2d 82       	std	Y+5, r2	; 0x05
+	*y = y_val;
+     f66:	8f e1       	ldi	r24, 0x1F	; 31
+     f68:	8e 83       	std	Y+6, r24	; 0x06
+				cnt = 0; // cnt 초기화
+				for (unsigned char i = 0; i < 3; ++i){ // 3마리의 새의 y좌표와 x좌표 초기화
+					set_Bird(&bd[i].y, &bd[i].x, (35 * i + 10) % 53 + 4);
+				}
+			}
+			lcd_string(0, 0, "SCORE ");   // 좌측 상단에 SCORE 출력
+     f6a:	41 e9       	ldi	r20, 0x91	; 145
+     f6c:	5c e0       	ldi	r21, 0x0C	; 12
+     f6e:	60 e0       	ldi	r22, 0x00	; 0
+     f70:	80 e0       	ldi	r24, 0x00	; 0
+     f72:	33 d1       	rcall	.+614    	; 0x11da <lcd_string>
+			lcd_xy(0, 6);
+     f74:	66 e0       	ldi	r22, 0x06	; 6
+     f76:	80 e0       	ldi	r24, 0x00	; 0
+     f78:	ed d0       	rcall	.+474    	; 0x1154 <lcd_xy>
+			GLCD_4DigitDecimal(cur_score);
+     f7a:	80 91 a0 0c 	lds	r24, 0x0CA0	; 0x800ca0 <__data_end>
+     f7e:	90 91 a1 0c 	lds	r25, 0x0CA1	; 0x800ca1 <__data_end+0x1>
+     f82:	ae d3       	rcall	.+1884   	; 0x16e0 <GLCD_4DigitDecimal>
+			lcd_string(0, 12, "LIFE * "); // 우측 상단에 남은 life 출력
+     f84:	48 e9       	ldi	r20, 0x98	; 152
+     f86:	5c e0       	ldi	r21, 0x0C	; 12
+     f88:	6c e0       	ldi	r22, 0x0C	; 12
+     f8a:	80 e0       	ldi	r24, 0x00	; 0
+     f8c:	26 d1       	rcall	.+588    	; 0x11da <lcd_string>
+			lcd_xy(0, 18);
+     f8e:	62 e1       	ldi	r22, 0x12	; 18
+     f90:	80 e0       	ldi	r24, 0x00	; 0
+     f92:	e0 d0       	rcall	.+448    	; 0x1154 <lcd_xy>
+			GLCD_2DigitDecimal(life);
+     f94:	80 91 ae 0c 	lds	r24, 0x0CAE	; 0x800cae <life>
+     f98:	80 d3       	rcall	.+1792   	; 0x169a <GLCD_2DigitDecimal>
+     f9a:	73 01       	movw	r14, r6
+     f9c:	03 2d       	mov	r16, r3
+     f9e:	14 2d       	mov	r17, r4
+     fa0:	c1 2c       	mov	r12, r1
+     fa2:	d1 2c       	mov	r13, r1
+			for (unsigned char i = 0; i < 3; ++i)   // 3마리의 새를 40*i시간 후 화면에 출력
+     fa4:	51 2c       	mov	r5, r1
+     fa6:	b8 01       	movw	r22, r16
+     fa8:	6f 5f       	subi	r22, 0xFF	; 255
+     faa:	7f 4f       	sbci	r23, 0xFF	; 255
+			fly(40 * i, &bd[i].y, &bd[i].x, i);
+     fac:	25 2d       	mov	r18, r5
+     fae:	a8 01       	movw	r20, r16
+     fb0:	c6 01       	movw	r24, r12
+     fb2:	73 db       	rcall	.-2330   	; 0x69a <fly>
+			lcd_xy(0, 6);
+			GLCD_4DigitDecimal(cur_score);
+			lcd_string(0, 12, "LIFE * "); // 우측 상단에 남은 life 출력
+			lcd_xy(0, 18);
+			GLCD_2DigitDecimal(life);
+			for (unsigned char i = 0; i < 3; ++i)   // 3마리의 새를 40*i시간 후 화면에 출력
+     fb4:	53 94       	inc	r5
+     fb6:	98 e2       	ldi	r25, 0x28	; 40
+     fb8:	c9 0e       	add	r12, r25
+     fba:	d1 1c       	adc	r13, r1
+     fbc:	0e 5f       	subi	r16, 0xFE	; 254
+     fbe:	1f 4f       	sbci	r17, 0xFF	; 255
+     fc0:	e3 e0       	ldi	r30, 0x03	; 3
+     fc2:	5e 12       	cpse	r5, r30
+     fc4:	f0 cf       	rjmp	.-32     	; 0xfa6 <main+0x144>
+			fly(40 * i, &bd[i].y, &bd[i].x, i);
+			GLCD_Rectangle_black(60, 0, 64, 128);
+     fc6:	20 e8       	ldi	r18, 0x80	; 128
+     fc8:	40 e4       	ldi	r20, 0x40	; 64
+     fca:	60 e0       	ldi	r22, 0x00	; 0
+     fcc:	8c e3       	ldi	r24, 0x3C	; 60
+     fce:	49 d2       	rcall	.+1170   	; 0x1462 <GLCD_Rectangle_black>
+			joystick_move(&man_y, &man_x); // 조이스틱 인식. 점프보이를 움직임
+     fd0:	be 01       	movw	r22, r28
+     fd2:	68 5f       	subi	r22, 0xF8	; 248
+     fd4:	7f 4f       	sbci	r23, 0xFF	; 255
+     fd6:	ce 01       	movw	r24, r28
+     fd8:	07 96       	adiw	r24, 0x07	; 7
+     fda:	cf de       	rcall	.-610    	; 0xd7a <joystick_move>
+
+			for (unsigned char i = 0; i < 3; ++i)   // 3마리의 새와 점프보이가 충돌했는지 체크
+     fdc:	10 e0       	ldi	r17, 0x00	; 0
+			compare(&man_y, &man_x, &bd[i], i);
+     fde:	21 2f       	mov	r18, r17
+     fe0:	a7 01       	movw	r20, r14
+     fe2:	be 01       	movw	r22, r28
+     fe4:	68 5f       	subi	r22, 0xF8	; 248
+     fe6:	7f 4f       	sbci	r23, 0xFF	; 255
+     fe8:	ce 01       	movw	r24, r28
+     fea:	07 96       	adiw	r24, 0x07	; 7
+     fec:	70 da       	rcall	.-2848   	; 0x4ce <compare>
+			for (unsigned char i = 0; i < 3; ++i)   // 3마리의 새를 40*i시간 후 화면에 출력
+			fly(40 * i, &bd[i].y, &bd[i].x, i);
+			GLCD_Rectangle_black(60, 0, 64, 128);
+			joystick_move(&man_y, &man_x); // 조이스틱 인식. 점프보이를 움직임
+
+			for (unsigned char i = 0; i < 3; ++i)   // 3마리의 새와 점프보이가 충돌했는지 체크
+     fee:	1f 5f       	subi	r17, 0xFF	; 255
+     ff0:	f2 e0       	ldi	r31, 0x02	; 2
+     ff2:	ef 0e       	add	r14, r31
+     ff4:	f1 1c       	adc	r15, r1
+     ff6:	13 30       	cpi	r17, 0x03	; 3
+     ff8:	91 f7       	brne	.-28     	; 0xfde <main+0x17c>
+			compare(&man_y, &man_x, &bd[i], i);
+
+			compare_round_time(&man_y, &man_x); // stage진행 시간과 play_time과 비교하여 stage를 종료시킴
+     ffa:	be 01       	movw	r22, r28
+     ffc:	68 5f       	subi	r22, 0xF8	; 248
+     ffe:	7f 4f       	sbci	r23, 0xFF	; 255
+    1000:	ce 01       	movw	r24, r28
+    1002:	07 96       	adiw	r24, 0x07	; 7
+    1004:	8d dd       	rcall	.-1254   	; 0xb20 <compare_round_time>
+			break;
+    1006:	10 c0       	rjmp	.+32     	; 0x1028 <main+0x1c6>
+			case 5: // game over 또는 game clear 화면 출력.
+			ending_display();
+    1008:	d9 d9       	rcall	.-3150   	; 0x3bc <ending_display>
+			for (int i = 0; i < 3; ++i) // 새의 화면 출력 flag 초기화
+			flag[i] = 0;
+    100a:	f5 01       	movw	r30, r10
+    100c:	10 82       	st	Z, r1
+    100e:	11 82       	std	Z+1, r1	; 0x01
+    1010:	12 82       	std	Z+2, r1	; 0x02
+    1012:	ff ef       	ldi	r31, 0xFF	; 255
+    1014:	2f ef       	ldi	r18, 0xFF	; 255
+    1016:	83 eb       	ldi	r24, 0xB3	; 179
+    1018:	f1 50       	subi	r31, 0x01	; 1
+    101a:	20 40       	sbci	r18, 0x00	; 0
+    101c:	80 40       	sbci	r24, 0x00	; 0
+    101e:	e1 f7       	brne	.-8      	; 0x1018 <main+0x1b6>
+    1020:	00 c0       	rjmp	.+0      	; 0x1022 <main+0x1c0>
+    1022:	00 00       	nop
+			_delay_ms(4000);
+			game_state = 0;
+    1024:	10 92 ad 0c 	sts	0x0CAD, r1	; 0x800cad <game_state>
+    1028:	9f ef       	ldi	r25, 0xFF	; 255
+    102a:	ef e7       	ldi	r30, 0x7F	; 127
+    102c:	f4 e0       	ldi	r31, 0x04	; 4
+    102e:	91 50       	subi	r25, 0x01	; 1
+    1030:	e0 40       	sbci	r30, 0x00	; 0
+    1032:	f0 40       	sbci	r31, 0x00	; 0
+    1034:	e1 f7       	brne	.-8      	; 0x102e <main+0x1cc>
+    1036:	00 c0       	rjmp	.+0      	; 0x1038 <main+0x1d6>
+    1038:	00 00       	nop
+    103a:	4e cf       	rjmp	.-356    	; 0xed8 <main+0x76>
+
+0000103c <Adc_init>:
+#define ADC_2_56_TYPE 0xC0      // A/D 컨버터 사용 기준 전압  2.56 설정
+
+//ADC initialize
+void Adc_init(void)
+{
+	ADCSRA = 0x00;	// disable adc
+    103c:	16 b8       	out	0x06, r1	; 6
+	ADMUX  = 0x00; 	// select adc input 0
+    103e:	17 b8       	out	0x07, r1	; 7
+	
+	ACSR   = 0x80;	//
+    1040:	80 e8       	ldi	r24, 0x80	; 128
+    1042:	88 b9       	out	0x08, r24	; 8
+	ADCSRA = 0xC3;	// Conversion time: 6uS
+    1044:	83 ec       	ldi	r24, 0xC3	; 195
+    1046:	86 b9       	out	0x06, r24	; 6
+    1048:	08 95       	ret
+
+0000104a <Read_Adc_Data>:
+
+unsigned int Read_Adc_Data(unsigned char adc_input)   // ADC  읽어 들이기
+{
+	unsigned int adc = 0;
+	
+	ADCSRA = 0xC3;    // Conversion time: 6uS
+    104a:	93 ec       	ldi	r25, 0xC3	; 195
+    104c:	96 b9       	out	0x06, r25	; 6
+	//CLI();
+	
+	ADMUX = adc_input | ADC_AVCC_TYPE ;      // adc  사용 핀 설정
+    104e:	80 64       	ori	r24, 0x40	; 64
+    1050:	87 b9       	out	0x07, r24	; 7
+	//ADMUX.3 = 1;
+	
+	ADCSRA |= 0x40;                            // Wait for the AD conversion to complete
+    1052:	36 9a       	sbi	0x06, 6	; 6
+	
+	while((ADCSRA & 0x10) != 0x10);
+    1054:	34 9b       	sbis	0x06, 4	; 6
+    1056:	fe cf       	rjmp	.-4      	; 0x1054 <Read_Adc_Data+0xa>
+	adc += ADCL + ( ADCH * 256 );
+    1058:	24 b1       	in	r18, 0x04	; 4
+    105a:	85 b1       	in	r24, 0x05	; 5
+	
+	
+	//SEI();
+	ADCSRA = 0x00;
+    105c:	16 b8       	out	0x06, r1	; 6
+	//ADMUX.3 = 1;
+	
+	ADCSRA |= 0x40;                            // Wait for the AD conversion to complete
+	
+	while((ADCSRA & 0x10) != 0x10);
+	adc += ADCL + ( ADCH * 256 );
+    105e:	90 e0       	ldi	r25, 0x00	; 0
+    1060:	98 2f       	mov	r25, r24
+    1062:	88 27       	eor	r24, r24
+	
+	
+	//SEI();
+	ADCSRA = 0x00;
+	return adc;
+}
+    1064:	82 0f       	add	r24, r18
+    1066:	91 1d       	adc	r25, r1
+    1068:	08 95       	ret
+
+0000106a <cmndl>:
+		number = number % 100;
+		i = number/10;
+		flag = GLCD_1DigitDecimal(i, flag); // 10^1
+		i = number % 10;
+		lcd_char(i + '0');              // 10^0
+	}
+    106a:	1d 9a       	sbi	0x03, 5	; 3
+    106c:	91 e3       	ldi	r25, 0x31	; 49
+    106e:	9a 95       	dec	r25
+    1070:	f1 f7       	brne	.-4      	; 0x106e <cmndl+0x4>
+    1072:	00 00       	nop
+    1074:	1c 98       	cbi	0x03, 4	; 3
+    1076:	1e 98       	cbi	0x03, 6	; 3
+    1078:	1f 9a       	sbi	0x03, 7	; 3
+    107a:	8b bb       	out	0x1b, r24	; 27
+    107c:	81 e3       	ldi	r24, 0x31	; 49
+    107e:	8a 95       	dec	r24
+    1080:	f1 f7       	brne	.-4      	; 0x107e <cmndl+0x14>
+    1082:	00 00       	nop
+    1084:	1d 98       	cbi	0x03, 5	; 3
+    1086:	08 95       	ret
+
+00001088 <cmndr>:
+    1088:	1d 9a       	sbi	0x03, 5	; 3
+    108a:	91 e3       	ldi	r25, 0x31	; 49
+    108c:	9a 95       	dec	r25
+    108e:	f1 f7       	brne	.-4      	; 0x108c <cmndr+0x4>
+    1090:	00 00       	nop
+    1092:	1c 98       	cbi	0x03, 4	; 3
+    1094:	1e 9a       	sbi	0x03, 6	; 3
+    1096:	1f 98       	cbi	0x03, 7	; 3
+    1098:	8b bb       	out	0x1b, r24	; 27
+    109a:	81 e3       	ldi	r24, 0x31	; 49
+    109c:	8a 95       	dec	r24
+    109e:	f1 f7       	brne	.-4      	; 0x109c <cmndr+0x14>
+    10a0:	00 00       	nop
+    10a2:	1d 98       	cbi	0x03, 5	; 3
+    10a4:	08 95       	ret
+
+000010a6 <cmnda>:
+    10a6:	1d 9a       	sbi	0x03, 5	; 3
+    10a8:	91 e3       	ldi	r25, 0x31	; 49
+    10aa:	9a 95       	dec	r25
+    10ac:	f1 f7       	brne	.-4      	; 0x10aa <cmnda+0x4>
+    10ae:	00 00       	nop
+    10b0:	1c 98       	cbi	0x03, 4	; 3
+    10b2:	1e 9a       	sbi	0x03, 6	; 3
+    10b4:	1f 9a       	sbi	0x03, 7	; 3
+    10b6:	8b bb       	out	0x1b, r24	; 27
+    10b8:	81 e3       	ldi	r24, 0x31	; 49
+    10ba:	8a 95       	dec	r24
+    10bc:	f1 f7       	brne	.-4      	; 0x10ba <cmnda+0x14>
+    10be:	00 00       	nop
+    10c0:	1d 98       	cbi	0x03, 5	; 3
+    10c2:	08 95       	ret
+
+000010c4 <datal>:
+    10c4:	1d 9a       	sbi	0x03, 5	; 3
+    10c6:	91 e3       	ldi	r25, 0x31	; 49
+    10c8:	9a 95       	dec	r25
+    10ca:	f1 f7       	brne	.-4      	; 0x10c8 <datal+0x4>
+    10cc:	00 00       	nop
+    10ce:	1c 9a       	sbi	0x03, 4	; 3
+    10d0:	1e 98       	cbi	0x03, 6	; 3
+    10d2:	1f 9a       	sbi	0x03, 7	; 3
+    10d4:	8b bb       	out	0x1b, r24	; 27
+    10d6:	81 e3       	ldi	r24, 0x31	; 49
+    10d8:	8a 95       	dec	r24
+    10da:	f1 f7       	brne	.-4      	; 0x10d8 <datal+0x14>
+    10dc:	00 00       	nop
+    10de:	1d 98       	cbi	0x03, 5	; 3
+    10e0:	08 95       	ret
+
+000010e2 <datar>:
+    10e2:	1d 9a       	sbi	0x03, 5	; 3
+    10e4:	91 e3       	ldi	r25, 0x31	; 49
+    10e6:	9a 95       	dec	r25
+    10e8:	f1 f7       	brne	.-4      	; 0x10e6 <datar+0x4>
+    10ea:	00 00       	nop
+    10ec:	1c 9a       	sbi	0x03, 4	; 3
+    10ee:	1e 9a       	sbi	0x03, 6	; 3
+    10f0:	1f 98       	cbi	0x03, 7	; 3
+    10f2:	8b bb       	out	0x1b, r24	; 27
+    10f4:	81 e3       	ldi	r24, 0x31	; 49
+    10f6:	8a 95       	dec	r24
+    10f8:	f1 f7       	brne	.-4      	; 0x10f6 <datar+0x14>
+    10fa:	00 00       	nop
+    10fc:	1d 98       	cbi	0x03, 5	; 3
+    10fe:	08 95       	ret
+
+00001100 <dataa>:
+    1100:	1d 9a       	sbi	0x03, 5	; 3
+    1102:	91 e3       	ldi	r25, 0x31	; 49
+    1104:	9a 95       	dec	r25
+    1106:	f1 f7       	brne	.-4      	; 0x1104 <dataa+0x4>
+    1108:	00 00       	nop
+    110a:	1c 9a       	sbi	0x03, 4	; 3
+    110c:	1e 9a       	sbi	0x03, 6	; 3
+    110e:	1f 9a       	sbi	0x03, 7	; 3
+    1110:	8b bb       	out	0x1b, r24	; 27
+    1112:	81 e3       	ldi	r24, 0x31	; 49
+    1114:	8a 95       	dec	r24
+    1116:	f1 f7       	brne	.-4      	; 0x1114 <dataa+0x14>
+    1118:	00 00       	nop
+    111a:	1d 98       	cbi	0x03, 5	; 3
+    111c:	08 95       	ret
+
+0000111e <lcd_clear>:
+    111e:	cf 93       	push	r28
+    1120:	df 93       	push	r29
+    1122:	d8 eb       	ldi	r29, 0xB8	; 184
+    1124:	8d 2f       	mov	r24, r29
+    1126:	bf df       	rcall	.-130    	; 0x10a6 <cmnda>
+    1128:	80 e4       	ldi	r24, 0x40	; 64
+    112a:	bd df       	rcall	.-134    	; 0x10a6 <cmnda>
+    112c:	c0 e4       	ldi	r28, 0x40	; 64
+    112e:	80 e0       	ldi	r24, 0x00	; 0
+    1130:	e7 df       	rcall	.-50     	; 0x1100 <dataa>
+    1132:	c1 50       	subi	r28, 0x01	; 1
+    1134:	e1 f7       	brne	.-8      	; 0x112e <lcd_clear+0x10>
+    1136:	df 5f       	subi	r29, 0xFF	; 255
+    1138:	d0 3c       	cpi	r29, 0xC0	; 192
+    113a:	a1 f7       	brne	.-24     	; 0x1124 <lcd_clear+0x6>
+    113c:	df 91       	pop	r29
+    113e:	cf 91       	pop	r28
+    1140:	08 95       	ret
+
+00001142 <lcd_init>:
+    1142:	8f e3       	ldi	r24, 0x3F	; 63
+    1144:	b0 df       	rcall	.-160    	; 0x10a6 <cmnda>
+    1146:	80 ec       	ldi	r24, 0xC0	; 192
+    1148:	ae df       	rcall	.-164    	; 0x10a6 <cmnda>
+    114a:	88 eb       	ldi	r24, 0xB8	; 184
+    114c:	ac df       	rcall	.-168    	; 0x10a6 <cmnda>
+    114e:	80 e4       	ldi	r24, 0x40	; 64
+    1150:	aa cf       	rjmp	.-172    	; 0x10a6 <cmnda>
+    1152:	08 95       	ret
+
+00001154 <lcd_xy>:
+    1154:	80 93 bf 0c 	sts	0x0CBF, r24	; 0x800cbf <xchar>
+    1158:	60 93 c2 10 	sts	0x10C2, r22	; 0x8010c2 <ychar>
+    115c:	88 54       	subi	r24, 0x48	; 72
+    115e:	a3 df       	rcall	.-186    	; 0x10a6 <cmnda>
+    1160:	80 91 c2 10 	lds	r24, 0x10C2	; 0x8010c2 <ychar>
+    1164:	8a 30       	cpi	r24, 0x0A	; 10
+    1166:	38 f4       	brcc	.+14     	; 0x1176 <lcd_xy+0x22>
+    1168:	98 2f       	mov	r25, r24
+    116a:	99 0f       	add	r25, r25
+    116c:	89 0f       	add	r24, r25
+    116e:	88 0f       	add	r24, r24
+    1170:	8c 5b       	subi	r24, 0xBC	; 188
+    1172:	7b cf       	rjmp	.-266    	; 0x106a <cmndl>
+    1174:	08 95       	ret
+    1176:	90 e0       	ldi	r25, 0x00	; 0
+    1178:	0a 97       	sbiw	r24, 0x0a	; 10
+    117a:	98 2f       	mov	r25, r24
+    117c:	99 0f       	add	r25, r25
+    117e:	89 0f       	add	r24, r25
+    1180:	88 0f       	add	r24, r24
+    1182:	80 5c       	subi	r24, 0xC0	; 192
+    1184:	81 cf       	rjmp	.-254    	; 0x1088 <cmndr>
+    1186:	08 95       	ret
+
+00001188 <lcd_char>:
+    1188:	1f 93       	push	r17
+    118a:	cf 93       	push	r28
+    118c:	df 93       	push	r29
+    118e:	90 e0       	ldi	r25, 0x00	; 0
+    1190:	ec 01       	movw	r28, r24
+    1192:	cc 0f       	add	r28, r28
+    1194:	dd 1f       	adc	r29, r29
+    1196:	cc 0f       	add	r28, r28
+    1198:	dd 1f       	adc	r29, r29
+    119a:	8c 0f       	add	r24, r28
+    119c:	9d 1f       	adc	r25, r29
+    119e:	ec 01       	movw	r28, r24
+    11a0:	c6 56       	subi	r28, 0x66	; 102
+    11a2:	d7 4f       	sbci	r29, 0xF7	; 247
+    11a4:	15 e0       	ldi	r17, 0x05	; 5
+    11a6:	80 91 c2 10 	lds	r24, 0x10C2	; 0x8010c2 <ychar>
+    11aa:	8a 30       	cpi	r24, 0x0A	; 10
+    11ac:	18 f4       	brcc	.+6      	; 0x11b4 <lcd_char+0x2c>
+    11ae:	88 81       	ld	r24, Y
+    11b0:	89 df       	rcall	.-238    	; 0x10c4 <datal>
+    11b2:	02 c0       	rjmp	.+4      	; 0x11b8 <lcd_char+0x30>
+    11b4:	88 81       	ld	r24, Y
+    11b6:	95 df       	rcall	.-214    	; 0x10e2 <datar>
+    11b8:	11 50       	subi	r17, 0x01	; 1
+    11ba:	21 96       	adiw	r28, 0x01	; 1
+    11bc:	11 11       	cpse	r17, r1
+    11be:	f3 cf       	rjmp	.-26     	; 0x11a6 <lcd_char+0x1e>
+    11c0:	80 91 c2 10 	lds	r24, 0x10C2	; 0x8010c2 <ychar>
+    11c4:	8a 30       	cpi	r24, 0x0A	; 10
+    11c6:	18 f4       	brcc	.+6      	; 0x11ce <lcd_char+0x46>
+    11c8:	80 e0       	ldi	r24, 0x00	; 0
+    11ca:	7c df       	rcall	.-264    	; 0x10c4 <datal>
+    11cc:	02 c0       	rjmp	.+4      	; 0x11d2 <lcd_char+0x4a>
+    11ce:	80 e0       	ldi	r24, 0x00	; 0
+    11d0:	88 df       	rcall	.-240    	; 0x10e2 <datar>
+    11d2:	df 91       	pop	r29
+    11d4:	cf 91       	pop	r28
+    11d6:	1f 91       	pop	r17
+    11d8:	08 95       	ret
+
+000011da <lcd_string>:
+    11da:	cf 93       	push	r28
+    11dc:	df 93       	push	r29
+    11de:	ea 01       	movw	r28, r20
+    11e0:	80 93 bf 0c 	sts	0x0CBF, r24	; 0x800cbf <xchar>
+    11e4:	60 93 c2 10 	sts	0x10C2, r22	; 0x8010c2 <ychar>
+    11e8:	b5 df       	rcall	.-150    	; 0x1154 <lcd_xy>
+    11ea:	88 81       	ld	r24, Y
+    11ec:	88 23       	and	r24, r24
+    11ee:	81 f0       	breq	.+32     	; 0x1210 <lcd_string+0x36>
+    11f0:	80 91 c2 10 	lds	r24, 0x10C2	; 0x8010c2 <ychar>
+    11f4:	8a 30       	cpi	r24, 0x0A	; 10
+    11f6:	11 f4       	brne	.+4      	; 0x11fc <lcd_string+0x22>
+    11f8:	80 e4       	ldi	r24, 0x40	; 64
+    11fa:	46 df       	rcall	.-372    	; 0x1088 <cmndr>
+    11fc:	89 91       	ld	r24, Y+
+    11fe:	c4 df       	rcall	.-120    	; 0x1188 <lcd_char>
+    1200:	80 91 c2 10 	lds	r24, 0x10C2	; 0x8010c2 <ychar>
+    1204:	8f 5f       	subi	r24, 0xFF	; 255
+    1206:	80 93 c2 10 	sts	0x10C2, r24	; 0x8010c2 <ychar>
+    120a:	88 81       	ld	r24, Y
+    120c:	81 11       	cpse	r24, r1
+    120e:	f0 cf       	rjmp	.-32     	; 0x11f0 <lcd_string+0x16>
+    1210:	df 91       	pop	r29
+    1212:	cf 91       	pop	r28
+    1214:	08 95       	ret
+
+00001216 <GLCD_Axis_xy>:
+    1216:	cf 93       	push	r28
+    1218:	c6 2f       	mov	r28, r22
+    121a:	88 54       	subi	r24, 0x48	; 72
+    121c:	44 df       	rcall	.-376    	; 0x10a6 <cmnda>
+    121e:	c0 34       	cpi	r28, 0x40	; 64
+    1220:	20 f4       	brcc	.+8      	; 0x122a <GLCD_Axis_xy+0x14>
+    1222:	80 e4       	ldi	r24, 0x40	; 64
+    1224:	8c 0f       	add	r24, r28
+    1226:	21 df       	rcall	.-446    	; 0x106a <cmndl>
+    1228:	02 c0       	rjmp	.+4      	; 0x122e <GLCD_Axis_xy+0x18>
+    122a:	8c 2f       	mov	r24, r28
+    122c:	2d df       	rcall	.-422    	; 0x1088 <cmndr>
+    122e:	cf 91       	pop	r28
+    1230:	08 95       	ret
+
+00001232 <GLCD_Dot>:
+    1232:	ef 92       	push	r14
+    1234:	ff 92       	push	r15
+    1236:	0f 93       	push	r16
+    1238:	1f 93       	push	r17
+    123a:	cf 93       	push	r28
+    123c:	80 34       	cpi	r24, 0x40	; 64
+    123e:	08 f0       	brcs	.+2      	; 0x1242 <GLCD_Dot+0x10>
+    1240:	52 c0       	rjmp	.+164    	; 0x12e6 <GLCD_Dot+0xb4>
+    1242:	66 23       	and	r22, r22
+    1244:	0c f4       	brge	.+2      	; 0x1248 <GLCD_Dot+0x16>
+    1246:	4f c0       	rjmp	.+158    	; 0x12e6 <GLCD_Dot+0xb4>
+    1248:	28 2f       	mov	r18, r24
+    124a:	26 95       	lsr	r18
+    124c:	26 95       	lsr	r18
+    124e:	26 95       	lsr	r18
+    1250:	98 2f       	mov	r25, r24
+    1252:	97 70       	andi	r25, 0x07	; 7
+    1254:	71 f0       	breq	.+28     	; 0x1272 <GLCD_Dot+0x40>
+    1256:	91 30       	cpi	r25, 0x01	; 1
+    1258:	71 f0       	breq	.+28     	; 0x1276 <GLCD_Dot+0x44>
+    125a:	92 30       	cpi	r25, 0x02	; 2
+    125c:	71 f0       	breq	.+28     	; 0x127a <GLCD_Dot+0x48>
+    125e:	93 30       	cpi	r25, 0x03	; 3
+    1260:	71 f0       	breq	.+28     	; 0x127e <GLCD_Dot+0x4c>
+    1262:	94 30       	cpi	r25, 0x04	; 4
+    1264:	71 f0       	breq	.+28     	; 0x1282 <GLCD_Dot+0x50>
+    1266:	95 30       	cpi	r25, 0x05	; 5
+    1268:	71 f0       	breq	.+28     	; 0x1286 <GLCD_Dot+0x54>
+    126a:	96 30       	cpi	r25, 0x06	; 6
+    126c:	71 f0       	breq	.+28     	; 0x128a <GLCD_Dot+0x58>
+    126e:	90 e8       	ldi	r25, 0x80	; 128
+    1270:	0d c0       	rjmp	.+26     	; 0x128c <GLCD_Dot+0x5a>
+    1272:	91 e0       	ldi	r25, 0x01	; 1
+    1274:	0b c0       	rjmp	.+22     	; 0x128c <GLCD_Dot+0x5a>
+    1276:	92 e0       	ldi	r25, 0x02	; 2
+    1278:	09 c0       	rjmp	.+18     	; 0x128c <GLCD_Dot+0x5a>
+    127a:	94 e0       	ldi	r25, 0x04	; 4
+    127c:	07 c0       	rjmp	.+14     	; 0x128c <GLCD_Dot+0x5a>
+    127e:	98 e0       	ldi	r25, 0x08	; 8
+    1280:	05 c0       	rjmp	.+10     	; 0x128c <GLCD_Dot+0x5a>
+    1282:	90 e1       	ldi	r25, 0x10	; 16
+    1284:	03 c0       	rjmp	.+6      	; 0x128c <GLCD_Dot+0x5a>
+    1286:	90 e2       	ldi	r25, 0x20	; 32
+    1288:	01 c0       	rjmp	.+2      	; 0x128c <GLCD_Dot+0x5a>
+    128a:	90 e4       	ldi	r25, 0x40	; 64
+    128c:	c6 2f       	mov	r28, r22
+    128e:	e6 2e       	mov	r14, r22
+    1290:	f1 2c       	mov	r15, r1
+    1292:	02 2f       	mov	r16, r18
+    1294:	10 e0       	ldi	r17, 0x00	; 0
+    1296:	f7 01       	movw	r30, r14
+    1298:	80 e8       	ldi	r24, 0x80	; 128
+    129a:	28 9f       	mul	r18, r24
+    129c:	e0 0d       	add	r30, r0
+    129e:	f1 1d       	adc	r31, r1
+    12a0:	11 24       	eor	r1, r1
+    12a2:	ee 53       	subi	r30, 0x3E	; 62
+    12a4:	f3 4f       	sbci	r31, 0xF3	; 243
+    12a6:	80 81       	ld	r24, Z
+    12a8:	89 2b       	or	r24, r25
+    12aa:	80 83       	st	Z, r24
+    12ac:	82 2f       	mov	r24, r18
+    12ae:	b3 df       	rcall	.-154    	; 0x1216 <GLCD_Axis_xy>
+    12b0:	c0 34       	cpi	r28, 0x40	; 64
+    12b2:	68 f4       	brcc	.+26     	; 0x12ce <GLCD_Dot+0x9c>
+    12b4:	f8 01       	movw	r30, r16
+    12b6:	f6 95       	lsr	r31
+    12b8:	fe 2f       	mov	r31, r30
+    12ba:	ee 27       	eor	r30, r30
+    12bc:	f7 95       	ror	r31
+    12be:	e7 95       	ror	r30
+    12c0:	ee 0d       	add	r30, r14
+    12c2:	ff 1d       	adc	r31, r15
+    12c4:	ee 53       	subi	r30, 0x3E	; 62
+    12c6:	f3 4f       	sbci	r31, 0xF3	; 243
+    12c8:	80 81       	ld	r24, Z
+    12ca:	fc de       	rcall	.-520    	; 0x10c4 <datal>
+    12cc:	0c c0       	rjmp	.+24     	; 0x12e6 <GLCD_Dot+0xb4>
+    12ce:	f8 01       	movw	r30, r16
+    12d0:	f6 95       	lsr	r31
+    12d2:	fe 2f       	mov	r31, r30
+    12d4:	ee 27       	eor	r30, r30
+    12d6:	f7 95       	ror	r31
+    12d8:	e7 95       	ror	r30
+    12da:	ee 0d       	add	r30, r14
+    12dc:	ff 1d       	adc	r31, r15
+    12de:	ee 53       	subi	r30, 0x3E	; 62
+    12e0:	f3 4f       	sbci	r31, 0xF3	; 243
+    12e2:	80 81       	ld	r24, Z
+    12e4:	fe de       	rcall	.-516    	; 0x10e2 <datar>
+    12e6:	cf 91       	pop	r28
+    12e8:	1f 91       	pop	r17
+    12ea:	0f 91       	pop	r16
+    12ec:	ff 90       	pop	r15
+    12ee:	ef 90       	pop	r14
+    12f0:	08 95       	ret
+
+000012f2 <ScreenBuffer_clear>:
+    12f2:	e2 ec       	ldi	r30, 0xC2	; 194
+    12f4:	fc e0       	ldi	r31, 0x0C	; 12
+    12f6:	22 ec       	ldi	r18, 0xC2	; 194
+    12f8:	30 e1       	ldi	r19, 0x10	; 16
+    12fa:	08 c0       	rjmp	.+16     	; 0x130c <ScreenBuffer_clear+0x1a>
+    12fc:	11 92       	st	Z+, r1
+    12fe:	e8 17       	cp	r30, r24
+    1300:	f9 07       	cpc	r31, r25
+    1302:	e1 f7       	brne	.-8      	; 0x12fc <ScreenBuffer_clear+0xa>
+    1304:	fc 01       	movw	r30, r24
+    1306:	82 17       	cp	r24, r18
+    1308:	93 07       	cpc	r25, r19
+    130a:	21 f0       	breq	.+8      	; 0x1314 <ScreenBuffer_clear+0x22>
+    130c:	cf 01       	movw	r24, r30
+    130e:	80 58       	subi	r24, 0x80	; 128
+    1310:	9f 4f       	sbci	r25, 0xFF	; 255
+    1312:	f4 cf       	rjmp	.-24     	; 0x12fc <ScreenBuffer_clear+0xa>
+    1314:	08 95       	ret
+
+00001316 <GLCD_Line>:
+    1316:	8f 92       	push	r8
+    1318:	9f 92       	push	r9
+    131a:	af 92       	push	r10
+    131c:	bf 92       	push	r11
+    131e:	cf 92       	push	r12
+    1320:	df 92       	push	r13
+    1322:	ef 92       	push	r14
+    1324:	ff 92       	push	r15
+    1326:	0f 93       	push	r16
+    1328:	1f 93       	push	r17
+    132a:	cf 93       	push	r28
+    132c:	df 93       	push	r29
+    132e:	62 17       	cp	r22, r18
+    1330:	09 f4       	brne	.+2      	; 0x1334 <GLCD_Line+0x1e>
+    1332:	47 c0       	rjmp	.+142    	; 0x13c2 <GLCD_Line+0xac>
+    1334:	62 17       	cp	r22, r18
+    1336:	18 f5       	brcc	.+70     	; 0x137e <GLCD_Line+0x68>
+    1338:	70 e0       	ldi	r23, 0x00	; 0
+    133a:	02 2f       	mov	r16, r18
+    133c:	10 e0       	ldi	r17, 0x00	; 0
+    133e:	06 17       	cp	r16, r22
+    1340:	17 07       	cpc	r17, r23
+    1342:	0c f4       	brge	.+2      	; 0x1346 <GLCD_Line+0x30>
+    1344:	63 c0       	rjmp	.+198    	; 0x140c <GLCD_Line+0xf6>
+    1346:	c8 2f       	mov	r28, r24
+    1348:	d0 e0       	ldi	r29, 0x00	; 0
+    134a:	c4 2e       	mov	r12, r20
+    134c:	d1 2c       	mov	r13, r1
+    134e:	cc 1a       	sub	r12, r28
+    1350:	dd 0a       	sbc	r13, r29
+    1352:	4b 01       	movw	r8, r22
+    1354:	e1 2c       	mov	r14, r1
+    1356:	f1 2c       	mov	r15, r1
+    1358:	58 01       	movw	r10, r16
+    135a:	a6 1a       	sub	r10, r22
+    135c:	b7 0a       	sbc	r11, r23
+    135e:	c7 01       	movw	r24, r14
+    1360:	b5 01       	movw	r22, r10
+    1362:	c4 d3       	rcall	.+1928   	; 0x1aec <__divmodhi4>
+    1364:	86 2f       	mov	r24, r22
+    1366:	68 2d       	mov	r22, r8
+    1368:	8c 0f       	add	r24, r28
+    136a:	63 df       	rcall	.-314    	; 0x1232 <GLCD_Dot>
+    136c:	8f ef       	ldi	r24, 0xFF	; 255
+    136e:	88 1a       	sub	r8, r24
+    1370:	98 0a       	sbc	r9, r24
+    1372:	ec 0c       	add	r14, r12
+    1374:	fd 1c       	adc	r15, r13
+    1376:	08 15       	cp	r16, r8
+    1378:	19 05       	cpc	r17, r9
+    137a:	8c f7       	brge	.-30     	; 0x135e <GLCD_Line+0x48>
+    137c:	47 c0       	rjmp	.+142    	; 0x140c <GLCD_Line+0xf6>
+    137e:	70 e0       	ldi	r23, 0x00	; 0
+    1380:	02 2f       	mov	r16, r18
+    1382:	10 e0       	ldi	r17, 0x00	; 0
+    1384:	60 17       	cp	r22, r16
+    1386:	71 07       	cpc	r23, r17
+    1388:	0c f4       	brge	.+2      	; 0x138c <GLCD_Line+0x76>
+    138a:	40 c0       	rjmp	.+128    	; 0x140c <GLCD_Line+0xf6>
+    138c:	c8 2f       	mov	r28, r24
+    138e:	d0 e0       	ldi	r29, 0x00	; 0
+    1390:	5e 01       	movw	r10, r28
+    1392:	a4 1a       	sub	r10, r20
+    1394:	b1 08       	sbc	r11, r1
+    1396:	4b 01       	movw	r8, r22
+    1398:	e1 2c       	mov	r14, r1
+    139a:	f1 2c       	mov	r15, r1
+    139c:	68 01       	movw	r12, r16
+    139e:	c6 1a       	sub	r12, r22
+    13a0:	d7 0a       	sbc	r13, r23
+    13a2:	c7 01       	movw	r24, r14
+    13a4:	b6 01       	movw	r22, r12
+    13a6:	a2 d3       	rcall	.+1860   	; 0x1aec <__divmodhi4>
+    13a8:	86 2f       	mov	r24, r22
+    13aa:	68 2d       	mov	r22, r8
+    13ac:	8c 0f       	add	r24, r28
+    13ae:	41 df       	rcall	.-382    	; 0x1232 <GLCD_Dot>
+    13b0:	81 e0       	ldi	r24, 0x01	; 1
+    13b2:	88 1a       	sub	r8, r24
+    13b4:	91 08       	sbc	r9, r1
+    13b6:	ea 0c       	add	r14, r10
+    13b8:	fb 1c       	adc	r15, r11
+    13ba:	80 16       	cp	r8, r16
+    13bc:	91 06       	cpc	r9, r17
+    13be:	8c f7       	brge	.-30     	; 0x13a2 <GLCD_Line+0x8c>
+    13c0:	25 c0       	rjmp	.+74     	; 0x140c <GLCD_Line+0xf6>
+    13c2:	84 17       	cp	r24, r20
+    13c4:	11 f1       	breq	.+68     	; 0x140a <GLCD_Line+0xf4>
+    13c6:	84 17       	cp	r24, r20
+    13c8:	80 f4       	brcc	.+32     	; 0x13ea <GLCD_Line+0xd4>
+    13ca:	c8 2f       	mov	r28, r24
+    13cc:	d0 e0       	ldi	r29, 0x00	; 0
+    13ce:	e4 2e       	mov	r14, r20
+    13d0:	f1 2c       	mov	r15, r1
+    13d2:	ec 16       	cp	r14, r28
+    13d4:	fd 06       	cpc	r15, r29
+    13d6:	d4 f0       	brlt	.+52     	; 0x140c <GLCD_Line+0xf6>
+    13d8:	16 2f       	mov	r17, r22
+    13da:	61 2f       	mov	r22, r17
+    13dc:	8c 2f       	mov	r24, r28
+    13de:	29 df       	rcall	.-430    	; 0x1232 <GLCD_Dot>
+    13e0:	21 96       	adiw	r28, 0x01	; 1
+    13e2:	ec 16       	cp	r14, r28
+    13e4:	fd 06       	cpc	r15, r29
+    13e6:	cc f7       	brge	.-14     	; 0x13da <GLCD_Line+0xc4>
+    13e8:	11 c0       	rjmp	.+34     	; 0x140c <GLCD_Line+0xf6>
+    13ea:	c8 2f       	mov	r28, r24
+    13ec:	d0 e0       	ldi	r29, 0x00	; 0
+    13ee:	e4 2e       	mov	r14, r20
+    13f0:	f1 2c       	mov	r15, r1
+    13f2:	ce 15       	cp	r28, r14
+    13f4:	df 05       	cpc	r29, r15
+    13f6:	54 f0       	brlt	.+20     	; 0x140c <GLCD_Line+0xf6>
+    13f8:	16 2f       	mov	r17, r22
+    13fa:	61 2f       	mov	r22, r17
+    13fc:	8c 2f       	mov	r24, r28
+    13fe:	19 df       	rcall	.-462    	; 0x1232 <GLCD_Dot>
+    1400:	21 97       	sbiw	r28, 0x01	; 1
+    1402:	ce 15       	cp	r28, r14
+    1404:	df 05       	cpc	r29, r15
+    1406:	cc f7       	brge	.-14     	; 0x13fa <GLCD_Line+0xe4>
+    1408:	01 c0       	rjmp	.+2      	; 0x140c <GLCD_Line+0xf6>
+    140a:	13 df       	rcall	.-474    	; 0x1232 <GLCD_Dot>
+    140c:	df 91       	pop	r29
+    140e:	cf 91       	pop	r28
+    1410:	1f 91       	pop	r17
+    1412:	0f 91       	pop	r16
+    1414:	ff 90       	pop	r15
+    1416:	ef 90       	pop	r14
+    1418:	df 90       	pop	r13
+    141a:	cf 90       	pop	r12
+    141c:	bf 90       	pop	r11
+    141e:	af 90       	pop	r10
+    1420:	9f 90       	pop	r9
+    1422:	8f 90       	pop	r8
+    1424:	08 95       	ret
+
+00001426 <GLCD_Rectangle>:
+    1426:	0f 93       	push	r16
+    1428:	1f 93       	push	r17
+    142a:	cf 93       	push	r28
+    142c:	df 93       	push	r29
+    142e:	c8 2f       	mov	r28, r24
+    1430:	06 2f       	mov	r16, r22
+    1432:	14 2f       	mov	r17, r20
+    1434:	d2 2f       	mov	r29, r18
+    1436:	48 2f       	mov	r20, r24
+    1438:	6e df       	rcall	.-292    	; 0x1316 <GLCD_Line>
+    143a:	2d 2f       	mov	r18, r29
+    143c:	41 2f       	mov	r20, r17
+    143e:	60 2f       	mov	r22, r16
+    1440:	81 2f       	mov	r24, r17
+    1442:	69 df       	rcall	.-302    	; 0x1316 <GLCD_Line>
+    1444:	20 2f       	mov	r18, r16
+    1446:	41 2f       	mov	r20, r17
+    1448:	60 2f       	mov	r22, r16
+    144a:	8c 2f       	mov	r24, r28
+    144c:	64 df       	rcall	.-312    	; 0x1316 <GLCD_Line>
+    144e:	2d 2f       	mov	r18, r29
+    1450:	41 2f       	mov	r20, r17
+    1452:	6d 2f       	mov	r22, r29
+    1454:	8c 2f       	mov	r24, r28
+    1456:	5f df       	rcall	.-322    	; 0x1316 <GLCD_Line>
+    1458:	df 91       	pop	r29
+    145a:	cf 91       	pop	r28
+    145c:	1f 91       	pop	r17
+    145e:	0f 91       	pop	r16
+    1460:	08 95       	ret
+
+00001462 <GLCD_Rectangle_black>:
+    1462:	af 92       	push	r10
+    1464:	bf 92       	push	r11
+    1466:	cf 92       	push	r12
+    1468:	df 92       	push	r13
+    146a:	ef 92       	push	r14
+    146c:	ff 92       	push	r15
+    146e:	0f 93       	push	r16
+    1470:	1f 93       	push	r17
+    1472:	cf 93       	push	r28
+    1474:	df 93       	push	r29
+    1476:	08 2f       	mov	r16, r24
+    1478:	10 e0       	ldi	r17, 0x00	; 0
+    147a:	c4 2e       	mov	r12, r20
+    147c:	d1 2c       	mov	r13, r1
+    147e:	c0 16       	cp	r12, r16
+    1480:	d1 06       	cpc	r13, r17
+    1482:	a4 f0       	brlt	.+40     	; 0x14ac <GLCD_Rectangle_black+0x4a>
+    1484:	a6 2e       	mov	r10, r22
+    1486:	b1 2c       	mov	r11, r1
+    1488:	e2 2e       	mov	r14, r18
+    148a:	f1 2c       	mov	r15, r1
+    148c:	e5 01       	movw	r28, r10
+    148e:	ea 14       	cp	r14, r10
+    1490:	fb 04       	cpc	r15, r11
+    1492:	3c f0       	brlt	.+14     	; 0x14a2 <GLCD_Rectangle_black+0x40>
+    1494:	6c 2f       	mov	r22, r28
+    1496:	80 2f       	mov	r24, r16
+    1498:	cc de       	rcall	.-616    	; 0x1232 <GLCD_Dot>
+    149a:	21 96       	adiw	r28, 0x01	; 1
+    149c:	ec 16       	cp	r14, r28
+    149e:	fd 06       	cpc	r15, r29
+    14a0:	cc f7       	brge	.-14     	; 0x1494 <GLCD_Rectangle_black+0x32>
+    14a2:	0f 5f       	subi	r16, 0xFF	; 255
+    14a4:	1f 4f       	sbci	r17, 0xFF	; 255
+    14a6:	c0 16       	cp	r12, r16
+    14a8:	d1 06       	cpc	r13, r17
+    14aa:	84 f7       	brge	.-32     	; 0x148c <GLCD_Rectangle_black+0x2a>
+    14ac:	df 91       	pop	r29
+    14ae:	cf 91       	pop	r28
+    14b0:	1f 91       	pop	r17
+    14b2:	0f 91       	pop	r16
+    14b4:	ff 90       	pop	r15
+    14b6:	ef 90       	pop	r14
+    14b8:	df 90       	pop	r13
+    14ba:	cf 90       	pop	r12
+    14bc:	bf 90       	pop	r11
+    14be:	af 90       	pop	r10
+    14c0:	08 95       	ret
+
+000014c2 <GLCD_Circle>:
+    14c2:	2f 92       	push	r2
+    14c4:	3f 92       	push	r3
+    14c6:	4f 92       	push	r4
+    14c8:	5f 92       	push	r5
+    14ca:	6f 92       	push	r6
+    14cc:	7f 92       	push	r7
+    14ce:	8f 92       	push	r8
+    14d0:	9f 92       	push	r9
+    14d2:	af 92       	push	r10
+    14d4:	bf 92       	push	r11
+    14d6:	cf 92       	push	r12
+    14d8:	df 92       	push	r13
+    14da:	ef 92       	push	r14
+    14dc:	ff 92       	push	r15
+    14de:	0f 93       	push	r16
+    14e0:	1f 93       	push	r17
+    14e2:	cf 93       	push	r28
+    14e4:	df 93       	push	r29
+    14e6:	cd b7       	in	r28, 0x3d	; 61
+    14e8:	de b7       	in	r29, 0x3e	; 62
+    14ea:	27 97       	sbiw	r28, 0x07	; 7
+    14ec:	0f b6       	in	r0, 0x3f	; 63
+    14ee:	f8 94       	cli
+    14f0:	de bf       	out	0x3e, r29	; 62
+    14f2:	0f be       	out	0x3f, r0	; 63
+    14f4:	cd bf       	out	0x3d, r28	; 61
+    14f6:	8d 83       	std	Y+5, r24	; 0x05
+    14f8:	e6 2e       	mov	r14, r22
+    14fa:	f1 2c       	mov	r15, r1
+    14fc:	24 2f       	mov	r18, r20
+    14fe:	30 e0       	ldi	r19, 0x00	; 0
+    1500:	3c 83       	std	Y+4, r19	; 0x04
+    1502:	2b 83       	std	Y+3, r18	; 0x03
+    1504:	89 01       	movw	r16, r18
+    1506:	00 0f       	add	r16, r16
+    1508:	11 1f       	adc	r17, r17
+    150a:	02 0f       	add	r16, r18
+    150c:	13 1f       	adc	r17, r19
+    150e:	c8 01       	movw	r24, r16
+    1510:	95 95       	asr	r25
+    1512:	87 95       	ror	r24
+    1514:	95 95       	asr	r25
+    1516:	87 95       	ror	r24
+    1518:	9a 83       	std	Y+2, r25	; 0x02
+    151a:	89 83       	std	Y+1, r24	; 0x01
+    151c:	f7 01       	movw	r30, r14
+    151e:	e8 1b       	sub	r30, r24
+    1520:	f9 0b       	sbc	r31, r25
+    1522:	ff 83       	std	Y+7, r31	; 0x07
+    1524:	ee 83       	std	Y+6, r30	; 0x06
+    1526:	6c 01       	movw	r12, r24
+    1528:	ce 0c       	add	r12, r14
+    152a:	df 1c       	adc	r13, r15
+    152c:	ce 16       	cp	r12, r30
+    152e:	df 06       	cpc	r13, r31
+    1530:	0c f4       	brge	.+2      	; 0x1534 <GLCD_Circle+0x72>
+    1532:	39 c0       	rjmp	.+114    	; 0x15a6 <GLCD_Circle+0xe4>
+    1534:	22 9f       	mul	r18, r18
+    1536:	30 01       	movw	r6, r0
+    1538:	23 9f       	mul	r18, r19
+    153a:	70 0c       	add	r7, r0
+    153c:	70 0c       	add	r7, r0
+    153e:	11 24       	eor	r1, r1
+    1540:	8c 01       	movw	r16, r24
+    1542:	27 01       	movw	r4, r14
+    1544:	fd 81       	ldd	r31, Y+5	; 0x05
+    1546:	2f 2e       	mov	r2, r31
+    1548:	8e 81       	ldd	r24, Y+6	; 0x06
+    154a:	9f 81       	ldd	r25, Y+7	; 0x07
+    154c:	84 19       	sub	r24, r4
+    154e:	95 09       	sbc	r25, r5
+    1550:	08 9f       	mul	r16, r24
+    1552:	40 01       	movw	r8, r0
+    1554:	09 9f       	mul	r16, r25
+    1556:	90 0c       	add	r9, r0
+    1558:	18 9f       	mul	r17, r24
+    155a:	90 0c       	add	r9, r0
+    155c:	11 24       	eor	r1, r1
+    155e:	86 0c       	add	r8, r6
+    1560:	97 1c       	adc	r9, r7
+    1562:	09 2c       	mov	r0, r9
+    1564:	00 0c       	add	r0, r0
+    1566:	aa 08       	sbc	r10, r10
+    1568:	bb 08       	sbc	r11, r11
+    156a:	c5 01       	movw	r24, r10
+    156c:	b4 01       	movw	r22, r8
+    156e:	c7 d1       	rcall	.+910    	; 0x18fe <__floatsisf>
+    1570:	56 d2       	rcall	.+1196   	; 0x1a1e <sqrt>
+    1572:	20 e0       	ldi	r18, 0x00	; 0
+    1574:	30 e0       	ldi	r19, 0x00	; 0
+    1576:	40 e0       	ldi	r20, 0x00	; 0
+    1578:	5f e3       	ldi	r21, 0x3F	; 63
+    157a:	2f d1       	rcall	.+606    	; 0x17da <__addsf3>
+    157c:	92 d1       	rcall	.+804    	; 0x18a2 <__fixunssfsi>
+    157e:	a6 2e       	mov	r10, r22
+    1580:	6e 81       	ldd	r22, Y+6	; 0x06
+    1582:	82 2d       	mov	r24, r2
+    1584:	8a 0d       	add	r24, r10
+    1586:	55 de       	rcall	.-854    	; 0x1232 <GLCD_Dot>
+    1588:	6e 81       	ldd	r22, Y+6	; 0x06
+    158a:	82 2d       	mov	r24, r2
+    158c:	8a 19       	sub	r24, r10
+    158e:	51 de       	rcall	.-862    	; 0x1232 <GLCD_Dot>
+    1590:	2e 81       	ldd	r18, Y+6	; 0x06
+    1592:	3f 81       	ldd	r19, Y+7	; 0x07
+    1594:	2f 5f       	subi	r18, 0xFF	; 255
+    1596:	3f 4f       	sbci	r19, 0xFF	; 255
+    1598:	3f 83       	std	Y+7, r19	; 0x07
+    159a:	2e 83       	std	Y+6, r18	; 0x06
+    159c:	01 50       	subi	r16, 0x01	; 1
+    159e:	11 09       	sbc	r17, r1
+    15a0:	c2 16       	cp	r12, r18
+    15a2:	d3 06       	cpc	r13, r19
+    15a4:	8c f6       	brge	.-94     	; 0x1548 <GLCD_Circle+0x86>
+    15a6:	3d 81       	ldd	r19, Y+5	; 0x05
+    15a8:	c3 2e       	mov	r12, r19
+    15aa:	d1 2c       	mov	r13, r1
+    15ac:	16 01       	movw	r2, r12
+    15ae:	89 81       	ldd	r24, Y+1	; 0x01
+    15b0:	9a 81       	ldd	r25, Y+2	; 0x02
+    15b2:	28 1a       	sub	r2, r24
+    15b4:	39 0a       	sbc	r3, r25
+    15b6:	c8 0e       	add	r12, r24
+    15b8:	d9 1e       	adc	r13, r25
+    15ba:	c2 14       	cp	r12, r2
+    15bc:	d3 04       	cpc	r13, r3
+    15be:	0c f4       	brge	.+2      	; 0x15c2 <GLCD_Circle+0x100>
+    15c0:	39 c0       	rjmp	.+114    	; 0x1634 <GLCD_Circle+0x172>
+    15c2:	eb 81       	ldd	r30, Y+3	; 0x03
+    15c4:	fc 81       	ldd	r31, Y+4	; 0x04
+    15c6:	ee 9f       	mul	r30, r30
+    15c8:	30 01       	movw	r6, r0
+    15ca:	ef 9f       	mul	r30, r31
+    15cc:	70 0c       	add	r7, r0
+    15ce:	70 0c       	add	r7, r0
+    15d0:	11 24       	eor	r1, r1
+    15d2:	8c 01       	movw	r16, r24
+    15d4:	43 2e       	mov	r4, r19
+    15d6:	51 2c       	mov	r5, r1
+    15d8:	c1 01       	movw	r24, r2
+    15da:	84 19       	sub	r24, r4
+    15dc:	95 09       	sbc	r25, r5
+    15de:	08 9f       	mul	r16, r24
+    15e0:	40 01       	movw	r8, r0
+    15e2:	09 9f       	mul	r16, r25
+    15e4:	90 0c       	add	r9, r0
+    15e6:	18 9f       	mul	r17, r24
+    15e8:	90 0c       	add	r9, r0
+    15ea:	11 24       	eor	r1, r1
+    15ec:	86 0c       	add	r8, r6
+    15ee:	97 1c       	adc	r9, r7
+    15f0:	09 2c       	mov	r0, r9
+    15f2:	00 0c       	add	r0, r0
+    15f4:	aa 08       	sbc	r10, r10
+    15f6:	bb 08       	sbc	r11, r11
+    15f8:	c5 01       	movw	r24, r10
+    15fa:	b4 01       	movw	r22, r8
+    15fc:	80 d1       	rcall	.+768    	; 0x18fe <__floatsisf>
+    15fe:	0f d2       	rcall	.+1054   	; 0x1a1e <sqrt>
+    1600:	20 e0       	ldi	r18, 0x00	; 0
+    1602:	30 e0       	ldi	r19, 0x00	; 0
+    1604:	40 e0       	ldi	r20, 0x00	; 0
+    1606:	5f e3       	ldi	r21, 0x3F	; 63
+    1608:	e8 d0       	rcall	.+464    	; 0x17da <__addsf3>
+    160a:	4b d1       	rcall	.+662    	; 0x18a2 <__fixunssfsi>
+    160c:	a6 2e       	mov	r10, r22
+    160e:	b1 2c       	mov	r11, r1
+    1610:	b7 01       	movw	r22, r14
+    1612:	6a 0d       	add	r22, r10
+    1614:	7b 1d       	adc	r23, r11
+    1616:	82 2d       	mov	r24, r2
+    1618:	0c de       	rcall	.-1000   	; 0x1232 <GLCD_Dot>
+    161a:	b7 01       	movw	r22, r14
+    161c:	6a 19       	sub	r22, r10
+    161e:	7b 09       	sbc	r23, r11
+    1620:	82 2d       	mov	r24, r2
+    1622:	07 de       	rcall	.-1010   	; 0x1232 <GLCD_Dot>
+    1624:	ff ef       	ldi	r31, 0xFF	; 255
+    1626:	2f 1a       	sub	r2, r31
+    1628:	3f 0a       	sbc	r3, r31
+    162a:	01 50       	subi	r16, 0x01	; 1
+    162c:	11 09       	sbc	r17, r1
+    162e:	c2 14       	cp	r12, r2
+    1630:	d3 04       	cpc	r13, r3
+    1632:	94 f6       	brge	.-92     	; 0x15d8 <GLCD_Circle+0x116>
+    1634:	27 96       	adiw	r28, 0x07	; 7
+    1636:	0f b6       	in	r0, 0x3f	; 63
+    1638:	f8 94       	cli
+    163a:	de bf       	out	0x3e, r29	; 62
+    163c:	0f be       	out	0x3f, r0	; 63
+    163e:	cd bf       	out	0x3d, r28	; 61
+    1640:	df 91       	pop	r29
+    1642:	cf 91       	pop	r28
+    1644:	1f 91       	pop	r17
+    1646:	0f 91       	pop	r16
+    1648:	ff 90       	pop	r15
+    164a:	ef 90       	pop	r14
+    164c:	df 90       	pop	r13
+    164e:	cf 90       	pop	r12
+    1650:	bf 90       	pop	r11
+    1652:	af 90       	pop	r10
+    1654:	9f 90       	pop	r9
+    1656:	8f 90       	pop	r8
+    1658:	7f 90       	pop	r7
+    165a:	6f 90       	pop	r6
+    165c:	5f 90       	pop	r5
+    165e:	4f 90       	pop	r4
+    1660:	3f 90       	pop	r3
+    1662:	2f 90       	pop	r2
+    1664:	08 95       	ret
+
+00001666 <GLCD_1DigitDecimal>:
+    1666:	9d ec       	ldi	r25, 0xCD	; 205
+    1668:	89 9f       	mul	r24, r25
+    166a:	91 2d       	mov	r25, r1
+    166c:	11 24       	eor	r1, r1
+    166e:	96 95       	lsr	r25
+    1670:	96 95       	lsr	r25
+    1672:	96 95       	lsr	r25
+    1674:	99 0f       	add	r25, r25
+    1676:	29 2f       	mov	r18, r25
+    1678:	22 0f       	add	r18, r18
+    167a:	22 0f       	add	r18, r18
+    167c:	92 0f       	add	r25, r18
+    167e:	89 1b       	sub	r24, r25
+    1680:	98 2f       	mov	r25, r24
+    1682:	31 f4       	brne	.+12     	; 0x1690 <GLCD_1DigitDecimal+0x2a>
+    1684:	61 11       	cpse	r22, r1
+    1686:	04 c0       	rjmp	.+8      	; 0x1690 <GLCD_1DigitDecimal+0x2a>
+    1688:	80 e2       	ldi	r24, 0x20	; 32
+    168a:	7e dd       	rcall	.-1284   	; 0x1188 <lcd_char>
+    168c:	80 e0       	ldi	r24, 0x00	; 0
+    168e:	08 95       	ret
+    1690:	80 e3       	ldi	r24, 0x30	; 48
+    1692:	89 0f       	add	r24, r25
+    1694:	79 dd       	rcall	.-1294   	; 0x1188 <lcd_char>
+    1696:	81 e0       	ldi	r24, 0x01	; 1
+    1698:	08 95       	ret
+
+0000169a <GLCD_2DigitDecimal>:
+    169a:	cf 93       	push	r28
+    169c:	df 93       	push	r29
+    169e:	c9 e2       	ldi	r28, 0x29	; 41
+    16a0:	8c 9f       	mul	r24, r28
+    16a2:	c1 2d       	mov	r28, r1
+    16a4:	11 24       	eor	r1, r1
+    16a6:	c2 95       	swap	r28
+    16a8:	cf 70       	andi	r28, 0x0F	; 15
+    16aa:	94 e6       	ldi	r25, 0x64	; 100
+    16ac:	c9 9f       	mul	r28, r25
+    16ae:	80 19       	sub	r24, r0
+    16b0:	11 24       	eor	r1, r1
+    16b2:	c8 2f       	mov	r28, r24
+    16b4:	dd ec       	ldi	r29, 0xCD	; 205
+    16b6:	8d 9f       	mul	r24, r29
+    16b8:	d1 2d       	mov	r29, r1
+    16ba:	11 24       	eor	r1, r1
+    16bc:	d6 95       	lsr	r29
+    16be:	d6 95       	lsr	r29
+    16c0:	d6 95       	lsr	r29
+    16c2:	60 e0       	ldi	r22, 0x00	; 0
+    16c4:	8d 2f       	mov	r24, r29
+    16c6:	cf df       	rcall	.-98     	; 0x1666 <GLCD_1DigitDecimal>
+    16c8:	dd 0f       	add	r29, r29
+    16ca:	8d 2f       	mov	r24, r29
+    16cc:	88 0f       	add	r24, r24
+    16ce:	88 0f       	add	r24, r24
+    16d0:	d8 0f       	add	r29, r24
+    16d2:	8c 2f       	mov	r24, r28
+    16d4:	8d 1b       	sub	r24, r29
+    16d6:	80 5d       	subi	r24, 0xD0	; 208
+    16d8:	57 dd       	rcall	.-1362   	; 0x1188 <lcd_char>
+    16da:	df 91       	pop	r29
+    16dc:	cf 91       	pop	r28
+    16de:	08 95       	ret
+
+000016e0 <GLCD_4DigitDecimal>:
+
+	// display 4-digit decimal number
+	// 4자리의 10진수 값을 표시합니다.
+	void GLCD_4DigitDecimal(unsigned int number)
+	{
+    16e0:	0f 93       	push	r16
+    16e2:	1f 93       	push	r17
+    16e4:	cf 93       	push	r28
+    16e6:	df 93       	push	r29
+    16e8:	ac 01       	movw	r20, r24
+		unsigned int i;
+		unsigned char flag;
+		flag = 0;
+		number = number % 10000;
+    16ea:	9c 01       	movw	r18, r24
+    16ec:	32 95       	swap	r19
+    16ee:	22 95       	swap	r18
+    16f0:	2f 70       	andi	r18, 0x0F	; 15
+    16f2:	23 27       	eor	r18, r19
+    16f4:	3f 70       	andi	r19, 0x0F	; 15
+    16f6:	23 27       	eor	r18, r19
+    16f8:	a7 e4       	ldi	r26, 0x47	; 71
+    16fa:	b3 e0       	ldi	r27, 0x03	; 3
+    16fc:	0a d2       	rcall	.+1044   	; 0x1b12 <__umulhisi3>
+    16fe:	ec 01       	movw	r28, r24
+    1700:	d6 95       	lsr	r29
+    1702:	c7 95       	ror	r28
+    1704:	d6 95       	lsr	r29
+    1706:	c7 95       	ror	r28
+    1708:	d6 95       	lsr	r29
+    170a:	c7 95       	ror	r28
+    170c:	20 e1       	ldi	r18, 0x10	; 16
+    170e:	37 e2       	ldi	r19, 0x27	; 39
+    1710:	c2 9f       	mul	r28, r18
+    1712:	c0 01       	movw	r24, r0
+    1714:	c3 9f       	mul	r28, r19
+    1716:	90 0d       	add	r25, r0
+    1718:	d2 9f       	mul	r29, r18
+    171a:	90 0d       	add	r25, r0
+    171c:	11 24       	eor	r1, r1
+    171e:	ea 01       	movw	r28, r20
+    1720:	c8 1b       	sub	r28, r24
+    1722:	d9 0b       	sbc	r29, r25
+		i = number/1000;
+    1724:	9e 01       	movw	r18, r28
+    1726:	36 95       	lsr	r19
+    1728:	27 95       	ror	r18
+    172a:	36 95       	lsr	r19
+    172c:	27 95       	ror	r18
+    172e:	36 95       	lsr	r19
+    1730:	27 95       	ror	r18
+    1732:	a5 ec       	ldi	r26, 0xC5	; 197
+    1734:	b0 e2       	ldi	r27, 0x20	; 32
+    1736:	ed d1       	rcall	.+986    	; 0x1b12 <__umulhisi3>
+    1738:	8c 01       	movw	r16, r24
+    173a:	12 95       	swap	r17
+    173c:	02 95       	swap	r16
+    173e:	0f 70       	andi	r16, 0x0F	; 15
+    1740:	01 27       	eor	r16, r17
+    1742:	1f 70       	andi	r17, 0x0F	; 15
+    1744:	01 27       	eor	r16, r17
+		flag = GLCD_1DigitDecimal(i, flag); // 10^3
+    1746:	60 e0       	ldi	r22, 0x00	; 0
+    1748:	80 2f       	mov	r24, r16
+    174a:	8d df       	rcall	.-230    	; 0x1666 <GLCD_1DigitDecimal>
+    174c:	48 2f       	mov	r20, r24
+		number = number % 1000;
+    174e:	28 ee       	ldi	r18, 0xE8	; 232
+    1750:	33 e0       	ldi	r19, 0x03	; 3
+    1752:	02 9f       	mul	r16, r18
+    1754:	c0 01       	movw	r24, r0
+    1756:	03 9f       	mul	r16, r19
+    1758:	90 0d       	add	r25, r0
+    175a:	12 9f       	mul	r17, r18
+    175c:	90 0d       	add	r25, r0
+    175e:	11 24       	eor	r1, r1
+    1760:	c8 1b       	sub	r28, r24
+    1762:	d9 0b       	sbc	r29, r25
+		i = number/100;
+    1764:	9e 01       	movw	r18, r28
+    1766:	36 95       	lsr	r19
+    1768:	27 95       	ror	r18
+    176a:	36 95       	lsr	r19
+    176c:	27 95       	ror	r18
+    176e:	ab e7       	ldi	r26, 0x7B	; 123
+    1770:	b4 e1       	ldi	r27, 0x14	; 20
+    1772:	cf d1       	rcall	.+926    	; 0x1b12 <__umulhisi3>
+    1774:	8c 01       	movw	r16, r24
+    1776:	16 95       	lsr	r17
+    1778:	07 95       	ror	r16
+		flag = GLCD_1DigitDecimal(i, flag); // 10^2
+    177a:	64 2f       	mov	r22, r20
+    177c:	80 2f       	mov	r24, r16
+    177e:	73 df       	rcall	.-282    	; 0x1666 <GLCD_1DigitDecimal>
+    1780:	48 2f       	mov	r20, r24
+		number = number % 100;
+    1782:	24 e6       	ldi	r18, 0x64	; 100
+    1784:	20 9f       	mul	r18, r16
+    1786:	c0 01       	movw	r24, r0
+    1788:	21 9f       	mul	r18, r17
+    178a:	90 0d       	add	r25, r0
+    178c:	11 24       	eor	r1, r1
+    178e:	c8 1b       	sub	r28, r24
+    1790:	d9 0b       	sbc	r29, r25
+		i = number/10;
+    1792:	9e 01       	movw	r18, r28
+    1794:	ad ec       	ldi	r26, 0xCD	; 205
+    1796:	bc ec       	ldi	r27, 0xCC	; 204
+    1798:	bc d1       	rcall	.+888    	; 0x1b12 <__umulhisi3>
+    179a:	8c 01       	movw	r16, r24
+    179c:	16 95       	lsr	r17
+    179e:	07 95       	ror	r16
+    17a0:	16 95       	lsr	r17
+    17a2:	07 95       	ror	r16
+    17a4:	16 95       	lsr	r17
+    17a6:	07 95       	ror	r16
+		flag = GLCD_1DigitDecimal(i, flag); // 10^1
+    17a8:	64 2f       	mov	r22, r20
+    17aa:	80 2f       	mov	r24, r16
+    17ac:	5c df       	rcall	.-328    	; 0x1666 <GLCD_1DigitDecimal>
+		i = number % 10;
+    17ae:	c8 01       	movw	r24, r16
+    17b0:	88 0f       	add	r24, r24
+    17b2:	99 1f       	adc	r25, r25
+    17b4:	00 0f       	add	r16, r16
+    17b6:	11 1f       	adc	r17, r17
+    17b8:	00 0f       	add	r16, r16
+    17ba:	11 1f       	adc	r17, r17
+    17bc:	00 0f       	add	r16, r16
+    17be:	11 1f       	adc	r17, r17
+    17c0:	08 0f       	add	r16, r24
+    17c2:	19 1f       	adc	r17, r25
+    17c4:	ce 01       	movw	r24, r28
+    17c6:	80 1b       	sub	r24, r16
+    17c8:	91 0b       	sbc	r25, r17
+		lcd_char(i + '0');              // 10^0
+    17ca:	80 5d       	subi	r24, 0xD0	; 208
+    17cc:	dd dc       	rcall	.-1606   	; 0x1188 <lcd_char>
+	}
+    17ce:	df 91       	pop	r29
+    17d0:	cf 91       	pop	r28
+    17d2:	1f 91       	pop	r17
+    17d4:	0f 91       	pop	r16
+    17d6:	08 95       	ret
+
+000017d8 <__subsf3>:
+    17d8:	50 58       	subi	r21, 0x80	; 128
+
+000017da <__addsf3>:
+    17da:	bb 27       	eor	r27, r27
+    17dc:	aa 27       	eor	r26, r26
+    17de:	0e d0       	rcall	.+28     	; 0x17fc <__addsf3x>
+    17e0:	e0 c0       	rjmp	.+448    	; 0x19a2 <__fp_round>
+    17e2:	d1 d0       	rcall	.+418    	; 0x1986 <__fp_pscA>
+    17e4:	30 f0       	brcs	.+12     	; 0x17f2 <__addsf3+0x18>
+    17e6:	d6 d0       	rcall	.+428    	; 0x1994 <__fp_pscB>
+    17e8:	20 f0       	brcs	.+8      	; 0x17f2 <__addsf3+0x18>
+    17ea:	31 f4       	brne	.+12     	; 0x17f8 <__addsf3+0x1e>
+    17ec:	9f 3f       	cpi	r25, 0xFF	; 255
+    17ee:	11 f4       	brne	.+4      	; 0x17f4 <__addsf3+0x1a>
+    17f0:	1e f4       	brtc	.+6      	; 0x17f8 <__addsf3+0x1e>
+    17f2:	c6 c0       	rjmp	.+396    	; 0x1980 <__fp_nan>
+    17f4:	0e f4       	brtc	.+2      	; 0x17f8 <__addsf3+0x1e>
+    17f6:	e0 95       	com	r30
+    17f8:	e7 fb       	bst	r30, 7
+    17fa:	bc c0       	rjmp	.+376    	; 0x1974 <__fp_inf>
+
+000017fc <__addsf3x>:
+    17fc:	e9 2f       	mov	r30, r25
+    17fe:	e2 d0       	rcall	.+452    	; 0x19c4 <__fp_split3>
+    1800:	80 f3       	brcs	.-32     	; 0x17e2 <__addsf3+0x8>
+    1802:	ba 17       	cp	r27, r26
+    1804:	62 07       	cpc	r22, r18
+    1806:	73 07       	cpc	r23, r19
+    1808:	84 07       	cpc	r24, r20
+    180a:	95 07       	cpc	r25, r21
+    180c:	18 f0       	brcs	.+6      	; 0x1814 <__addsf3x+0x18>
+    180e:	71 f4       	brne	.+28     	; 0x182c <__addsf3x+0x30>
+    1810:	9e f5       	brtc	.+102    	; 0x1878 <__addsf3x+0x7c>
+    1812:	fa c0       	rjmp	.+500    	; 0x1a08 <__fp_zero>
+    1814:	0e f4       	brtc	.+2      	; 0x1818 <__addsf3x+0x1c>
+    1816:	e0 95       	com	r30
+    1818:	0b 2e       	mov	r0, r27
+    181a:	ba 2f       	mov	r27, r26
+    181c:	a0 2d       	mov	r26, r0
+    181e:	0b 01       	movw	r0, r22
+    1820:	b9 01       	movw	r22, r18
+    1822:	90 01       	movw	r18, r0
+    1824:	0c 01       	movw	r0, r24
+    1826:	ca 01       	movw	r24, r20
+    1828:	a0 01       	movw	r20, r0
+    182a:	11 24       	eor	r1, r1
+    182c:	ff 27       	eor	r31, r31
+    182e:	59 1b       	sub	r21, r25
+    1830:	99 f0       	breq	.+38     	; 0x1858 <__addsf3x+0x5c>
+    1832:	59 3f       	cpi	r21, 0xF9	; 249
+    1834:	50 f4       	brcc	.+20     	; 0x184a <__addsf3x+0x4e>
+    1836:	50 3e       	cpi	r21, 0xE0	; 224
+    1838:	68 f1       	brcs	.+90     	; 0x1894 <__addsf3x+0x98>
+    183a:	1a 16       	cp	r1, r26
+    183c:	f0 40       	sbci	r31, 0x00	; 0
+    183e:	a2 2f       	mov	r26, r18
+    1840:	23 2f       	mov	r18, r19
+    1842:	34 2f       	mov	r19, r20
+    1844:	44 27       	eor	r20, r20
+    1846:	58 5f       	subi	r21, 0xF8	; 248
+    1848:	f3 cf       	rjmp	.-26     	; 0x1830 <__addsf3x+0x34>
+    184a:	46 95       	lsr	r20
+    184c:	37 95       	ror	r19
+    184e:	27 95       	ror	r18
+    1850:	a7 95       	ror	r26
+    1852:	f0 40       	sbci	r31, 0x00	; 0
+    1854:	53 95       	inc	r21
+    1856:	c9 f7       	brne	.-14     	; 0x184a <__addsf3x+0x4e>
+    1858:	7e f4       	brtc	.+30     	; 0x1878 <__addsf3x+0x7c>
+    185a:	1f 16       	cp	r1, r31
+    185c:	ba 0b       	sbc	r27, r26
+    185e:	62 0b       	sbc	r22, r18
+    1860:	73 0b       	sbc	r23, r19
+    1862:	84 0b       	sbc	r24, r20
+    1864:	ba f0       	brmi	.+46     	; 0x1894 <__addsf3x+0x98>
+    1866:	91 50       	subi	r25, 0x01	; 1
+    1868:	a1 f0       	breq	.+40     	; 0x1892 <__addsf3x+0x96>
+    186a:	ff 0f       	add	r31, r31
+    186c:	bb 1f       	adc	r27, r27
+    186e:	66 1f       	adc	r22, r22
+    1870:	77 1f       	adc	r23, r23
+    1872:	88 1f       	adc	r24, r24
+    1874:	c2 f7       	brpl	.-16     	; 0x1866 <__addsf3x+0x6a>
+    1876:	0e c0       	rjmp	.+28     	; 0x1894 <__addsf3x+0x98>
+    1878:	ba 0f       	add	r27, r26
+    187a:	62 1f       	adc	r22, r18
+    187c:	73 1f       	adc	r23, r19
+    187e:	84 1f       	adc	r24, r20
+    1880:	48 f4       	brcc	.+18     	; 0x1894 <__addsf3x+0x98>
+    1882:	87 95       	ror	r24
+    1884:	77 95       	ror	r23
+    1886:	67 95       	ror	r22
+    1888:	b7 95       	ror	r27
+    188a:	f7 95       	ror	r31
+    188c:	9e 3f       	cpi	r25, 0xFE	; 254
+    188e:	08 f0       	brcs	.+2      	; 0x1892 <__addsf3x+0x96>
+    1890:	b3 cf       	rjmp	.-154    	; 0x17f8 <__addsf3+0x1e>
+    1892:	93 95       	inc	r25
+    1894:	88 0f       	add	r24, r24
+    1896:	08 f0       	brcs	.+2      	; 0x189a <__addsf3x+0x9e>
+    1898:	99 27       	eor	r25, r25
+    189a:	ee 0f       	add	r30, r30
+    189c:	97 95       	ror	r25
+    189e:	87 95       	ror	r24
+    18a0:	08 95       	ret
+
+000018a2 <__fixunssfsi>:
+    18a2:	98 d0       	rcall	.+304    	; 0x19d4 <__fp_splitA>
+    18a4:	88 f0       	brcs	.+34     	; 0x18c8 <__fixunssfsi+0x26>
+    18a6:	9f 57       	subi	r25, 0x7F	; 127
+    18a8:	90 f0       	brcs	.+36     	; 0x18ce <__fixunssfsi+0x2c>
+    18aa:	b9 2f       	mov	r27, r25
+    18ac:	99 27       	eor	r25, r25
+    18ae:	b7 51       	subi	r27, 0x17	; 23
+    18b0:	a0 f0       	brcs	.+40     	; 0x18da <__fixunssfsi+0x38>
+    18b2:	d1 f0       	breq	.+52     	; 0x18e8 <__fixunssfsi+0x46>
+    18b4:	66 0f       	add	r22, r22
+    18b6:	77 1f       	adc	r23, r23
+    18b8:	88 1f       	adc	r24, r24
+    18ba:	99 1f       	adc	r25, r25
+    18bc:	1a f0       	brmi	.+6      	; 0x18c4 <__fixunssfsi+0x22>
+    18be:	ba 95       	dec	r27
+    18c0:	c9 f7       	brne	.-14     	; 0x18b4 <__fixunssfsi+0x12>
+    18c2:	12 c0       	rjmp	.+36     	; 0x18e8 <__fixunssfsi+0x46>
+    18c4:	b1 30       	cpi	r27, 0x01	; 1
+    18c6:	81 f0       	breq	.+32     	; 0x18e8 <__fixunssfsi+0x46>
+    18c8:	9f d0       	rcall	.+318    	; 0x1a08 <__fp_zero>
+    18ca:	b1 e0       	ldi	r27, 0x01	; 1
+    18cc:	08 95       	ret
+    18ce:	9c c0       	rjmp	.+312    	; 0x1a08 <__fp_zero>
+    18d0:	67 2f       	mov	r22, r23
+    18d2:	78 2f       	mov	r23, r24
+    18d4:	88 27       	eor	r24, r24
+    18d6:	b8 5f       	subi	r27, 0xF8	; 248
+    18d8:	39 f0       	breq	.+14     	; 0x18e8 <__fixunssfsi+0x46>
+    18da:	b9 3f       	cpi	r27, 0xF9	; 249
+    18dc:	cc f3       	brlt	.-14     	; 0x18d0 <__fixunssfsi+0x2e>
+    18de:	86 95       	lsr	r24
+    18e0:	77 95       	ror	r23
+    18e2:	67 95       	ror	r22
+    18e4:	b3 95       	inc	r27
+    18e6:	d9 f7       	brne	.-10     	; 0x18de <__fixunssfsi+0x3c>
+    18e8:	3e f4       	brtc	.+14     	; 0x18f8 <__fixunssfsi+0x56>
+    18ea:	90 95       	com	r25
+    18ec:	80 95       	com	r24
+    18ee:	70 95       	com	r23
+    18f0:	61 95       	neg	r22
+    18f2:	7f 4f       	sbci	r23, 0xFF	; 255
+    18f4:	8f 4f       	sbci	r24, 0xFF	; 255
+    18f6:	9f 4f       	sbci	r25, 0xFF	; 255
+    18f8:	08 95       	ret
+
+000018fa <__floatunsisf>:
+    18fa:	e8 94       	clt
+    18fc:	09 c0       	rjmp	.+18     	; 0x1910 <__floatsisf+0x12>
+
+000018fe <__floatsisf>:
+    18fe:	97 fb       	bst	r25, 7
+    1900:	3e f4       	brtc	.+14     	; 0x1910 <__floatsisf+0x12>
+    1902:	90 95       	com	r25
+    1904:	80 95       	com	r24
+    1906:	70 95       	com	r23
+    1908:	61 95       	neg	r22
+    190a:	7f 4f       	sbci	r23, 0xFF	; 255
+    190c:	8f 4f       	sbci	r24, 0xFF	; 255
+    190e:	9f 4f       	sbci	r25, 0xFF	; 255
+    1910:	99 23       	and	r25, r25
+    1912:	a9 f0       	breq	.+42     	; 0x193e <__floatsisf+0x40>
+    1914:	f9 2f       	mov	r31, r25
+    1916:	96 e9       	ldi	r25, 0x96	; 150
+    1918:	bb 27       	eor	r27, r27
+    191a:	93 95       	inc	r25
+    191c:	f6 95       	lsr	r31
+    191e:	87 95       	ror	r24
+    1920:	77 95       	ror	r23
+    1922:	67 95       	ror	r22
+    1924:	b7 95       	ror	r27
+    1926:	f1 11       	cpse	r31, r1
+    1928:	f8 cf       	rjmp	.-16     	; 0x191a <__floatsisf+0x1c>
+    192a:	fa f4       	brpl	.+62     	; 0x196a <__floatsisf+0x6c>
+    192c:	bb 0f       	add	r27, r27
+    192e:	11 f4       	brne	.+4      	; 0x1934 <__floatsisf+0x36>
+    1930:	60 ff       	sbrs	r22, 0
+    1932:	1b c0       	rjmp	.+54     	; 0x196a <__floatsisf+0x6c>
+    1934:	6f 5f       	subi	r22, 0xFF	; 255
+    1936:	7f 4f       	sbci	r23, 0xFF	; 255
+    1938:	8f 4f       	sbci	r24, 0xFF	; 255
+    193a:	9f 4f       	sbci	r25, 0xFF	; 255
+    193c:	16 c0       	rjmp	.+44     	; 0x196a <__floatsisf+0x6c>
+    193e:	88 23       	and	r24, r24
+    1940:	11 f0       	breq	.+4      	; 0x1946 <__floatsisf+0x48>
+    1942:	96 e9       	ldi	r25, 0x96	; 150
+    1944:	11 c0       	rjmp	.+34     	; 0x1968 <__floatsisf+0x6a>
+    1946:	77 23       	and	r23, r23
+    1948:	21 f0       	breq	.+8      	; 0x1952 <__floatsisf+0x54>
+    194a:	9e e8       	ldi	r25, 0x8E	; 142
+    194c:	87 2f       	mov	r24, r23
+    194e:	76 2f       	mov	r23, r22
+    1950:	05 c0       	rjmp	.+10     	; 0x195c <__floatsisf+0x5e>
+    1952:	66 23       	and	r22, r22
+    1954:	71 f0       	breq	.+28     	; 0x1972 <__floatsisf+0x74>
+    1956:	96 e8       	ldi	r25, 0x86	; 134
+    1958:	86 2f       	mov	r24, r22
+    195a:	70 e0       	ldi	r23, 0x00	; 0
+    195c:	60 e0       	ldi	r22, 0x00	; 0
+    195e:	2a f0       	brmi	.+10     	; 0x196a <__floatsisf+0x6c>
+    1960:	9a 95       	dec	r25
+    1962:	66 0f       	add	r22, r22
+    1964:	77 1f       	adc	r23, r23
+    1966:	88 1f       	adc	r24, r24
+    1968:	da f7       	brpl	.-10     	; 0x1960 <__floatsisf+0x62>
+    196a:	88 0f       	add	r24, r24
+    196c:	96 95       	lsr	r25
+    196e:	87 95       	ror	r24
+    1970:	97 f9       	bld	r25, 7
+    1972:	08 95       	ret
+
+00001974 <__fp_inf>:
+    1974:	97 f9       	bld	r25, 7
+    1976:	9f 67       	ori	r25, 0x7F	; 127
+    1978:	80 e8       	ldi	r24, 0x80	; 128
+    197a:	70 e0       	ldi	r23, 0x00	; 0
+    197c:	60 e0       	ldi	r22, 0x00	; 0
+    197e:	08 95       	ret
+
+00001980 <__fp_nan>:
+    1980:	9f ef       	ldi	r25, 0xFF	; 255
+    1982:	80 ec       	ldi	r24, 0xC0	; 192
+    1984:	08 95       	ret
+
+00001986 <__fp_pscA>:
+    1986:	00 24       	eor	r0, r0
+    1988:	0a 94       	dec	r0
+    198a:	16 16       	cp	r1, r22
+    198c:	17 06       	cpc	r1, r23
+    198e:	18 06       	cpc	r1, r24
+    1990:	09 06       	cpc	r0, r25
+    1992:	08 95       	ret
+
+00001994 <__fp_pscB>:
+    1994:	00 24       	eor	r0, r0
+    1996:	0a 94       	dec	r0
+    1998:	12 16       	cp	r1, r18
+    199a:	13 06       	cpc	r1, r19
+    199c:	14 06       	cpc	r1, r20
+    199e:	05 06       	cpc	r0, r21
+    19a0:	08 95       	ret
+
+000019a2 <__fp_round>:
+    19a2:	09 2e       	mov	r0, r25
+    19a4:	03 94       	inc	r0
+    19a6:	00 0c       	add	r0, r0
+    19a8:	11 f4       	brne	.+4      	; 0x19ae <__fp_round+0xc>
+    19aa:	88 23       	and	r24, r24
+    19ac:	52 f0       	brmi	.+20     	; 0x19c2 <__fp_round+0x20>
+    19ae:	bb 0f       	add	r27, r27
+    19b0:	40 f4       	brcc	.+16     	; 0x19c2 <__fp_round+0x20>
+    19b2:	bf 2b       	or	r27, r31
+    19b4:	11 f4       	brne	.+4      	; 0x19ba <__fp_round+0x18>
+    19b6:	60 ff       	sbrs	r22, 0
+    19b8:	04 c0       	rjmp	.+8      	; 0x19c2 <__fp_round+0x20>
+    19ba:	6f 5f       	subi	r22, 0xFF	; 255
+    19bc:	7f 4f       	sbci	r23, 0xFF	; 255
+    19be:	8f 4f       	sbci	r24, 0xFF	; 255
+    19c0:	9f 4f       	sbci	r25, 0xFF	; 255
+    19c2:	08 95       	ret
+
+000019c4 <__fp_split3>:
+    19c4:	57 fd       	sbrc	r21, 7
+    19c6:	90 58       	subi	r25, 0x80	; 128
+    19c8:	44 0f       	add	r20, r20
+    19ca:	55 1f       	adc	r21, r21
+    19cc:	59 f0       	breq	.+22     	; 0x19e4 <__fp_splitA+0x10>
+    19ce:	5f 3f       	cpi	r21, 0xFF	; 255
+    19d0:	71 f0       	breq	.+28     	; 0x19ee <__fp_splitA+0x1a>
+    19d2:	47 95       	ror	r20
+
+000019d4 <__fp_splitA>:
+    19d4:	88 0f       	add	r24, r24
+    19d6:	97 fb       	bst	r25, 7
+    19d8:	99 1f       	adc	r25, r25
+    19da:	61 f0       	breq	.+24     	; 0x19f4 <__fp_splitA+0x20>
+    19dc:	9f 3f       	cpi	r25, 0xFF	; 255
+    19de:	79 f0       	breq	.+30     	; 0x19fe <__fp_splitA+0x2a>
+    19e0:	87 95       	ror	r24
+    19e2:	08 95       	ret
+    19e4:	12 16       	cp	r1, r18
+    19e6:	13 06       	cpc	r1, r19
+    19e8:	14 06       	cpc	r1, r20
+    19ea:	55 1f       	adc	r21, r21
+    19ec:	f2 cf       	rjmp	.-28     	; 0x19d2 <__fp_split3+0xe>
+    19ee:	46 95       	lsr	r20
+    19f0:	f1 df       	rcall	.-30     	; 0x19d4 <__fp_splitA>
+    19f2:	08 c0       	rjmp	.+16     	; 0x1a04 <__fp_splitA+0x30>
+    19f4:	16 16       	cp	r1, r22
+    19f6:	17 06       	cpc	r1, r23
+    19f8:	18 06       	cpc	r1, r24
+    19fa:	99 1f       	adc	r25, r25
+    19fc:	f1 cf       	rjmp	.-30     	; 0x19e0 <__fp_splitA+0xc>
+    19fe:	86 95       	lsr	r24
+    1a00:	71 05       	cpc	r23, r1
+    1a02:	61 05       	cpc	r22, r1
+    1a04:	08 94       	sec
+    1a06:	08 95       	ret
+
+00001a08 <__fp_zero>:
+    1a08:	e8 94       	clt
+
+00001a0a <__fp_szero>:
+    1a0a:	bb 27       	eor	r27, r27
+    1a0c:	66 27       	eor	r22, r22
+    1a0e:	77 27       	eor	r23, r23
+    1a10:	cb 01       	movw	r24, r22
+    1a12:	97 f9       	bld	r25, 7
+    1a14:	08 95       	ret
+    1a16:	11 f4       	brne	.+4      	; 0x1a1c <__fp_szero+0x12>
+    1a18:	0e f4       	brtc	.+2      	; 0x1a1c <__fp_szero+0x12>
+    1a1a:	b2 cf       	rjmp	.-156    	; 0x1980 <__fp_nan>
+    1a1c:	3e c0       	rjmp	.+124    	; 0x1a9a <__fp_mpack>
+
+00001a1e <sqrt>:
+    1a1e:	da df       	rcall	.-76     	; 0x19d4 <__fp_splitA>
+    1a20:	d0 f3       	brcs	.-12     	; 0x1a16 <__fp_szero+0xc>
+    1a22:	99 23       	and	r25, r25
+    1a24:	d9 f3       	breq	.-10     	; 0x1a1c <__fp_szero+0x12>
+    1a26:	ce f3       	brts	.-14     	; 0x1a1a <__fp_szero+0x10>
+    1a28:	9f 57       	subi	r25, 0x7F	; 127
+    1a2a:	55 0b       	sbc	r21, r21
+    1a2c:	87 ff       	sbrs	r24, 7
+    1a2e:	43 d0       	rcall	.+134    	; 0x1ab6 <__fp_norm2>
+    1a30:	00 24       	eor	r0, r0
+    1a32:	a0 e6       	ldi	r26, 0x60	; 96
+    1a34:	40 ea       	ldi	r20, 0xA0	; 160
+    1a36:	90 01       	movw	r18, r0
+    1a38:	80 58       	subi	r24, 0x80	; 128
+    1a3a:	56 95       	lsr	r21
+    1a3c:	97 95       	ror	r25
+    1a3e:	28 f4       	brcc	.+10     	; 0x1a4a <sqrt+0x2c>
+    1a40:	80 5c       	subi	r24, 0xC0	; 192
+    1a42:	66 0f       	add	r22, r22
+    1a44:	77 1f       	adc	r23, r23
+    1a46:	88 1f       	adc	r24, r24
+    1a48:	20 f0       	brcs	.+8      	; 0x1a52 <sqrt+0x34>
+    1a4a:	26 17       	cp	r18, r22
+    1a4c:	37 07       	cpc	r19, r23
+    1a4e:	48 07       	cpc	r20, r24
+    1a50:	30 f4       	brcc	.+12     	; 0x1a5e <sqrt+0x40>
+    1a52:	62 1b       	sub	r22, r18
+    1a54:	73 0b       	sbc	r23, r19
+    1a56:	84 0b       	sbc	r24, r20
+    1a58:	20 29       	or	r18, r0
+    1a5a:	31 29       	or	r19, r1
+    1a5c:	4a 2b       	or	r20, r26
+    1a5e:	a6 95       	lsr	r26
+    1a60:	17 94       	ror	r1
+    1a62:	07 94       	ror	r0
+    1a64:	20 25       	eor	r18, r0
+    1a66:	31 25       	eor	r19, r1
+    1a68:	4a 27       	eor	r20, r26
+    1a6a:	58 f7       	brcc	.-42     	; 0x1a42 <sqrt+0x24>
+    1a6c:	66 0f       	add	r22, r22
+    1a6e:	77 1f       	adc	r23, r23
+    1a70:	88 1f       	adc	r24, r24
+    1a72:	20 f0       	brcs	.+8      	; 0x1a7c <sqrt+0x5e>
+    1a74:	26 17       	cp	r18, r22
+    1a76:	37 07       	cpc	r19, r23
+    1a78:	48 07       	cpc	r20, r24
+    1a7a:	30 f4       	brcc	.+12     	; 0x1a88 <sqrt+0x6a>
+    1a7c:	62 0b       	sbc	r22, r18
+    1a7e:	73 0b       	sbc	r23, r19
+    1a80:	84 0b       	sbc	r24, r20
+    1a82:	20 0d       	add	r18, r0
+    1a84:	31 1d       	adc	r19, r1
+    1a86:	41 1d       	adc	r20, r1
+    1a88:	a0 95       	com	r26
+    1a8a:	81 f7       	brne	.-32     	; 0x1a6c <sqrt+0x4e>
+    1a8c:	b9 01       	movw	r22, r18
+    1a8e:	84 2f       	mov	r24, r20
+    1a90:	91 58       	subi	r25, 0x81	; 129
+    1a92:	88 0f       	add	r24, r24
+    1a94:	96 95       	lsr	r25
+    1a96:	87 95       	ror	r24
+    1a98:	08 95       	ret
+
+00001a9a <__fp_mpack>:
+    1a9a:	9f 3f       	cpi	r25, 0xFF	; 255
+    1a9c:	31 f0       	breq	.+12     	; 0x1aaa <__fp_mpack_finite+0xc>
+
+00001a9e <__fp_mpack_finite>:
+    1a9e:	91 50       	subi	r25, 0x01	; 1
+    1aa0:	20 f4       	brcc	.+8      	; 0x1aaa <__fp_mpack_finite+0xc>
+    1aa2:	87 95       	ror	r24
+    1aa4:	77 95       	ror	r23
+    1aa6:	67 95       	ror	r22
+    1aa8:	b7 95       	ror	r27
+    1aaa:	88 0f       	add	r24, r24
+    1aac:	91 1d       	adc	r25, r1
+    1aae:	96 95       	lsr	r25
+    1ab0:	87 95       	ror	r24
+    1ab2:	97 f9       	bld	r25, 7
+    1ab4:	08 95       	ret
+
+00001ab6 <__fp_norm2>:
+    1ab6:	91 50       	subi	r25, 0x01	; 1
+    1ab8:	50 40       	sbci	r21, 0x00	; 0
+    1aba:	66 0f       	add	r22, r22
+    1abc:	77 1f       	adc	r23, r23
+    1abe:	88 1f       	adc	r24, r24
+    1ac0:	d2 f7       	brpl	.-12     	; 0x1ab6 <__fp_norm2>
+    1ac2:	08 95       	ret
+
+00001ac4 <__udivmodhi4>:
+    1ac4:	aa 1b       	sub	r26, r26
+    1ac6:	bb 1b       	sub	r27, r27
+    1ac8:	51 e1       	ldi	r21, 0x11	; 17
+    1aca:	07 c0       	rjmp	.+14     	; 0x1ada <__udivmodhi4_ep>
+
+00001acc <__udivmodhi4_loop>:
+    1acc:	aa 1f       	adc	r26, r26
+    1ace:	bb 1f       	adc	r27, r27
+    1ad0:	a6 17       	cp	r26, r22
+    1ad2:	b7 07       	cpc	r27, r23
+    1ad4:	10 f0       	brcs	.+4      	; 0x1ada <__udivmodhi4_ep>
+    1ad6:	a6 1b       	sub	r26, r22
+    1ad8:	b7 0b       	sbc	r27, r23
+
+00001ada <__udivmodhi4_ep>:
+    1ada:	88 1f       	adc	r24, r24
+    1adc:	99 1f       	adc	r25, r25
+    1ade:	5a 95       	dec	r21
+    1ae0:	a9 f7       	brne	.-22     	; 0x1acc <__udivmodhi4_loop>
+    1ae2:	80 95       	com	r24
+    1ae4:	90 95       	com	r25
+    1ae6:	bc 01       	movw	r22, r24
+    1ae8:	cd 01       	movw	r24, r26
+    1aea:	08 95       	ret
+
+00001aec <__divmodhi4>:
+    1aec:	97 fb       	bst	r25, 7
+    1aee:	07 2e       	mov	r0, r23
+    1af0:	16 f4       	brtc	.+4      	; 0x1af6 <__divmodhi4+0xa>
+    1af2:	00 94       	com	r0
+    1af4:	06 d0       	rcall	.+12     	; 0x1b02 <__divmodhi4_neg1>
+    1af6:	77 fd       	sbrc	r23, 7
+    1af8:	08 d0       	rcall	.+16     	; 0x1b0a <__divmodhi4_neg2>
+    1afa:	e4 df       	rcall	.-56     	; 0x1ac4 <__udivmodhi4>
+    1afc:	07 fc       	sbrc	r0, 7
+    1afe:	05 d0       	rcall	.+10     	; 0x1b0a <__divmodhi4_neg2>
+    1b00:	3e f4       	brtc	.+14     	; 0x1b10 <__divmodhi4_exit>
+
+00001b02 <__divmodhi4_neg1>:
+    1b02:	90 95       	com	r25
+    1b04:	81 95       	neg	r24
+    1b06:	9f 4f       	sbci	r25, 0xFF	; 255
+    1b08:	08 95       	ret
+
+00001b0a <__divmodhi4_neg2>:
+    1b0a:	70 95       	com	r23
+    1b0c:	61 95       	neg	r22
+    1b0e:	7f 4f       	sbci	r23, 0xFF	; 255
+
+00001b10 <__divmodhi4_exit>:
+    1b10:	08 95       	ret
+
+00001b12 <__umulhisi3>:
+    1b12:	a2 9f       	mul	r26, r18
+    1b14:	b0 01       	movw	r22, r0
+    1b16:	b3 9f       	mul	r27, r19
+    1b18:	c0 01       	movw	r24, r0
+    1b1a:	a3 9f       	mul	r26, r19
+    1b1c:	70 0d       	add	r23, r0
+    1b1e:	81 1d       	adc	r24, r1
+    1b20:	11 24       	eor	r1, r1
+    1b22:	91 1d       	adc	r25, r1
+    1b24:	b2 9f       	mul	r27, r18
+    1b26:	70 0d       	add	r23, r0
+    1b28:	81 1d       	adc	r24, r1
+    1b2a:	11 24       	eor	r1, r1
+    1b2c:	91 1d       	adc	r25, r1
+    1b2e:	08 95       	ret
+
+00001b30 <_exit>:
+    1b30:	f8 94       	cli
+
+00001b32 <__stop_program>:
+    1b32:	ff cf       	rjmp	.-2      	; 0x1b32 <__stop_program>
